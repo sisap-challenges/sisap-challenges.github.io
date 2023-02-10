@@ -19,5 +19,5 @@ In the same terms, we ask for using GHA to ensure reproducibility under a limite
 # Python + Faiss
 
 # Julia + `SimilaritySearch.jl`
-
+[https://github.com/sisap-challenges/sisap23-laion-challenge-example](https://github.com/sisap-challenges/sisap23-laion-challenge-example)
 

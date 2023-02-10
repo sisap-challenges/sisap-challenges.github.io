@@ -6,6 +6,8 @@ date = Date(2023, 02, 10)
 tags = ["LAION2B", "Task A", "Task B", "Task C", "similarity search challenges"]
 +++
 
+# Tasks of the Implementation Challenge and Demo Track
+
 \tableofcontents <!-- you can use \toc as well -->
 
 ## Task A: Indexing and searching a LAION-5B deep features subset

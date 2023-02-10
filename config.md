@@ -7,7 +7,7 @@ The website_* must be defined for the RSS to work
 @def website_descr = "Main site for the call for implementation and challenge"
 @def website_url   = "https://sisap-challenges.github.io/"
 
-@def author = "Eric S. Tellez"
+@def author = "sisap challenge committee"
 
 @def mintoclevel = 2
 
