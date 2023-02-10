@@ -1,5 +1,7 @@
-@def title = "SISAP Indexing Challenge and Demo Track"
-@def tags = ["sisap", "challenge"]
++++
+title = "SISAP Indexing Challenge and Demo Track"
+tags = ["sisap", "challenge"]
++++
 
 # SISAP 2023 Indexing Challenge and Demo Track 
 
