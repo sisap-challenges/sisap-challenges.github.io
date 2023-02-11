@@ -1,0 +1,13 @@
+.important {
+    background-color: lemonchiffon;
+    padding: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .definition {
+    background-color: aliceblue;
+    border-left: 5px solid cornflowerblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 1em;
+  }

@@ -30,7 +30,7 @@ We encourage people to construct their entire data pipeline to handle data for i
 
 
 ## Some technical specifications of the LAION-5B and the CLIP embeddings
-The embeddings use approximately 160GB of space and its associated metadata 20GB (the first 112 parts). Embeddings are 768-dimensional vectors of single precision (16bits) floating point numbers bundled in the NumPy data-specific format `npz`. They can be loaded on most platforms due to the format's popularity. We provide different low dimensional projections packed in `HDF5`; queries and gold standards are also HDF5, i.e., `.h5` files. HDF5 can perform faster and more flexible _io_, which can help on large datasets. In particular, the sizes of the projection files are as follow:
+The embeddings use approximately 160GB of space and its associated metadata 20GB (the first 112 parts). Embeddings are 768-dimensional vectors of single precision (16bits) floating point numbers bundled in the NumPy data-specific format `.npz`. They can be loaded on most platforms due to the format's popularity. We provide different low dimensional projections packed in `HDF5`; queries and gold standards are also HDF5, i.e., `.h5` files. HDF5 can perform faster and more flexible _io_, which can help on large datasets. In particular, the sizes of the projection files are as follow:
 
 ```julia:./datasets/table
 #hideall
