@@ -17,7 +17,7 @@ CLIP vectors are typically 768-dimensional and compared under the cosine similar
 A more detailed description can be found here:
 ```
 Schuhmann, C., Beaumont, R., Vencu, R., Gordon, C., Wightman, R., Cherti, M., ... & Jitsev, J. (2022). Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402.
-````
+```
 
 The metadata is publicly available through the [LAION-5B](https://laion.ai/blog/laion-5b/) effort and the [Hugging face repository](https://huggingface.co/laion). Please note that the LAION-5B dataset contains many NSFW materials that were discarded.
 
