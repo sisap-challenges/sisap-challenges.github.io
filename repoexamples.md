@@ -12,12 +12,17 @@ The reproducibility of search methods is essential. We encourage sharing solutio
 
 In the same terms, we ask for using GHA to ensure reproducibility under a limited-size dataset. GHA is a continuous integration platform that can run specified scripts after a repository is updated. We plan to use GHA to ask participants to ensure that indexing and searching methods work in one of the supported platforms. For this matter, we will prepare a small subset of the dataset, and a small query sets allow checking that at least these functions work. We will provide examples of projects working with GHA for Python and Julia programming languages (listed in the challenge's site.)
 
+Take a look on `.github/workflows/ci.yml` files, please feel free to use them as starting point for your continuous integration process.
+
+
 # Examples of repositories with GitHub Actions 
 
 \toc
 
-# Python + Faiss
+## Python and Faiss
 
-# Julia + `SimilaritySearch.jl`
+[https://github.com/sisap-challenges/sisap23-laion-challenge-faiss-example](https://github.com/sisap-challenges/sisap23-laion-challenge-faiss-example)
+
+## Julia and `SimilaritySearch.jl`
 [https://github.com/sisap-challenges/sisap23-laion-challenge-example](https://github.com/sisap-challenges/sisap23-laion-challenge-example)
 
