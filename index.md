@@ -7,7 +7,7 @@ tags = ["sisap", "challenge"]
 
 The International Conference on Similarity Search and Applications (SISAP) is an annual forum for researchers and application developers in the area of similarity data management. It aims at the technological problems shared by numerous application domains, such as data mining, information retrieval, multimedia, computer vision, pattern recognition, computational biology, geography, biometrics, machine learning, and many others that use similarity search as a necessary supporting service. Machine learning, dense retrieval, and multimedia indexing have taken the scene of similarity search as the most challenging task among applications. This call reflects on this observation.
 
-In 2023 we are launching the _Indexing Challenge and Demo Track_ with a test bed to compare new and existing indexing algorithms in a common task. Current data pools are in the order of several billion objects to train a generative deep neural network; we will be steering towards indexing datasets in this size in upcoming editions of this challenge. For this year, we are launching the challenge with datasets sized one to one hundred million objects. We aim to provide a common test bed to report on theoretical and practical advances in proximity indexing objects in different scales.
+In 2023 we are launching the _Indexing Challenge and Demo Track_ with a test bed to compare new and existing indexing algorithms in a common task. For this year, we are launching the challenge with datasets sized ten to one hundred million objects. We aim to provide a common test bed to report on theoretical and practical advances in proximity indexing objects in different scales.
 
 To make results comparable, we ask participants to normalize the results using sequential $k$-nn search, reporting speedup with respect to this baseline instead of plain query speed or throughput. We will also verify those solutions that can be reproduced in a reasonable effort and time (below, we provide a set of guidelines to help with this goal) using a common workstation.
 
@@ -21,7 +21,7 @@ The team should create a GitHub repository with the system and a GitHub Action (
 The GitHub repository can remain private during the challenge, although it is expected to be made public after the challenge or at the very least give access to the organizers. We expect the repository to work with the GitHub Actions continuous integration and correctly run a small test bed containing all the necessary configurations and hyper-parameters to run tasks.
 @@
 
-Solutions working on different subsets should also specify the setup to reproduce results. The solution should store its output in a prescribed format for each task. Repositories should give enough information to determine what functions should be run and if hyperparameters should be set for each subset and task; this is critical for solutions working on several tasks and several dataset subsets.
+All solutions must follow our io guides for each task, see EXAMP.... . In any case, repositories should give enough information to determine what functions should be run and the precise hyperparameters to use for each subset and task; this is critical for solutions working on several tasks and several dataset subsets.
 
 Authors are encouraged to prepare a short paper reporting its design, ablation study, result, and discussion in a traditional SISAP short paper format. This report will be included in the main conference proceedings published by Springer in its LNCS series.
 
