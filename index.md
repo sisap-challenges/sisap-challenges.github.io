@@ -6,8 +6,14 @@ tags = ["sisap", "challenge"]
 
 The International Conference on Similarity Search and Applications (SISAP) is an annual forum for researchers and application developers in the area of similarity data management. It aims at the technological problems shared by numerous application domains, such as data mining, information retrieval, multimedia, computer vision, pattern recognition, computational biology, geography, biometrics, machine learning, and many others that use similarity search as a necessary supporting service. Machine learning, dense retrieval, and multimedia indexing have taken the scene of similarity search as the most challenging task among applications. This call reflects on this observation.
 
-In 2023 we are launching the \textit{SISAP Indexing Challenge and Demo Track} with a test bed to compare new and existing indexing algorithms in three common tasks. Current data pools are in the order of several billion objects to train a generative deep neural network; we will be steering towards indexing datasets in this size in upcoming editions of this challenge. For this year, we are launching the challenge with datasets fitting on a single modern desktop computer, sized from ten million to one hundred million objects. We aim at providing a common test bed to compare new indexes, re-implementations of previously known indexes and an overview of the behavior of similarity search at various size scales.
+In 2023 we are launching the \textit{SISAP Indexing Challenge} with a test bed to compare new and existing indexing algorithms in three common tasks. Current data pools are in the order of several billion objects to train a generative deep neural network; we will be steering towards indexing datasets in this size in upcoming editions of this challenge. For this year, we are launching the challenge with datasets fitting on a single modern desktop computer, sized from ten million to one hundred million objects. We aim at providing a common test bed to compare new indexes, re-implementations of previously known indexes and an overview of the behavior of similarity search at various size scales.
 
+## Important information
+- Task list and description: [https://sisap-challenges.github.io/tasks/](https://sisap-challenges.github.io/tasks/).
+- Evaluation: [https://sisap-challenges.github.io/tasks/](https://sisap-challenges.github.io/tasks/).
+- Important dates: below $\arrowdown$.
+- Datasets:  [https://sisap-challenges.github.io/datasets/](https://sisap-challenges.github.io/datasets/).
+- Example GitHub repositories (Actions enabled):  [https://sisap-challenges.github.io/repoexamples/](https://sisap-challenges.github.io/repoexamples/).
 
 ## Important dates
 
@@ -19,13 +25,6 @@ In 2023 we are launching the \textit{SISAP Indexing Challenge and Demo Track} wi
 - **Aug. 20th, 2023:** Publication of final rankings. 
 - **Sept. 4th, 2023:** Camera ready.
 - **Oct. 9-11, 2023:** SISAP 2023 in A Coruña, Spain, with a special session for the challenge.
-
-## Important information
-
-- Task list and description: [https://sisap-challenges.github.io/tasks/](https://sisap-challenges.github.io/tasks/).
-- Evaluation: [https://sisap-challenges.github.io/tasks/](https://sisap-challenges.github.io/tasks/).
-- Datasets:  [https://sisap-challenges.github.io/datasets/](https://sisap-challenges.github.io/datasets/).
-- Example GitHub repositories (Actions enabled):  [https://sisap-challenges.github.io/repoexamples/](https://sisap-challenges.github.io/repoexamples/).
 
 
 ## Reports
