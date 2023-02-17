@@ -26,5 +26,5 @@ For instance:
 -->
 \newcommand{\R}{\mathbb R}
 \newcommand{\scal}[1]{\langle #1 \rangle}
-\newcommand{\textit}[1]{_{#1}_}
-\newcommand{\texttt}[1]{_{#1}_}
+\newcommand{\textit}[1]{_#1_}
+\newcommand{\texttt}[1]{_#1_}
