@@ -13,6 +13,3 @@ It should support `.npz` files and `.h5` files as inputs.
 
 The output should be an _.h5_ file using groups _knns_ for identifiers and _dists_ for distances.
 Identifiers should start at 0 or 1 but must be specified.
-
-
-[]
