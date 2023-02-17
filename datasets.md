@@ -9,22 +9,34 @@ tags = ["LAION2B", "dataset", "projections", "gold standard", "pca32", "pca96", 
 
 \toc
 
-## About the LAION2B 
+## About the LAION5B
 
-For the challenge and demo track, we selected a 10M, 30M, and 100M-size subsets of the English LAION-5B (often called LAION2B) using Contrastive Language–Image Pre-training (CLIP) embeddings and a set of 10k independent queries to compute a gold standard for each subset.
-CLIP vectors are typically 768-dimensional and compared under the cosine similarity. 
+The **LAION5B** dataset is an openly available image collection that has been used for learning very large visual and language deep-neural models; for instance, the famed stable diffusion generative model used it as the training set.
+The collection equips each image with a URL handle, allowing people to showcase demonstrations easily.
 
 A more detailed description can be found here:
 ```
 Schuhmann, C., Beaumont, R., Vencu, R., Gordon, C., Wightman, R., Cherti, M., ... & Jitsev, J. (2022). Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402.
 ```
 
+### Metadata
+
 The metadata is publicly available through the [LAION-5B](https://laion.ai/blog/laion-5b/) effort and the [Hugging face repository](https://huggingface.co/laion). Please note that the LAION-5B dataset contains many NSFW materials that were discarded.
 
+
+### Subset of the challenge
 The dataset is divided into parts containing close to 1M vectors. We selected the first 112 parts (0000 to 0111); we used the first part to extract the public query set and the rest to extract the database. The subset use approximately 160GB of space and its associated metadata 20GB (the first 112 parts). Embeddings are distributed using single precision (16bits) floating point vectors bundled in the NumPy data-specific format `.npz`. They can be loaded on most platforms due to the format's popularity.
 
+The challenge has three subsets:
 
-## Downloading the original data
+- 10M subset: concatenation of 1-11 parts.
+- 30M subset: concatenation of 1-33 parts.
+- 100M subset: concatenation of 1-111 parts.
+- queries: computed from part 0.
+
+All parts should be concatenated in order and also removing NSFW entries (marked in metadata files).
+
+#### Downloading the dataset
 
 The embeddings are also publicly available from the original mirror site [https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/).
 
@@ -50,7 +62,7 @@ done
 
 Remove the `echo` command to actually start downloading.
 
-Throubleshooting: You can restart and resume partial downloads adding `-C -` to the `curl` command line, as follows:
+Troubleshooting: You can restart and resume partial downloads adding `-C -` to the `curl` command line, as follows:
 
 ```bash
 curl -C - -O https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-en/img_emb/img_emb_0000.npy
