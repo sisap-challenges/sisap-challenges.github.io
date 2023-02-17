@@ -11,7 +11,7 @@ In 2023 we are launching the \textit{SISAP Indexing Challenge} with a test bed t
 ## Important information
 - Task list and description: [https://sisap-challenges.github.io/tasks/](https://sisap-challenges.github.io/tasks/).
 - Evaluation: [https://sisap-challenges.github.io/tasks/](https://sisap-challenges.github.io/tasks/).
-- Important dates: below $\arrowdown$.
+- Important dates: see below.
 - Datasets:  [https://sisap-challenges.github.io/datasets/](https://sisap-challenges.github.io/datasets/).
 - Example GitHub repositories (Actions enabled):  [https://sisap-challenges.github.io/repoexamples/](https://sisap-challenges.github.io/repoexamples/).
 
