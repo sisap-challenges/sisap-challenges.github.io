@@ -23,5 +23,5 @@ Take a look on `.github/workflows/ci.yml` files, please feel free to use them as
 [https://github.com/sisap-challenges/sisap23-laion-challenge-faiss-example](https://github.com/sisap-challenges/sisap23-laion-challenge-faiss-example)
 
 ## Julia and `SimilaritySearch.jl`
-[https://github.com/sisap-challenges/sisap23-laion-challenge-example](https://github.com/sisap-challenges/sisap23-laion-challenge-example)
+[https://github.com/sisap-challenges/sisap23-laion-challenge-julia-example](https://github.com/sisap-challenges/sisap23-laion-challenge-julia-example)
 
