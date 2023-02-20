@@ -18,7 +18,7 @@ In 2023 we are launching the \textit{SISAP Indexing Challenge} with a test bed t
 ## Important dates
 
 - **Feb. 20th, 2023:** Call for participation published, declaration of interest opened.
-- **April 3rd, 2023:** Declaration of interest closes.
+- **April 3rd, 2023:** Expression of interest closes.
 - **July 10th, 2023:** Submission of proposed implementations.
 - **July 31th, 2023:** Short paper deadline (AoE).
 - **Aug. 14th, 2023:** Paper notification. 

@@ -73,9 +73,9 @@ Each dataset part has metadata and embedding files. The medatada file is an Apac
 
 ## Projections
 
-We encourage people to construct their entire data pipeline to handle data for indexing and searching. However, we produced three different lower-dimensional projections that can be used. In particular, we computed two PCA projections using 32 and 96 dimensions and one more projection into binary sketches designed to work with bit-level hamming distance (using 1024 bits). Find below the URLs to download these bundles.
+We encourage people to construct their entire data pipeline to handle data for indexing and searching. However, we produced three different lower-dimensional projections that can be used. In particular, we computed two PCA projections using 32 and 96 dimensions and one more projection into binary sketches designed to work with bit-level hamming distance (using 1024 bits). Find below the URLs to download these bundles. 
 
-**Note**: All these projections will reduce the result's quality with respect to the original embeddings. We will mention the kind of input used in the rank, but the rank will be global. The original data can be downloaded from the active LAION2B mirror instead. The metadata, if needed, should also be retrieved from the LAION2B mirror.
+**Note**: All these projections will reduce the result's quality with respect to the original embeddings (see the bottom of this page for more details). We will mention the kind of input used in the rank, but the rank will be global. The original data can be downloaded from the active LAION2B mirror instead. The metadata, if needed, should also be retrieved from the LAION2B mirror.
 
 
 ### Some technical specifications of the LAION-5B and the CLIP embeddings
@@ -157,3 +157,28 @@ files = [
 \textoutput{./datasets/table}
 
 two mirrors are given for these datasets, listed in the challenge site for our projections, queries, and gold-standard datasets.
+
+## Projection's recall and baseline search times (bruteforce)
+Each projection is an approximation of the original CLIP embeddings; therefore, they produce a quality reduction. For instance, we computed the upper bound recall scores (using brute force) for searching for the 30 nearest neighbors are:
+
+
+```julia:./table-recall
+#hideall
+using DataFrames, CSV
+table = CSV.read("recall-projections.csv", DataFrame)
+
+# data size algo buildtime querytime params recall 
+
+println("| data | size | recall | querytime (32 cores / 64 threads) |")
+println("|------|------|--------|-----------------------|")
+for r in eachrow(table)
+    recall = round(r.recall, digits=4)
+    querytime = round(r.querytime, digits=2)
+    println("|$(r.data)|$(r.size)|$(recall)|$(querytime)s|")
+end
+
+```
+
+\textoutput{./table-recall}
+
+Note that our projection models were trained with the 2d part of the LAION2B dataset (i.e, id=0001 with approx. 1M vectors). Other approaches may vary the resulting quality.
