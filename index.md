@@ -23,7 +23,7 @@ In 2023 we are launching the \textit{SISAP Indexing Challenge} with a test bed t
 - **Aug. 14th, 2023:** Paper notification. 
 - **Aug. 20th, 2023:** Publication of final rankings. 
 - **Sept. 4th, 2023:** Camera-ready.
-- **Oct. 9-11, 2023:** SISAP 2023 in A Coru{\~n}a, Spain, with a special session for the challenge.
+- **Oct. 9th-11th, 2023:** SISAP 2023 in A Coruña, Spain, with a special session for the challenge.
 
 [^1]: Visit <https://sisap-challenges.github.io/committee/> for more instructions.
 ## Reports
