@@ -198,21 +198,21 @@ Each projection is an approximation of the original CLIP embeddings; therefore, 
 
 ```julia:./table-recall
 #hideall
-using DataFrames, CSV
-table = CSV.read("recall-projections.csv", DataFrame)
-
-# data size algo buildtime querytime params recall 
-
-println("| data | size | recall | querytime (32 cores / 64 threads) |")
-println("|------|------|--------|-----------------------|")
-for r in eachrow(table)
-    recall = round(r.recall, digits=4)
-    querytime = round(r.querytime, digits=2)
-    println("|$(r.data)|$(r.size)|$(recall)|$(querytime)s|")
-end
-
+### using DataFrames, CSV
+### table = CSV.read("recall-projections.csv", DataFrame)
+### 
+### # data size algo buildtime querytime params recall 
+### 
+### println("| data | size | recall | querytime (32 cores / 64 threads) |")
+### println("|------|------|--------|-----------------------|")
+### for r in eachrow(table)
+###     recall = round(r.recall, digits=4)
+###     querytime = round(r.querytime, digits=2)
+###     println("|$(r.data)|$(r.size)|$(recall)|$(querytime)s|")
+### end
+## \textoutput{./table-recall}
 ```
 
-\textoutput{./table-recall}
+
 
 Note that our projection models were trained with the 2d part of the LAION2B dataset (i.e, id=0001 with approx. 1M vectors). Other approaches may vary the resulting quality.
