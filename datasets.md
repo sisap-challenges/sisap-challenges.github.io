@@ -69,7 +69,39 @@ curl -C - -O https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-
 ```
 
 ### Filtering out NSFW to get the precise subsets
-Each dataset part has metadata and embedding files. The medatada file is an Apache parquet table where we can find registers containing information like URL, description, and NSFW status, among other fields. Participants must use the NSFW field to obtain a mask for _NSFW_ that should be used to get the desired sub-matrix. 
+Each dataset part has metadata and embedding files. The metadata file is an Apache parquet table where we can find registers containing information like URL, description, and NSFW status, among other fields. Participants must use the NSFW field to obtain a mask for _NSFW_ that should be used to get the desired sub-matrix. 
+
+The following script for the Julia language can be used for this purpose. Once you have downloaded the LAION parts and metadata, run the Julia REPL in the directory where you saved the files. The necessary packages will be asked to be installed:
+
+```julia
+using Parquet2, DataFrames, Glob, Printf, JLD2, CSV, OhMyREPL
+
+let N = 111
+    D = Float16[]; sizehint!(D, 768 * (N * 10^6)); L = []
+    for i in 1:N
+        embfile = @sprintf "img_emb_%04d.h5" i
+        metafile = @sprintf "metadata_%04d.parquet" i
+        @show embfile, metafile
+        df = DataFrame(Parquet2.select(Parquet2.Dataset(metafile), :caption, :NSFW, :LICENSE, :url), copycols=false)
+        mask = [(!ismissing(r.NSFW) && r.NSFW != "NSFW") for r in eachrow(df)]
+        df = df[mask, :]
+        X = jldopen(f->f["emb"], embfile)
+        @assert size(X, 1) == 768
+        @assert size(X, 2) == length(mask)
+        length(L) == 0 ? push!(L, df) : append!(L[1], df)
+        X = X[:, mask]
+        append!(D, vec(X))
+        @show N => (768, length(D) ÷ 768)
+        if i in (11, 33, 111)
+            CSV.write("metadata-$i.tsv", L[1], delim='\t')  # you can use this file to create demos
+            jldsave("laion2B-$i.h5", emb=reshape(copy(D), (768, length(D) ÷ 768)))
+        end
+    end
+end
+
+```
+
+Adjust `N` if necessary. Please recall that subset 10M contains 11 parts, 30M contains 33 parts, and 100M is composed of 111 parts.
 
 ## Projections
 
