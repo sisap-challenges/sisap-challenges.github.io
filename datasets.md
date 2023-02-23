@@ -103,7 +103,21 @@ end
 
 ```
 
+Package versions:
+```
+  [336ed68f] CSV v0.10.9
+⌃ [a93c6f00] DataFrames v1.4.4
+  [c27321d9] Glob v1.3.0
+  [033835bb] JLD2 v0.4.30
+  [5fb14364] OhMyREPL v0.5.13
+⌃ [98572fba] Parquet2 v0.2.8
+```
+
 Adjust `N` if necessary. Please recall that subset 10M contains 11 parts, 30M contains 33 parts, and 100M is composed of 111 parts.
+
+@@warn
+Original LAION parts are distributed in `npz` format and you can load them with `numpy` or the `NPZ.jl` package when you work with Julia.
+@@
 
 ## Projections
 
