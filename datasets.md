@@ -94,6 +94,8 @@ let N = 111
         @show N => (768, length(D) ÷ 768)
         if i in (11, 33, 111)
             CSV.write("metadata-$i.tsv", L[1], delim='\t')  # you can use this file to create demos
+            # the copy is necessary only because reshape marks the array as shared and
+            # append! will raise errors
             jldsave("laion2B-$i.h5", emb=reshape(copy(D), (768, length(D) ÷ 768)))
         end
     end
