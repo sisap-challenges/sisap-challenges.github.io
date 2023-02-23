@@ -61,7 +61,15 @@ curl -O https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-en/la
         <span class=hljs-keyword >end</span>
     <span class=hljs-keyword >end</span>
 <span class=hljs-keyword >end</span></code></pre>
+<p>Package versions:</p>
+<pre><code class="julia hljs">[<span class=hljs-number >336</span>ed68f] CSV v0<span class=hljs-number >.10</span><span class=hljs-number >.9</span>
+⌃ [a93c6f00] DataFrames v1<span class=hljs-number >.4</span><span class=hljs-number >.4</span>
+  [c27321d9] Glob v1<span class=hljs-number >.3</span><span class=hljs-number >.0</span>
+  [<span class=hljs-number >033835</span>bb] JLD2 v0<span class=hljs-number >.4</span><span class=hljs-number >.30</span>
+  [<span class=hljs-number >5</span>fb14364] OhMyREPL v0<span class=hljs-number >.5</span><span class=hljs-number >.13</span>
+⌃ [<span class=hljs-number >98572</span>fba] Parquet2 v0<span class=hljs-number >.2</span><span class=hljs-number >.8</span></code></pre>
 <p>Adjust <code>N</code> if necessary. Please recall that subset 10M contains 11 parts, 30M contains 33 parts, and 100M is composed of 111 parts.</p>
+<div class=warn >Original LAION parts are distributed in <code>npz</code> format and you can load them with <code>numpy</code> or the <code>NPZ.jl</code> package when you work with Julia.</div>
 <h2 id=projections ><a href="#projections" class=header-anchor >Projections</a></h2>
 <p>We encourage people to construct their entire data pipeline to handle data for indexing and searching. However, we produced three different lower-dimensional projections that can be used. In particular, we computed two PCA projections using 32 and 96 dimensions and one more projection into binary sketches designed to work with bit-level hamming distance &#40;using 1024 bits&#41;. Find below the URLs to download these bundles. </p>
 <p><strong>Note</strong>: All these projections will reduce the result&#39;s quality with respect to the original embeddings &#40;see the bottom of this page for more details&#41;. We will mention the kind of input used in the rank, but the rank will be global. The original data can be downloaded from the active LAION2B mirror instead. The metadata, if needed, should also be retrieved from the LAION2B mirror.</p>
