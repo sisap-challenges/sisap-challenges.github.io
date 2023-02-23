@@ -33,7 +33,33 @@ curl -O https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-en/la
 <p>Troubleshooting: You can restart and resume partial downloads adding <code>-C -</code> to the <code>curl</code> command line, as follows:</p>
 <pre><code class="bash hljs">curl -C - -O https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-en/img_emb/img_emb_0000.npy</code></pre>
 <h3 id=filtering_out_nsfw_to_get_the_precise_subsets ><a href="#filtering_out_nsfw_to_get_the_precise_subsets" class=header-anchor >Filtering out NSFW to get the precise subsets</a></h3>
-<p>Each dataset part has metadata and embedding files. The medatada file is an Apache parquet table where we can find registers containing information like URL, description, and NSFW status, among other fields. Participants must use the NSFW field to obtain a mask for <em>NSFW</em> that should be used to get the desired sub-matrix. </p>
+<p>Each dataset part has metadata and embedding files. The metadata file is an Apache parquet table where we can find registers containing information like URL, description, and NSFW status, among other fields. Participants must use the NSFW field to obtain a mask for <em>NSFW</em> that should be used to get the desired sub-matrix. </p>
+<p>The following script for the Julia language can be used for this purpose. Once you have downloaded the LAION parts and metadata, run the Julia REPL in the directory where you saved the files. The necessary packages will be asked to be installed:</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >using</span> Parquet2, DataFrames, Glob, Printf, JLD2, CSV, OhMyREPL
+
+<span class=hljs-keyword >let</span> N = <span class=hljs-number >111</span>
+    D = <span class=hljs-built_in >Float16</span>[]; sizehint!(D, <span class=hljs-number >768</span> * (N * <span class=hljs-number >10</span>^<span class=hljs-number >6</span>)); L = []
+    <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> <span class=hljs-number >1</span>:N
+        embfile = <span class=hljs-meta >@sprintf</span> <span class=hljs-string >&quot;img_emb_%04d.h5&quot;</span> i
+        metafile = <span class=hljs-meta >@sprintf</span> <span class=hljs-string >&quot;metadata_%04d.parquet&quot;</span> i
+        <span class=hljs-meta >@show</span> embfile, metafile
+        df = DataFrame(Parquet2.select(Parquet2.Dataset(metafile), :caption, :NSFW, :LICENSE, :url), copycols=<span class=hljs-literal >false</span>)
+        mask = [(!ismissing(r.NSFW) &amp;&amp; r.NSFW != <span class=hljs-string >&quot;NSFW&quot;</span>) <span class=hljs-keyword >for</span> r <span class=hljs-keyword >in</span> eachrow(df)]
+        df = df[mask, :]
+        X = jldopen(f-&gt;f[<span class=hljs-string >&quot;emb&quot;</span>], embfile)
+        <span class=hljs-meta >@assert</span> size(X, <span class=hljs-number >1</span>) == <span class=hljs-number >768</span>
+        <span class=hljs-meta >@assert</span> size(X, <span class=hljs-number >2</span>) == length(mask)
+        length(L) == <span class=hljs-number >0</span> ? push!(L, df) : append!(L[<span class=hljs-number >1</span>], df)
+        X = X[:, mask]
+        append!(D, vec(X))
+        <span class=hljs-meta >@show</span> N =&gt; (<span class=hljs-number >768</span>, length(D) ÷ <span class=hljs-number >768</span>)
+        <span class=hljs-keyword >if</span> i <span class=hljs-keyword >in</span> (<span class=hljs-number >11</span>, <span class=hljs-number >33</span>, <span class=hljs-number >111</span>)
+            CSV.write(<span class=hljs-string >&quot;metadata-<span class=hljs-variable >$i</span>.tsv&quot;</span>, L[<span class=hljs-number >1</span>], delim=&#x27;\t&#x27;)  <span class=hljs-comment ># you can use this file to create demos</span>
+            jldsave(<span class=hljs-string >&quot;laion2B-<span class=hljs-variable >$i</span>.h5&quot;</span>, emb=reshape(copy(D), (<span class=hljs-number >768</span>, length(D) ÷ <span class=hljs-number >768</span>)))
+        <span class=hljs-keyword >end</span>
+    <span class=hljs-keyword >end</span>
+<span class=hljs-keyword >end</span></code></pre>
+<p>Adjust <code>N</code> if necessary. Please recall that subset 10M contains 11 parts, 30M contains 33 parts, and 100M is composed of 111 parts.</p>
 <h2 id=projections ><a href="#projections" class=header-anchor >Projections</a></h2>
 <p>We encourage people to construct their entire data pipeline to handle data for indexing and searching. However, we produced three different lower-dimensional projections that can be used. In particular, we computed two PCA projections using 32 and 96 dimensions and one more projection into binary sketches designed to work with bit-level hamming distance &#40;using 1024 bits&#41;. Find below the URLs to download these bundles. </p>
 <p><strong>Note</strong>: All these projections will reduce the result&#39;s quality with respect to the original embeddings &#40;see the bottom of this page for more details&#41;. We will mention the kind of input used in the rank, but the rank will be global. The original data can be downloaded from the active LAION2B mirror instead. The metadata, if needed, should also be retrieved from the LAION2B mirror.</p>
@@ -59,7 +85,7 @@ curl -O https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-en/la
 
 <p>Note that our projection models were trained with the 2d part of the LAION2B dataset &#40;i.e, id&#61;0001 with approx. 1M vectors&#41;. Other approaches may vary the resulting quality.</p>
 <div class=page-foot >
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> sisap challenge committee. Last modified: February 22, 2023.
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> sisap challenge committee. Last modified: February 23, 2023.
     Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
 </div>
 </div>
