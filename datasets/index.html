@@ -55,6 +55,8 @@ curl -O https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-en/la
         <span class=hljs-meta >@show</span> N =&gt; (<span class=hljs-number >768</span>, length(D) ÷ <span class=hljs-number >768</span>)
         <span class=hljs-keyword >if</span> i <span class=hljs-keyword >in</span> (<span class=hljs-number >11</span>, <span class=hljs-number >33</span>, <span class=hljs-number >111</span>)
             CSV.write(<span class=hljs-string >&quot;metadata-<span class=hljs-variable >$i</span>.tsv&quot;</span>, L[<span class=hljs-number >1</span>], delim=&#x27;\t&#x27;)  <span class=hljs-comment ># you can use this file to create demos</span>
+            <span class=hljs-comment ># the copy is necessary only because reshape marks the array as shared and</span>
+            <span class=hljs-comment ># append! will raise errors</span>
             jldsave(<span class=hljs-string >&quot;laion2B-<span class=hljs-variable >$i</span>.h5&quot;</span>, emb=reshape(copy(D), (<span class=hljs-number >768</span>, length(D) ÷ <span class=hljs-number >768</span>)))
         <span class=hljs-keyword >end</span>
     <span class=hljs-keyword >end</span>
