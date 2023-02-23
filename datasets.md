@@ -192,6 +192,7 @@ files = [
 
 two mirrors are given for these datasets, listed in the challenge site for our projections, queries, and gold-standard datasets.
 
+<!--
 ## Projection's recall and baseline search times (bruteforce)
 Each projection is an approximation of the original CLIP embeddings; therefore, they produce a quality reduction. For instance, we computed the upper bound recall scores (using brute force) for searching for the 30 nearest neighbors are:
 
@@ -214,5 +215,6 @@ Each projection is an approximation of the original CLIP embeddings; therefore, 
 ```
 
 
+-->
 
 Note that our projection models were trained with the 2d part of the LAION2B dataset (i.e, id=0001 with approx. 1M vectors). Other approaches may vary the resulting quality.
