@@ -45,8 +45,8 @@ N- **Note 1:** It is well known other approaches like product quantization, loca
 This task asks for solutions for fast indexing binary sketches under the Hamming distance. Participants can use their solutions on Task B to compute the projections or a set of binary sketches added with a variant of the brief permutation binary sketches.[^2]
 
 - **Input queries:** Idem Task A.
-- **Input dataset:** I task A.
-- **Output:** Idem Task B, but we expect that teams use an index working with the Hamming distance instead of brute force.
+- **Input dataset:** Idem task A.
+- **Output:** Similar to Task B, but we expect that teams use an index working with the Hamming distance instead of brute force.
 - **Ranking:** Best queries-per-second for results having a recall bigger than $90%$ of our baseline recall[^2] w.r.t a public gold standard (partial ranking, working with GitHub Actions) and w.r.t. a private gold standard (final ranking).
 
 [^2]: Santoyo, F., Chávez, E., & Téllez, E. S. (2014). A compressed index for hamming distances. In Similarity Search and Applications: 7th International Conference, SISAP 2014, Los Cabos, Mexico, October 29-31, 2014. Proceedings 7 (pp. 113-126). Springer International Publishing.
