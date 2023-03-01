@@ -50,3 +50,7 @@ This task asks for solutions for fast indexing binary sketches under the Hamming
 - **Ranking:** Best queries-per-second for results having a recall bigger than $90%$ of our baseline recall[^2] w.r.t a public gold standard (partial ranking, working with GitHub Actions) and w.r.t. a private gold standard (final ranking).
 
 [^2]: Santoyo, F., Chávez, E., & Téllez, E. S. (2014). A compressed index for hamming distances. In Similarity Search and Applications: 7th International Conference, SISAP 2014, Los Cabos, Mexico, October 29-31, 2014. Proceedings 7 (pp. 113-126). Springer International Publishing.
+
+
+### General notes
+We will impose hard wall times (12hrs) for construction and searching for verification and reproduction (final ranking). We expect that people already specify hyperparameters in the solutions for each subset and task.
