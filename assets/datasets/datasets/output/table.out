@@ -1,44 +1,49 @@
 
+## 768d clip embeddings
+| dataset | description | size | md5      |
+|---------|-------------|------|----------|
+| [laion2B-en-clip768-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/clip768/en-bundles/laion2B-en-clip768-n=100M.h5) | 100K subset | 147G | 9d8ee3347b1edf136b3ef38162ac05c3 |
+| [laion2B-en-clip768-n=30M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/clip768/en-bundles/laion2B-en-clip768-n=30M.h5) | 100K subset | 44G | 15a24d28d2304e14711e23baf7fe86a4 |
+| [laion2B-en-clip768-n=10M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/clip768/en-bundles/laion2B-en-clip768-n=10M.h5) | 100K subset | 15G | c05e4b1d2b2a0c7663ac9767753e25e1 |
+| [laion2B-en-clip768-n=300K.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/clip768/en-bundles/laion2B-en-clip768-n=300K.h5) | 100K subset, for developing purposes | 440M | d238b4b037c32bae41e497f95dffa895 |
+| [laion2B-en-clip768-n=100K.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/clip768/en-bundles/laion2B-en-clip768-n=100K.h5) | 100K subset, for developing purposes | 147M | daef38a64e3cd1c5233231f8be882a64 |
+| [public-queries-10k-clip768.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/clip768/en-queries/public-queries-10k-clip768.h5) | 10k public query set (original 768d embeddings) | 30M | 257b9eb3f7f25776e0d33b22451b7b32 |
+
 ## 32d PCA projections
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
-| [laion2B-en-pca32-n=100M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=100M.h5) | 100M subset | 13G | 6a83e337ee5e73532aa0884cf626f1ae |
-| [laion2B-en-pca32-n=30M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=30M.h5) | 30M subset | 3.7G | 3ab3b201e8aa089e4567bf1eaeb4f4a7 |
-| [laion2B-en-pca32-n=10M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=10M.h5) | 10M subset | 1.3G | 8a6e7521d125ffc6c138b486e1876951 |
-| [laion2B-en-pca32-n=300K.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=300K.h5) | 300K subset, for developing purposes | 37M | 3c8b15e7459f813b5aebc624b16ad867 |
-| [laion2B-en-pca32-n=100K.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=100K.h5) | 100K subset, for developing purposes | 13M | 20faeeb7380a394b1f7a8ce15774b150 |
-| [public-queries-10k-pca32.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca32/en-queries/public-queries-10k-pca32.h5) | 10k public query set for 32d PCA projection | 1.3M | 638a83185a6bd3490559531123559180 |
+| [laion2B-en-pca32-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/pca32/en-bundles/laion2B-en-pca32-n=100M.h5) | 100M subset | 13G | 6a83e337ee5e73532aa0884cf626f1ae |
+| [laion2B-en-pca32-n=30M.h5](https://sisap-23-challenge.s3.amazonaws.com/pca32/en-bundles/laion2B-en-pca32-n=30M.h5) | 30M subset | 3.7G | 3ab3b201e8aa089e4567bf1eaeb4f4a7 |
+| [laion2B-en-pca32-n=10M.h5](https://sisap-23-challenge.s3.amazonaws.com/pca32/en-bundles/laion2B-en-pca32-n=10M.h5) | 10M subset | 1.3G | 8a6e7521d125ffc6c138b486e1876951 |
+| [laion2B-en-pca32-n=300K.h5](https://sisap-23-challenge.s3.amazonaws.com/pca32/en-bundles/laion2B-en-pca32-n=300K.h5) | 300K subset, for developing purposes | 37M | 3c8b15e7459f813b5aebc624b16ad867 |
+| [laion2B-en-pca32-n=100K.h5](https://sisap-23-challenge.s3.amazonaws.com/pca32/en-bundles/laion2B-en-pca32-n=100K.h5) | 100K subset, for developing purposes | 13M | 20faeeb7380a394b1f7a8ce15774b150 |
+| [public-queries-10k-pca32.h5](https://sisap-23-challenge.s3.amazonaws.com/pca32/en-queries/public-queries-10k-pca32.h5) | 10k public query set for 32d PCA projection | 1.3M | 638a83185a6bd3490559531123559180 |
 
 ## 96d PCA projections
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
-| [laion2B-en-pca96-n=100M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=100M.h5) | 100M subset | 37G | 2eb46114b4ac4b9add106b1934858892 |
-| [laion2B-en-pca96-n=30M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=30M.h5) | 30M subset | 11G | eca407fef10ad02b67575557a96d5c1d |
-| [laion2B-en-pca96-n=10M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=10M.h5) | 10M subset | 3.7G | b349c3e58cd3b0421643f27878066e03 |
-| [laion2B-en-pca96-n=300K.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=300K.h5) | 300K subset, for developing purposes | 110M | 8f3991fb4efeaa67f13ee7dc8407e1b6 |
-| [laion2B-en-pca96-n=100K.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=100K.h5) | 100K subset, for developing purposes | 37M | 513d2c93efa0fa225bada4b123d45f37 |
-| [public-queries-10k-pca96.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/pca96/en-queries/public-queries-10k-pca96.h5) | 10k public query set for 96d PCA projection | 3.7M | a8651dce51a13da26c65ace188d76f3e |
+| [laion2B-en-pca96-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/pca96/en-bundles/laion2B-en-pca96-n=100M.h5) | 100M subset | 37G | 2eb46114b4ac4b9add106b1934858892 |
+| [laion2B-en-pca96-n=30M.h5](https://sisap-23-challenge.s3.amazonaws.com/pca96/en-bundles/laion2B-en-pca96-n=30M.h5) | 30M subset | 11G | eca407fef10ad02b67575557a96d5c1d |
+| [laion2B-en-pca96-n=10M.h5](https://sisap-23-challenge.s3.amazonaws.com/pca96/en-bundles/laion2B-en-pca96-n=10M.h5) | 10M subset | 3.7G | b349c3e58cd3b0421643f27878066e03 |
+| [laion2B-en-pca96-n=300K.h5](https://sisap-23-challenge.s3.amazonaws.com/pca96/en-bundles/laion2B-en-pca96-n=300K.h5) | 300K subset, for developing purposes | 110M | 8f3991fb4efeaa67f13ee7dc8407e1b6 |
+| [laion2B-en-pca96-n=100K.h5](https://sisap-23-challenge.s3.amazonaws.com/pca96/en-bundles/laion2B-en-pca96-n=100K.h5) | 100K subset, for developing purposes | 37M | 513d2c93efa0fa225bada4b123d45f37 |
+| [public-queries-10k-pca96.h5](https://sisap-23-challenge.s3.amazonaws.com/pca96/en-queries/public-queries-10k-pca96.h5) | 10k public query set for 96d PCA projection | 3.7M | a8651dce51a13da26c65ace188d76f3e |
 
 ## 1024-bit binary sketches
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
-| [laion2B-en-hamming-n=100M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=100M.h5) | 100M subset | 13G | 5f615332d78164158b364f886a70acea |
-| [laion2B-en-hamming-n=30M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=30M.h5) | 30M subset | 3.7G | 0780987241fb78aade610393f44b236f |
-| [laion2B-en-hamming-n=10M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=10M.h5) | 10M subset | 1.3G | 6a9c7c50b3416c411e93df0d8800aa45 |
-| [laion2B-en-hamming-n=300K.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=300K.h5) | 300K subset, for developing purposes | 37M | afa0cfc6b959babb2c112dd35d02f8f6 |
-| [laion2B-en-hamming-n=100K.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=100K.h5) | 100K subset, for developing purposes | 13M | b5678d5651f1c60e332797fe602b7d6b |
-| [public-queries-10k-hamming.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/hamming/en-queries/public-queries-10k-hamming.h5) | 10k public query set for 1024-bit binary sketch projection | 1.3M | cd93f7bf61a436b5a45d0b3e1a002667 |
-
-## 768d-embeddings public dataset
-| dataset | description | size | md5      |
-|---------|-------------|------|----------|
-| [public-queries-10k.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/public-queries/public-queries-10k.h5) | 10k public query set (original 768d embeddings) | 30M | e95642c6a458431900365aa69bfdbf0f |
+| [laion2B-en-hamming-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/hamming/en-bundles/laion2B-en-hamming-n=100M.h5) | 100M subset | 13G | 5f615332d78164158b364f886a70acea |
+| [laion2B-en-hamming-n=30M.h5](https://sisap-23-challenge.s3.amazonaws.com/hamming/en-bundles/laion2B-en-hamming-n=30M.h5) | 30M subset | 3.7G | 0780987241fb78aade610393f44b236f |
+| [laion2B-en-hamming-n=10M.h5](https://sisap-23-challenge.s3.amazonaws.com/hamming/en-bundles/laion2B-en-hamming-n=10M.h5) | 10M subset | 1.3G | 6a9c7c50b3416c411e93df0d8800aa45 |
+| [laion2B-en-hamming-n=300K.h5](https://sisap-23-challenge.s3.amazonaws.com/hamming/en-bundles/laion2B-en-hamming-n=300K.h5) | 300K subset, for developing purposes | 37M | afa0cfc6b959babb2c112dd35d02f8f6 |
+| [laion2B-en-hamming-n=100K.h5](https://sisap-23-challenge.s3.amazonaws.com/hamming/en-bundles/laion2B-en-hamming-n=100K.h5) | 100K subset, for developing purposes | 13M | b5678d5651f1c60e332797fe602b7d6b |
+| [public-queries-10k-hamming.h5](https://sisap-23-challenge.s3.amazonaws.com/hamming/en-queries/public-queries-10k-hamming.h5) | 10k public query set for 1024-bit binary sketch projection | 1.3M | cd93f7bf61a436b5a45d0b3e1a002667 |
 
 ## Gold standard list
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
-| [laion2B-en-public-gold-standard-100M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/public-queries/en-gold-standard-public/laion2B-en-public-gold-standard-100M.h5) | 100M gold standard | 7.7M | 17789f878a128df7d1693ca6fab755fd |
-| [laion2B-en-public-gold-standard-30M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/public-queries/en-gold-standard-public/laion2B-en-public-gold-standard-30M.h5) | 30M gold standard | 7.7M | 06f2fdd419448060ca86acf6b23e64e2 |
-| [laion2B-en-public-gold-standard-10M.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/public-queries/en-gold-standard-public/laion2B-en-public-gold-standard-10M.h5) | 10M gold standard | 7.7M | d02750285783cabb04f425b61133910d |
-| [small-laion2B-en-public-gold-standard-300K.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/public-queries/en-gold-standard-public/small-laion2B-en-public-gold-standard-300K.h5) | 300K gold standard | 7.7M | 4164290dd39b8693d8bdb939d638495e |
-| [small-laion2B-en-public-gold-standard-100K.h5](http://ingeotec.mx/~sadit/metric-datasets/LAION/SISAP23-Challenge/public-queries/en-gold-standard-public/small-laion2B-en-public-gold-standard-100K.h5) | 100K gold standard | 7.7M | 2aecc02d78884e70b4578f5c08699d91 |
+| [laion2B-en-public-gold-standard-100M.h5](https://sisap-23-challenge.s3.amazonaws.com/public-queries/en-gold-standard-public/laion2B-en-public-gold-standard-100M.h5) | 100M gold standard | 7.7M | 17789f878a128df7d1693ca6fab755fd |
+| [laion2B-en-public-gold-standard-30M.h5](https://sisap-23-challenge.s3.amazonaws.com/public-queries/en-gold-standard-public/laion2B-en-public-gold-standard-30M.h5) | 30M gold standard | 7.7M | 06f2fdd419448060ca86acf6b23e64e2 |
+| [laion2B-en-public-gold-standard-10M.h5](https://sisap-23-challenge.s3.amazonaws.com/public-queries/en-gold-standard-public/laion2B-en-public-gold-standard-10M.h5) | 10M gold standard | 7.7M | d02750285783cabb04f425b61133910d |
+| [small-laion2B-en-public-gold-standard-300K.h5](https://sisap-23-challenge.s3.amazonaws.com/public-queries/en-gold-standard-public/small-laion2B-en-public-gold-standard-300K.h5) | 300K gold standard | 7.7M | 4164290dd39b8693d8bdb939d638495e |
+| [small-laion2B-en-public-gold-standard-100K.h5](https://sisap-23-challenge.s3.amazonaws.com/public-queries/en-gold-standard-public/small-laion2B-en-public-gold-standard-100K.h5) | 100K gold standard | 7.7M | 2aecc02d78884e70b4578f5c08699d91 |
