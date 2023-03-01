@@ -19,9 +19,7 @@ A more detailed description can be found here:
 Schuhmann, C., Beaumont, R., Vencu, R., Gordon, C., Wightman, R., Cherti, M., ... & Jitsev, J. (2022). Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402.
 ```
 
-### Metadata
-
-The metadata is publicly available through the [LAION-5B](https://laion.ai/blog/laion-5b/) effort and the [Hugging face repository](https://huggingface.co/laion). Please note that the LAION-5B dataset contains many NSFW materials that were discarded.
+The English subset, often called LAION2B, contains over 2 billion objects.
 
 
 ### Subset of the challenge
@@ -69,28 +67,28 @@ function tablehead()
 end
 
 files = [
-  nothing => "768d clip embeddings",
+  nothing => "768d clip embeddings (clip768)",
   "laion2B-en-clip768-n=100M.h5" => "100K subset",
   "laion2B-en-clip768-n=30M.h5" => "100K subset",
   "laion2B-en-clip768-n=10M.h5" => "100K subset",
   "laion2B-en-clip768-n=300K.h5" => "100K subset, for developing purposes",
   "laion2B-en-clip768-n=100K.h5" => "100K subset, for developing purposes",
   "public-queries-10k-clip768.h5" => "10k public query set (original 768d embeddings)",
-  nothing => "32d PCA projections",
+  nothing => "32d PCA projections (pca32)",
   "laion2B-en-pca32-n=100M.h5" => "100M subset",
   "laion2B-en-pca32-n=30M.h5" => "30M subset",
   "laion2B-en-pca32-n=10M.h5" => "10M subset",
   "laion2B-en-pca32-n=300K.h5" => "300K subset, for developing purposes",
   "laion2B-en-pca32-n=100K.h5" => "100K subset, for developing purposes",
   "public-queries-10k-pca32.h5" => "10k public query set for 32d PCA projection",
-  nothing => "96d PCA projections",
+  nothing => "96d PCA projections (pca96)",
   "laion2B-en-pca96-n=100M.h5" => "100M subset",
   "laion2B-en-pca96-n=30M.h5" => "30M subset",
   "laion2B-en-pca96-n=10M.h5" => "10M subset",
   "laion2B-en-pca96-n=300K.h5" => "300K subset, for developing purposes",
   "laion2B-en-pca96-n=100K.h5" => "100K subset, for developing purposes",
   "public-queries-10k-pca96.h5" => "10k public query set for 96d PCA projection",
-  nothing => "1024-bit binary sketches",
+  nothing => "1024-bit binary sketches (hamming)",
   "laion2B-en-hamming-n=100M.h5" => "100M subset",
   "laion2B-en-hamming-n=30M.h5" => "30M subset",
   "laion2B-en-hamming-n=10M.h5" => "10M subset",
@@ -155,6 +153,11 @@ Note that our projection models were trained with the 2d part of the LAION2B dat
 
 
 # Original LAION parts
+The LAION dataset is distributed in pairs of metadata and embeddings, bundled in parts of nearly 1 million each. Please note that the dataset contains many NSFW materials that must be discarded for our challenge, and this is made with the metadata information.
+
+### Metadata
+
+The metadata is publicly available through the [LAION-5B](https://laion.ai/blog/laion-5b/) effort and the [Hugging face repository](https://huggingface.co/laion). 
 
 ## Downloading the dataset
 
