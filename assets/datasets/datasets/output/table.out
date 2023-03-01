@@ -1,5 +1,5 @@
 
-## 768d clip embeddings
+## 768d clip embeddings (clip768)
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
 | [laion2B-en-clip768-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/clip768/en-bundles/laion2B-en-clip768-n=100M.h5) | 100K subset | 147G | 9d8ee3347b1edf136b3ef38162ac05c3 |
@@ -9,7 +9,7 @@
 | [laion2B-en-clip768-n=100K.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/clip768/en-bundles/laion2B-en-clip768-n=100K.h5) | 100K subset, for developing purposes | 147M | daef38a64e3cd1c5233231f8be882a64 |
 | [public-queries-10k-clip768.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/clip768/en-queries/public-queries-10k-clip768.h5) | 10k public query set (original 768d embeddings) | 30M | 257b9eb3f7f25776e0d33b22451b7b32 |
 
-## 32d PCA projections
+## 32d PCA projections (pca32)
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
 | [laion2B-en-pca32-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/pca32/en-bundles/laion2B-en-pca32-n=100M.h5) | 100M subset | 13G | 6a83e337ee5e73532aa0884cf626f1ae |
@@ -19,7 +19,7 @@
 | [laion2B-en-pca32-n=100K.h5](https://sisap-23-challenge.s3.amazonaws.com/pca32/en-bundles/laion2B-en-pca32-n=100K.h5) | 100K subset, for developing purposes | 13M | 20faeeb7380a394b1f7a8ce15774b150 |
 | [public-queries-10k-pca32.h5](https://sisap-23-challenge.s3.amazonaws.com/pca32/en-queries/public-queries-10k-pca32.h5) | 10k public query set for 32d PCA projection | 1.3M | 638a83185a6bd3490559531123559180 |
 
-## 96d PCA projections
+## 96d PCA projections (pca96)
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
 | [laion2B-en-pca96-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/pca96/en-bundles/laion2B-en-pca96-n=100M.h5) | 100M subset | 37G | 2eb46114b4ac4b9add106b1934858892 |
@@ -29,7 +29,7 @@
 | [laion2B-en-pca96-n=100K.h5](https://sisap-23-challenge.s3.amazonaws.com/pca96/en-bundles/laion2B-en-pca96-n=100K.h5) | 100K subset, for developing purposes | 37M | 513d2c93efa0fa225bada4b123d45f37 |
 | [public-queries-10k-pca96.h5](https://sisap-23-challenge.s3.amazonaws.com/pca96/en-queries/public-queries-10k-pca96.h5) | 10k public query set for 96d PCA projection | 3.7M | a8651dce51a13da26c65ace188d76f3e |
 
-## 1024-bit binary sketches
+## 1024-bit binary sketches (hamming)
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
 | [laion2B-en-hamming-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/hamming/en-bundles/laion2B-en-hamming-n=100M.h5) | 100M subset | 13G | 5f615332d78164158b364f886a70acea |
