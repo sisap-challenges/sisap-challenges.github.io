@@ -36,9 +36,129 @@ The challenge has three subsets:
 
 All parts should be concatenated in order and also removing NSFW entries (marked in metadata files).
 
-#### Downloading the dataset
+## Subsets
 
-The embeddings are also publicly available from the original mirror site [https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/).
+We provide access to different subsets of the dataset and also created three different lower-dimensional projections that can be used. In particular, we computed two PCA projections using 32 and 96 dimensions and one more projection into binary sketches designed to work with bit-level hamming distance (using 1024 bits). Find below the URLs to download these bundles. 
+
+```julia:./datasets/table
+#hideall
+urls = Dict()
+sizes = Dict()
+md5s = Dict()
+
+for line in readlines("dataset-files-urls.txt")
+    (length(line) == 0 || line[1] == '#') && continue
+    urls[basename(line)] = line
+end
+
+for line in readlines("dataset-files-size.txt")
+    (length(line) == 0 || line[1] == '#') && continue
+    s, name = split(line)
+    sizes[basename(name)] = s
+end
+
+for line in readlines("dataset-files-md5.txt")
+    (length(line) == 0 || line[1] == '#') && continue
+    s, name = split(line)
+    md5s[basename(name)] = s
+end
+
+function tablehead() 
+    println("| dataset | description | size | md5      |")
+    println("|---------|-------------|------|----------|")
+end
+
+files = [
+  nothing => "768d clip embeddings",
+  "laion2B-en-clip768-n=100M.h5" => "100K subset",
+  "laion2B-en-clip768-n=30M.h5" => "100K subset",
+  "laion2B-en-clip768-n=10M.h5" => "100K subset",
+  "laion2B-en-clip768-n=300K.h5" => "100K subset, for developing purposes",
+  "laion2B-en-clip768-n=100K.h5" => "100K subset, for developing purposes",
+  "public-queries-10k-clip768.h5" => "10k public query set (original 768d embeddings)",
+  nothing => "32d PCA projections",
+  "laion2B-en-pca32-n=100M.h5" => "100M subset",
+  "laion2B-en-pca32-n=30M.h5" => "30M subset",
+  "laion2B-en-pca32-n=10M.h5" => "10M subset",
+  "laion2B-en-pca32-n=300K.h5" => "300K subset, for developing purposes",
+  "laion2B-en-pca32-n=100K.h5" => "100K subset, for developing purposes",
+  "public-queries-10k-pca32.h5" => "10k public query set for 32d PCA projection",
+  nothing => "96d PCA projections",
+  "laion2B-en-pca96-n=100M.h5" => "100M subset",
+  "laion2B-en-pca96-n=30M.h5" => "30M subset",
+  "laion2B-en-pca96-n=10M.h5" => "10M subset",
+  "laion2B-en-pca96-n=300K.h5" => "300K subset, for developing purposes",
+  "laion2B-en-pca96-n=100K.h5" => "100K subset, for developing purposes",
+  "public-queries-10k-pca96.h5" => "10k public query set for 96d PCA projection",
+  nothing => "1024-bit binary sketches",
+  "laion2B-en-hamming-n=100M.h5" => "100M subset",
+  "laion2B-en-hamming-n=30M.h5" => "30M subset",
+  "laion2B-en-hamming-n=10M.h5" => "10M subset",
+  "laion2B-en-hamming-n=300K.h5" => "300K subset, for developing purposes",
+  "laion2B-en-hamming-n=100K.h5" => "100K subset, for developing purposes",
+  "public-queries-10k-hamming.h5" => "10k public query set for 1024-bit binary sketch projection",
+  nothing => "Gold standard list",
+  "laion2B-en-public-gold-standard-100M.h5" => "100M gold standard",
+  "laion2B-en-public-gold-standard-30M.h5" => "30M gold standard",
+  "laion2B-en-public-gold-standard-10M.h5" => "10M gold standard",
+  "small-laion2B-en-public-gold-standard-300K.h5" => "300K gold standard",
+  "small-laion2B-en-public-gold-standard-100K.h5" => "100K gold standard",
+]
+
+#open("assets/download-table.md", "w") do file
+    for (name, desc) in files
+        if name === nothing
+            println()
+            if desc !== nothing
+                println("## ", desc)
+                tablehead()
+            end
+        else
+            println("| [$(name)]($(urls[name])) | $desc | $(sizes[name]) | $(md5s[name]) |")
+        end
+    end
+#end
+
+```
+
+\textoutput{./datasets/table}
+
+<!--
+## Projection's recall and baseline search times (bruteforce)
+Each projection is an approximation of the original CLIP embeddings; therefore, they produce a quality reduction. For instance, we computed the upper bound recall scores (using brute force) for searching for the 30 nearest neighbors are:
+
+
+```julia:./table-recall
+#hideall
+### using DataFrames, CSV
+### table = CSV.read("recall-projections.csv", DataFrame)
+### 
+### # data size algo buildtime querytime params recall 
+### 
+### println("| data | size | recall | querytime (32 cores / 64 threads) |")
+### println("|------|------|--------|-----------------------|")
+### for r in eachrow(table)
+###     recall = round(r.recall, digits=4)
+###     querytime = round(r.querytime, digits=2)
+###     println("|$(r.data)|$(r.size)|$(recall)|$(querytime)s|")
+### end
+## \textoutput{./table-recall}
+```
+
+
+-->
+
+Note that our projection models were trained with the 2d part of the LAION2B dataset (i.e, id=0001 with approx. 1M vectors). Other approaches may vary the resulting quality.
+
+
+**Note**: Projections will reduce the result's quality concerning the original embeddings, but you can use these datasets to fast prototype your solution and for hyperparameter optimization. Please email us if you are interested in the associated metadata (which can also be obtained as described in the rest of the document.)
+
+
+# Original LAION parts
+
+## Downloading the dataset
+
+The embeddings are publicly available from the original mirror site [https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/).
 
 For instance, you can retrieve the first two parts (and its associated meta data) using a typical Linux installation using the terminal, as follows:
 
@@ -100,17 +220,16 @@ let N = 111
         end
     end
 end
-
 ```
 
 Package versions:
 ```
   [336ed68f] CSV v0.10.9
-⌃ [a93c6f00] DataFrames v1.4.4
+  [a93c6f00] DataFrames v1.4.4
   [c27321d9] Glob v1.3.0
   [033835bb] JLD2 v0.4.30
   [5fb14364] OhMyREPL v0.5.13
-⌃ [98572fba] Parquet2 v0.2.8
+  [98572fba] Parquet2 v0.2.8
 ```
 
 Adjust `N` if necessary. Please recall that subset 10M contains 11 parts, 30M contains 33 parts, and 100M is composed of 111 parts.
@@ -118,117 +237,3 @@ Adjust `N` if necessary. Please recall that subset 10M contains 11 parts, 30M co
 @@warn
 Original LAION parts are distributed in `npz` format and you can load them with `numpy` or the `NPZ.jl` package when you work with Julia.
 @@
-
-## Projections
-
-We encourage people to construct their entire data pipeline to handle data for indexing and searching. However, we produced three different lower-dimensional projections that can be used. In particular, we computed two PCA projections using 32 and 96 dimensions and one more projection into binary sketches designed to work with bit-level hamming distance (using 1024 bits). Find below the URLs to download these bundles. 
-
-**Note**: All these projections will reduce the result's quality with respect to the original embeddings (see the bottom of this page for more details). We will mention the kind of input used in the rank, but the rank will be global. The original data can be downloaded from the active LAION2B mirror instead. The metadata, if needed, should also be retrieved from the LAION2B mirror.
-
-
-### Some technical specifications of the LAION-5B and the CLIP embeddings
- We provide different low dimensional projections packed in `HDF5`; queries and gold standards are also HDF5, i.e., `.h5` files. HDF5 can perform faster and more flexible _io_, which can help on large datasets. In particular, the sizes of the projection files are as follow:
-
-```julia:./datasets/table
-#hideall
-urls = Dict()
-sizes = Dict()
-md5s = Dict()
-
-for line in readlines("dataset-files-urls.txt")
-    urls[basename(line)] = line
-end
-
-for line in readlines("dataset-files-size.txt")
-    s, name = split(line)
-    sizes[basename(name)] = s
-end
-
-for line in readlines("dataset-files-md5.txt")
-    s, name = split(line)
-    md5s[basename(name)] = s
-end
-
-function tablehead() 
-    println("| dataset | description | size | md5      |")
-    println("|---------|-------------|------|----------|")
-end
-
-files = [
-  nothing => "32d PCA projections",
-  "laion2B-en-pca32-n=100M.h5" => "100M subset",
-  "laion2B-en-pca32-n=30M.h5" => "30M subset",
-  "laion2B-en-pca32-n=10M.h5" => "10M subset",
-  "laion2B-en-pca32-n=300K.h5" => "300K subset, for developing purposes",
-  "laion2B-en-pca32-n=100K.h5" => "100K subset, for developing purposes",
-  "public-queries-10k-pca32.h5" => "10k public query set for 32d PCA projection",
-  nothing => "96d PCA projections",
-  "laion2B-en-pca96-n=100M.h5" => "100M subset",
-  "laion2B-en-pca96-n=30M.h5" => "30M subset",
-  "laion2B-en-pca96-n=10M.h5" => "10M subset",
-  "laion2B-en-pca96-n=300K.h5" => "300K subset, for developing purposes",
-  "laion2B-en-pca96-n=100K.h5" => "100K subset, for developing purposes",
-  "public-queries-10k-pca96.h5" => "10k public query set for 96d PCA projection",
-  nothing => "1024-bit binary sketches",
-  "laion2B-en-hamming-n=100M.h5" => "100M subset",
-  "laion2B-en-hamming-n=30M.h5" => "30M subset",
-  "laion2B-en-hamming-n=10M.h5" => "10M subset",
-  "laion2B-en-hamming-n=300K.h5" => "300K subset, for developing purposes",
-  "laion2B-en-hamming-n=100K.h5" => "100K subset, for developing purposes",
-  "public-queries-10k-hamming.h5" => "10k public query set for 1024-bit binary sketch projection",
-  nothing => "768d-embeddings public dataset",
-  "public-queries-10k.h5" => "10k public query set (original 768d embeddings)",
-  nothing => "Gold standard list",
-  "laion2B-en-public-gold-standard-100M.h5" => "100M gold standard",
-  "laion2B-en-public-gold-standard-30M.h5" => "30M gold standard",
-  "laion2B-en-public-gold-standard-10M.h5" => "10M gold standard",
-  "small-laion2B-en-public-gold-standard-300K.h5" => "300K gold standard",
-  "small-laion2B-en-public-gold-standard-100K.h5" => "100K gold standard",
-]
-
-#open("assets/download-table.md", "w") do file
-    for (name, desc) in files
-        if name === nothing
-            println()
-            if desc !== nothing
-                println("## ", desc)
-                tablehead()
-            end
-        else
-            println("| [$(name)]($(urls[name])) | $desc | $(sizes[name]) | $(md5s[name]) |")
-        end
-    end
-#end
-
-```
-
-\textoutput{./datasets/table}
-
-two mirrors are given for these datasets, listed in the challenge site for our projections, queries, and gold-standard datasets.
-
-<!--
-## Projection's recall and baseline search times (bruteforce)
-Each projection is an approximation of the original CLIP embeddings; therefore, they produce a quality reduction. For instance, we computed the upper bound recall scores (using brute force) for searching for the 30 nearest neighbors are:
-
-
-```julia:./table-recall
-#hideall
-### using DataFrames, CSV
-### table = CSV.read("recall-projections.csv", DataFrame)
-### 
-### # data size algo buildtime querytime params recall 
-### 
-### println("| data | size | recall | querytime (32 cores / 64 threads) |")
-### println("|------|------|--------|-----------------------|")
-### for r in eachrow(table)
-###     recall = round(r.recall, digits=4)
-###     querytime = round(r.querytime, digits=2)
-###     println("|$(r.data)|$(r.size)|$(recall)|$(querytime)s|")
-### end
-## \textoutput{./table-recall}
-```
-
-
--->
-
-Note that our projection models were trained with the 2d part of the LAION2B dataset (i.e, id=0001 with approx. 1M vectors). Other approaches may vary the resulting quality.
