@@ -134,6 +134,11 @@ h6 {
   margin-bottom: 1em;
 }
 
+.franklin-content code {
+  overflow-x: visible;
+  background-color: rgb(203, 214, 205);
+}
+
 .franklin-content h1 a { color: inherit; }
 .franklin-content h1 a:hover { text-decoration: none; }
 .franklin-content h2 a { color: inherit; }

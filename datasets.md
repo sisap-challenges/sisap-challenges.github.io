@@ -15,9 +15,9 @@ The **LAION5B** dataset is an openly available image collection that has been us
 The collection equips each image with a URL handle, allowing people to showcase demonstrations easily.
 
 A more detailed description can be found here:
-```
-Schuhmann, C., Beaumont, R., Vencu, R., Gordon, C., Wightman, R., Cherti, M., ... & Jitsev, J. (2022). Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402.
-```
+@@important
+_Schuhmann, C., Beaumont, R., Vencu, R., Gordon, C., Wightman, R., Cherti, M., ... & Jitsev, J. (2022). Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402._
+@@
 
 The English subset, often called LAION2B, contains over 2 billion objects.
 
