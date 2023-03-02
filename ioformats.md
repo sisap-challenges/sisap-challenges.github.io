@@ -9,7 +9,11 @@ tags = ["io", "input", "output", "hdf5", "npz"]
 
 
 # About file formats
-It should support `.npz` files and `.h5` files as inputs.
+We will find several kinds of files. For instance, LIAON parts come in two formats: ' .npz` for embeddings[^1] and `.parquet` files for metadata[^2].
+We use HDF5 files[^3] (`.h5`) extensively for datasets, projections, queries, and gold standards, and we also require result files to be HDF5 files. HDF5 files can contain tree-like organization and may include several kinds of data, working well among platforms.
 
-The output should be an _.h5_ file using groups _knns_ for identifiers and _dists_ for distances.
-Identifiers should start at 0 or 1 but must be specified.
+[^1]: Numpy files can be loaded with [`numpy.load`](https://numpy.org/doc/stable/reference/generated/numpy.load.html) in Python and with package [`NPZ.jl`](https://github.com/fhs/NPZ.jl) in Julia.
+
+[^2]: The [`pyarrow`](https://arrow.apache.org/docs/python/index.html) package provide support for parquet files in Python. Julia users can use the [`Parquet2.jl`](https://expandingman.gitlab.io/Parquet2.jl/) package.
+
+[^3]: High-performance data management and storage suite <https://www.hdfgroup.org/solutions/hdf5/>. In Python, these files can be loaded and created with [`h5py`](https://www.h5py.org/). Julia users can use [`HDF5.jl`](https://juliaio.github.io/HDF5.jl/) or the less featured but faster [`JLD2`](https://github.com/JuliaIO/JLD2.jl).
