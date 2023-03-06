@@ -1,34 +1,3 @@
-ef9e33b41276f2ac563a069a633277fb SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=1000K.h5
-b5678d5651f1c60e332797fe602b7d6b SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=100K.h5
-5f615332d78164158b364f886a70acea SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=100M.h5
-6a9c7c50b3416c411e93df0d8800aa45 SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=10M.h5
-afa0cfc6b959babb2c112dd35d02f8f6 SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=300K.h5
-8270a0ae396723cefd55bb881789b3fe SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=30K.h5
-0780987241fb78aade610393f44b236f SISAP23-Challenge/hamming/en-bundles/laion2B-en-hamming-n=30M.h5
-9373282b5be2cf5a593e938e1776b543 SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=1000K.h5
-20faeeb7380a394b1f7a8ce15774b150 SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=100K.h5
-6a83e337ee5e73532aa0884cf626f1ae SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=100M.h5
-8a6e7521d125ffc6c138b486e1876951 SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=10M.h5
-3c8b15e7459f813b5aebc624b16ad867 SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=300K.h5
-ef5251af0745972fe8fd21cbc62a8d90 SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=30K.h5
-3ab3b201e8aa089e4567bf1eaeb4f4a7 SISAP23-Challenge/pca32/en-bundles/laion2B-en-pca32-n=30M.h5
-be7194efbeab66ede49be5649884e8bd SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=1000K.h5
-513d2c93efa0fa225bada4b123d45f37 SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=100K.h5
-2eb46114b4ac4b9add106b1934858892 SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=100M.h5
-b349c3e58cd3b0421643f27878066e03 SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=10M.h5
-8f3991fb4efeaa67f13ee7dc8407e1b6 SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=300K.h5
-db643ae562fb84b5c71f8a0168c45c33 SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=30K.h5
-eca407fef10ad02b67575557a96d5c1d SISAP23-Challenge/pca96/en-bundles/laion2B-en-pca96-n=30M.h5
-cd93f7bf61a436b5a45d0b3e1a002667 SISAP23-Challenge/hamming/en-queries/public-queries-10k-hamming.h5
-638a83185a6bd3490559531123559180 SISAP23-Challenge/pca32/en-queries/public-queries-10k-pca32.h5
-a8651dce51a13da26c65ace188d76f3e SISAP23-Challenge/pca96/en-queries/public-queries-10k-pca96.h5
-e95642c6a458431900365aa69bfdbf0f SISAP23-Challenge/public-queries/public-queries-10k.h5
-d02750285783cabb04f425b61133910d SISAP23-Challenge/public-queries/en-gold-standard-public/laion2B-en-public-gold-standard-10M.h5
-06f2fdd419448060ca86acf6b23e64e2 SISAP23-Challenge/public-queries/en-gold-standard-public/laion2B-en-public-gold-standard-30M.h5
-17789f878a128df7d1693ca6fab755fd SISAP23-Challenge/public-queries/en-gold-standard-public/laion2B-en-public-gold-standard-100M.h5
-b5661453ce4531d23553af89875a6242 SISAP23-Challenge/public-queries/en-gold-standard-public/small-laion2B-en-public-gold-standard-30K.h5
-2aecc02d78884e70b4578f5c08699d91 SISAP23-Challenge/public-queries/en-gold-standard-public/small-laion2B-en-public-gold-standard-100K.h5
-4164290dd39b8693d8bdb939d638495e SISAP23-Challenge/public-queries/en-gold-standard-public/small-laion2B-en-public-gold-standard-300K.h5
 
 daef38a64e3cd1c5233231f8be882a64  laion2B-en-clip768-n=100K.h5
 9d8ee3347b1edf136b3ef38162ac05c3  laion2B-en-clip768-n=100M.h5
@@ -38,3 +7,31 @@ d238b4b037c32bae41e497f95dffa895  laion2B-en-clip768-n=300K.h5
 15a24d28d2304e14711e23baf7fe86a4  laion2B-en-clip768-n=30M.h5
 007ec4db4337d8ce3d524f37598d6cef  laion2B-en-clip768-n=3M.h5
 257b9eb3f7f25776e0d33b22451b7b32  public-queries-10k-clip768.h5
+
+0dcb6fc72284439f67debcb34080b282  laion2B-en-hammingv2-n=100K.h5
+36030a46f0792d8c520b85a39ea64dfc  laion2B-en-hammingv2-n=100M.h5
+13a28c054a351c2b2cdd8fd918b006ed  laion2B-en-hammingv2-n=10M.h5
+03533c23fcc18c806cd42653e46fda89  laion2B-en-hammingv2-n=300K.h5
+9f438fd469e21313684f191d375c63ed  laion2B-en-hammingv2-n=30M.h5
+
+45a6c4e3774430d6318f808b43053895  laion2B-en-pca32v2-n=100K.h5
+02c5726ba41cbfd3320d75ad113ef008  laion2B-en-pca32v2-n=100M.h5
+799dfd317976012a9b768aea123ce6b0  laion2B-en-pca32v2-n=10M.h5
+aeffa3290eedd6063f138d5a81489128  laion2B-en-pca32v2-n=300K.h5
+cf34551e4a80689a155052de640874b1  laion2B-en-pca32v2-n=30M.h5
+
+73d464eccd6a6695d1f78f67bfbc7b46  laion2B-en-pca96v2-n=100K.h5
+715c1f5bfa3da61eaf5e2e8735052043  laion2B-en-pca96v2-n=100M.h5
+4f2520b152929bcd34fb3912d4db025e  laion2B-en-pca96v2-n=10M.h5
+97faba380163a5ec2e1a441c3a6d21b6  laion2B-en-pca96v2-n=300K.h5
+17b783ca3714b4b8084d93d59bac4611  laion2B-en-pca96v2-n=30M.h5
+
+fe39725772f487e4c86af68e18e87c88  laion2B-en-public-gold-standard-v2-100K.h5
+35de58992c6446c85c56e710b144c90c  laion2B-en-public-gold-standard-v2-100M.h5
+b68b17693253d95e1fc94c217af25e95  laion2B-en-public-gold-standard-v2-10M.h5
+258654f2a34a1bdbfa031862b4e6cfae  laion2B-en-public-gold-standard-v2-300K.h5
+1726691372d2f62d7b0b97d8bf4f6189  laion2B-en-public-gold-standard-v2-30M.h5
+
+cd93f7bf61a436b5a45d0b3e1a002667  public-queries-10k-hammingv2.h5
+8c0fa4fff523d6263a246f7553d2b92f  public-queries-10k-pca32v2.h5
+f7d0b77f336f8f63803ddb59b4d4b8ed  public-queries-10k-pca96v2.h5
