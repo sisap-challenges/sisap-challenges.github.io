@@ -53,4 +53,4 @@ This task asks for solutions for fast indexing binary sketches under the Hamming
 
 
 ### General notes
-We will impose hard wall times (12hrs) for construction and searching for verification and reproduction (final ranking). We expect that people already specify hyperparameters in the solutions for each subset and task.
+We will impose hard wall times (e.g., 12hrs) for construction and searching for verification and reproduction (final ranking). We expect that people already specify hyperparameters in the solutions for each subset and task.
