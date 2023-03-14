@@ -101,6 +101,10 @@ files = [
   "laion2B-en-public-gold-standard-v2-10M.h5" => "10M gold standard",
   "small-laion2B-en-public-gold-standard-v2-300K.h5" => "300K gold standard",
   "small-laion2B-en-public-gold-standard-v2-100K.h5" => "100K gold standard",
+  nothing => "Associated captions and image urls (tabular delimited files)",
+  "meta-10M.tsv" => "metadata for the 10M subset",
+  "meta-30M.tsv" => "metadata for the 30M subset",
+  "meta-100M.tsv" => "metadata for the 100M subset",
 ]
 
 #open("assets/download-table.md", "w") do file
@@ -121,6 +125,9 @@ files = [
 
 \textoutput{./datasets/table}
 
+@@warn
+Metadata for 100K and 300K does not correspond to first 100K and 300K elements of large subsets. More precisely, 100K and 300K subsets include registers with NSFW missing values while large subsets remove missing values.
+@@
 <!--
 ## Projection's recall and baseline search times (bruteforce)
 Each projection is an approximation of the original CLIP embeddings; therefore, they produce a quality reduction. For instance, we computed the upper bound recall scores (using brute force) for searching for the 30 nearest neighbors are:

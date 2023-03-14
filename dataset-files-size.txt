@@ -73,3 +73,7 @@
  1.3M public-queries-10k-hammingv2.h5
  1.3M public-queries-10k-pca32v2.h5
  3.7M public-queries-10k-pca96v2.h5
+
+1.8G  meta-10M.tsv
+5.2G  meta-30M.tsv
+ 18G  meta-100M.tsv

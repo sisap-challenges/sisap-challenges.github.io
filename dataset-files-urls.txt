@@ -32,3 +32,7 @@ https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768
 https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=10M.h5
 https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=30M.h5
 https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=100M.h5
+
+https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/meta-10M.tsv
+https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/meta-30M.tsv
+https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/meta-100M.tsv
