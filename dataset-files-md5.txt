@@ -1,12 +1,12 @@
 
-daef38a64e3cd1c5233231f8be882a64  laion2B-en-clip768-n=100K.h5
-9d8ee3347b1edf136b3ef38162ac05c3  laion2B-en-clip768-n=100M.h5
-c05e4b1d2b2a0c7663ac9767753e25e1  laion2B-en-clip768-n=10M.h5
-61dea2ae683636a248cb915391156435  laion2B-en-clip768-n=1M.h5
-d238b4b037c32bae41e497f95dffa895  laion2B-en-clip768-n=300K.h5
-15a24d28d2304e14711e23baf7fe86a4  laion2B-en-clip768-n=30M.h5
-007ec4db4337d8ce3d524f37598d6cef  laion2B-en-clip768-n=3M.h5
-257b9eb3f7f25776e0d33b22451b7b32  public-queries-10k-clip768.h5
+daef38a64e3cd1c5233231f8be882a64  laion2B-en-clip768v2-n=100K.h5
+9d8ee3347b1edf136b3ef38162ac05c3  laion2B-en-clip768v2-n=100M.h5
+c05e4b1d2b2a0c7663ac9767753e25e1  laion2B-en-clip768v2-n=10M.h5
+61dea2ae683636a248cb915391156435  laion2B-en-clip768v2-n=1M.h5
+d238b4b037c32bae41e497f95dffa895  laion2B-en-clip768v2-n=300K.h5
+15a24d28d2304e14711e23baf7fe86a4  laion2B-en-clip768v2-n=30M.h5
+007ec4db4337d8ce3d524f37598d6cef  laion2B-en-clip768v2-n=3M.h5
+257b9eb3f7f25776e0d33b22451b7b32  public-queries-10k-clip768v2.h5
 
 0dcb6fc72284439f67debcb34080b282  laion2B-en-hammingv2-n=100K.h5
 36030a46f0792d8c520b85a39ea64dfc  laion2B-en-hammingv2-n=100M.h5
