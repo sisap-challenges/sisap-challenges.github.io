@@ -17,8 +17,7 @@ However, we will turn our approach to verify whichever participant report as lon
 
 The final ranking per task will be published after the submission deadline and before the camera-ready stage so that participants can report their position in the final rank. Partial ranks will be computed using GHA or our primary approach using a small subset of the dataset, e.g., 1M. We will consider only correct GHA running on Ubuntu Linux, it can be test using GHA. Note that we will ignore network-based solutions (calling external API beyond installations) and closed-source platforms (e.g., we cannot handle Matlab solutions.)
 
-We will use a docker instance using a specified version of Linux (that one working in GHA) with Docker using a 32-core Intel(R) Xeon(R) CPU E7-4809 workstation with 512GiB of RAM without GPU.[^1] We encourage participants to use multithreading or multiprocessing in both construction and searching stages to take advantage of the hardware.
-The evaluation will timeout after one day.
+We will use a docker instance using a specified version of Linux (that one working in GHA) with Docker using a 32-core Intel(R) Xeon(R) CPU E7-4809 workstation with 512GiB of RAM without GPU.[^1] We encourage participants to use multithreading or multiprocessing in the construction and searching stages to take advantage of the hardware. The evaluation will timeout after one day.
 
 [^1]: Note that this CPU does not support natively half-precision floating point operations (e.g., `bfloat16`), and therefore, we recommended using 32-bit floating point arithmetic to take advantage of the platform. This will duplicate memory requirements on teams using original clip embeddings. For instance, our PCA projections already use single-precision floating point numbers.
 
