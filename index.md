@@ -15,6 +15,10 @@ In 2023 we are launching the \textit{SISAP Indexing Challenge} with a test bed t
 - Datasets:  [https://sisap-challenges.github.io/datasets/](https://sisap-challenges.github.io/datasets/).
 - Example GitHub repositories (Actions enabled):  [https://sisap-challenges.github.io/repoexamples/](https://sisap-challenges.github.io/repoexamples/).
 
+
+## News:
+- **Mar. 28th, 2023:** The evaluation methodology was changed to allow multithreading searches.
+
 ## Important dates
 - **Feb. 20th, 2023:** Call for participation published, expression of interest opened.[^1]
 - **Apr. 3rd, 2023:** Expression of interest closes.
