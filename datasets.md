@@ -34,6 +34,12 @@ The challenge has three subsets:
 
 All parts should be concatenated in order and also removing NSFW entries (marked in metadata files).
 
+- **Note 1**: You will get 768 dimensional 16-bit floating point vectors that may be changed to a 32-bit format to get full speed on legacy hardware.
+- **Note 2**: Our gold-standards were computed using $L_2$-normalized vectors (i.e., unitary norms) and the $1-\cos(\cdot, \cdot)$ as distance function.
+- **Note 3**: Our gold-standard `.h5` files contain the 100 nearest neighbors of each query using two associated matrices `knns` and `dists`, i.e., columns correspond to queries and rows to nearest neighbors for each query.
+  - The `knns` identifiers start indexing on 1.
+  - The `dists` contains raw distance values for each corresponding query and object, i.e., `1-\cos(\cdot, \cdot)`; please consider that this is not a proper metric distance. People using metric properties can use the angle with minor changes. 
+
 ## Subsets
 
 We provide access to different subsets of the dataset and also created three different lower-dimensional projections that can be used. In particular, we computed two PCA projections using 32 and 96 dimensions and one more projection into binary sketches designed to work with bit-level hamming distance (using 1024 bits). Find below the URLs to download these bundles. 
@@ -68,10 +74,10 @@ end
 
 files = [
   nothing => "768d clip embeddings (clip768)",
-  "laion2B-en-clip768v2-n=100M.h5" => "100K subset",
-  "laion2B-en-clip768v2-n=30M.h5" => "100K subset",
-  "laion2B-en-clip768v2-n=10M.h5" => "100K subset",
-  "laion2B-en-clip768v2-n=300K.h5" => "100K subset, for developing purposes",
+  "laion2B-en-clip768v2-n=100M.h5" => "100M subset",
+  "laion2B-en-clip768v2-n=30M.h5" => "30M subset",
+  "laion2B-en-clip768v2-n=10M.h5" => "10M subset",
+  "laion2B-en-clip768v2-n=300K.h5" => "300K subset, for developing purposes",
   "laion2B-en-clip768v2-n=100K.h5" => "100K subset, for developing purposes",
   "public-queries-10k-clip768v2.h5" => "10k public query set (original 768d embeddings)",
   nothing => "32d PCA projections (pca32)",
@@ -170,10 +176,11 @@ Each projection is an approximation of the original CLIP embeddings; therefore, 
 
 -->
 
-Note that our projection models were trained with the 2d part of the LAION2B dataset (i.e, id=0001 with approx. 1M vectors). Other approaches may vary the resulting quality.
+Note that our projection models were trained with our 10M subset. Other approaches may vary the resulting quality.
 
 
 **Note**: Projections will reduce the result's quality concerning the original embeddings, but you can use these datasets to fast prototype your solution and for hyperparameter optimization. Please email us if you are interested in the associated metadata (which can also be obtained as described in the rest of the document.)
+
 
 @@warn
 The original dataset can be downloaded and processed to get different subsets as described in
