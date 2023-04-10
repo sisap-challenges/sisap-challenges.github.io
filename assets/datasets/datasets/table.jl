@@ -28,10 +28,10 @@ end
 
 files = [
   nothing => "768d clip embeddings (clip768)",
-  "laion2B-en-clip768v2-n=100M.h5" => "100K subset",
-  "laion2B-en-clip768v2-n=30M.h5" => "100K subset",
-  "laion2B-en-clip768v2-n=10M.h5" => "100K subset",
-  "laion2B-en-clip768v2-n=300K.h5" => "100K subset, for developing purposes",
+  "laion2B-en-clip768v2-n=100M.h5" => "100M subset",
+  "laion2B-en-clip768v2-n=30M.h5" => "30M subset",
+  "laion2B-en-clip768v2-n=10M.h5" => "10M subset",
+  "laion2B-en-clip768v2-n=300K.h5" => "300K subset, for developing purposes",
   "laion2B-en-clip768v2-n=100K.h5" => "100K subset, for developing purposes",
   "public-queries-10k-clip768v2.h5" => "10k public query set (original 768d embeddings)",
   nothing => "32d PCA projections (pca32)",

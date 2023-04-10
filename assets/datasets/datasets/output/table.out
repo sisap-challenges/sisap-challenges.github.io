@@ -2,10 +2,10 @@
 ## 768d clip embeddings (clip768)
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
-| [laion2B-en-clip768v2-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=100M.h5) | 100K subset | 147G | 9d8ee3347b1edf136b3ef38162ac05c3 |
-| [laion2B-en-clip768v2-n=30M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=30M.h5) | 100K subset | 44G | 15a24d28d2304e14711e23baf7fe86a4 |
-| [laion2B-en-clip768v2-n=10M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=10M.h5) | 100K subset | 15G | c05e4b1d2b2a0c7663ac9767753e25e1 |
-| [laion2B-en-clip768v2-n=300K.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=300K.h5) | 100K subset, for developing purposes | 440M | d238b4b037c32bae41e497f95dffa895 |
+| [laion2B-en-clip768v2-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=100M.h5) | 100M subset | 147G | 9d8ee3347b1edf136b3ef38162ac05c3 |
+| [laion2B-en-clip768v2-n=30M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=30M.h5) | 30M subset | 44G | 15a24d28d2304e14711e23baf7fe86a4 |
+| [laion2B-en-clip768v2-n=10M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=10M.h5) | 10M subset | 15G | c05e4b1d2b2a0c7663ac9767753e25e1 |
+| [laion2B-en-clip768v2-n=300K.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=300K.h5) | 300K subset, for developing purposes | 440M | d238b4b037c32bae41e497f95dffa895 |
 | [laion2B-en-clip768v2-n=100K.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=100K.h5) | 100K subset, for developing purposes | 147M | daef38a64e3cd1c5233231f8be882a64 |
 | [public-queries-10k-clip768v2.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/public-queries-10k-clip768v2.h5) | 10k public query set (original 768d embeddings) | 30M | 257b9eb3f7f25776e0d33b22451b7b32 |
 
