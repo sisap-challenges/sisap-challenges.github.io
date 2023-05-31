@@ -18,7 +18,7 @@ In 2023 we are launching the \textit{SISAP Indexing Challenge} with a test bed t
 
 ## News:
 - **Mar. 28th, 2023:** The evaluation methodology was changed to allow multithreading searches (more [details](https://sisap-challenges.github.io/evaluationmethodology/).)
-- **May. 31st, 2023:** The gold standard was recomputed using 64-bit IEEE floating point arithmetic (see [datasets](https://sisap-challenges.github.io/datasets/) page) due to a list of observations of Vladimír Míč about distance values in the gold standard. Vladimir computed several sanity checks and found queries with many near duplicates and others with ties on critical rank positions. We think the new gold standard help with some issues, but most problems seem part of the dataset (for instance, see [^1]). Currently, the plan is as follows:
+- **May. 31st, 2023:** The gold standards were recomputed using 64-bit IEEE floating point arithmetic, yet storing 32-bit FP values for compatibility. The new files can be downloaded from the [datasets](https://sisap-challenges.github.io/datasets/) page. The new gold standards were computed in response to a list of observations from Vladimír Míč about distance values in the gold standard. Vladimir computed several sanity checks and found queries with many near duplicates and others with ties on critical rank positions. We think the new gold standard help with some issues, but most problems seem part of the dataset (for instance, see [^1]). Currently, the plan is as follows:
   - Remove problematic query objects from the query set.
   - Adjust the metric score to be fair and/or ask for more $k$ nearest neighbors to reduce the impact of problematic queries.
   - Ensure that the evaluation query set (private) is free of these issues.
