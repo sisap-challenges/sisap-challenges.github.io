@@ -77,3 +77,8 @@
 1.8G  meta-10M.tsv
 5.2G  meta-30M.tsv
  18G  meta-100M.tsv
+
+77M laion2B-en-public-gold-standard-v2-100M-F64-IEEE754.h5
+77M laion2B-en-public-gold-standard-v2-10M-F64-IEEE754.h5
+77M laion2B-en-public-gold-standard-v2-300K-F64-IEEE754.h5
+77M laion2B-en-public-gold-standard-v2-30M-F64-IEEE754.h5

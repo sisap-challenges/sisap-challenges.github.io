@@ -17,10 +17,17 @@ In 2023 we are launching the \textit{SISAP Indexing Challenge} with a test bed t
 
 
 ## News:
-- **Mar. 28th, 2023:** The evaluation methodology was changed to allow multithreading searches.
+- **Mar. 28th, 2023:** The evaluation methodology was changed to allow multithreading searches (more [details](https://sisap-challenges.github.io/evaluationmethodology/).)
+- **May. 31st, 2023:** The gold standard was recomputed using 64-bit IEEE floating point arithmetic (see [datasets](https://sisap-challenges.github.io/datasets/) page) due to a list of observations of Vladimír Míč about distance values in the gold standard. Vladimir computed several sanity checks and found queries with many near duplicates and others with ties on critical rank positions. We think the new gold standard help with some issues, but most problems seem part of the dataset (for instance, see [^1]). Currently, the plan is as follows:
+  - Remove problematic query objects from the query set.
+  - Adjust the metric score to be fair and/or ask for more $k$ nearest neighbors to reduce the impact of problematic queries.
+  - Ensure that the evaluation query set (private) is free of these issues.
+  - Publish the private query set and its gold standard after the challenge.
+
+[^1]: Webster, R., Rabin, J., Simon, L., & Jurie, F. (2023). On the De-duplication of LAION-2B. arXiv preprint arXiv:2303.12733.
 
 ## Important dates
-- **Feb. 20th, 2023:** Call for participation published, expression of interest opened.[^1]
+- **Feb. 20th, 2023:** Call for participation published, expression of interest opened.[^2]
 - **Apr. 3rd, 2023:** Expression of interest closes.
 - **Jul. 10th, 2023:** Submission of proposed implementations.
 - **Jul. 31st, 2023:** Short paper deadline (AoE).
@@ -29,7 +36,7 @@ In 2023 we are launching the \textit{SISAP Indexing Challenge} with a test bed t
 - **Sept. 4th, 2023:** Camera-ready.
 - **Oct. 9th-11th, 2023:** SISAP 2023 in A Coruña, Spain, with a special session for the challenge.
 
-[^1]: Visit <https://sisap-challenges.github.io/committee/> for more instructions.
+[^2]: Visit <https://sisap-challenges.github.io/committee/> for more instructions.
 
 ## Reports
 We expect that participants prepare a detailed report of their solution in a typical SISAP's _shortpaper format_ with a focus on reproducibility and comparing their speedup against a brute force solution in its machine and the resulting quality w.r.t. recall.

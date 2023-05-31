@@ -36,3 +36,9 @@ https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768
 https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/meta-10M.tsv
 https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/meta-30M.tsv
 https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/meta-100M.tsv
+
+http://ingeotec.mx/~sadit/SISAP2023-Challenge/laion2B-en-public-gold-standard-v2-100M-F64-IEEE754.h5
+http://ingeotec.mx/~sadit/SISAP2023-Challenge/laion2B-en-public-gold-standard-v2-10M-F64-IEEE754.h5
+http://ingeotec.mx/~sadit/SISAP2023-Challenge/laion2B-en-public-gold-standard-v2-300K-F64-IEEE754.h5
+http://ingeotec.mx/~sadit/SISAP2023-Challenge/laion2B-en-public-gold-standard-v2-30M-F64-IEEE754.h5
+

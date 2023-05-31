@@ -21,9 +21,10 @@ We will use a docker instance using a specified version of Linux (that one worki
 
 [^1]: Note that this CPU does not support natively half-precision floating point operations (e.g., `bfloat16`), and therefore, we recommended using 32-bit floating point arithmetic to take advantage of the platform. This will duplicate memory requirements on teams using original clip embeddings. For instance, our PCA projections already use single-precision floating point numbers.
 
-The core idea is to clone the repository, instantiate the specified packages (as defined for GHA), and run the with the available resources changing the input database and query sets (changing input files.) The participant should include all necessary data steps and hyperparameters to reproduce their results effectively in the continuous integration pipeline. We will record and verify raw times for construction, search, and the resulting quality. We will maintain communication with the authors to solve any issues in the evaluation process. 
 
 ## About repositories and continuous integration setup
+The core idea is to clone the repository, instantiate the specified packages (as defined for GHA), and run the with the available resources changing the input database and query sets (changing input files.) The participant should include all necessary data steps and hyperparameters to reproduce their results effectively in the continuous integration pipeline. We will record and verify raw times for construction, search, and the resulting quality. We will maintain communication with the authors to solve any issues in the evaluation process. 
+
 The reproducibility of similarity search methods is essential. We encourage sharing solutions using public GitHub repositories, preferentially under an open-source license to boost its usage and simplify its reproducibility by the community. Of course, repository documentation, notebooks, and tutorials are always welcome.
 
 In the same terms, we ask for using GHA to ensure reproducibility under a limited-size dataset. GHA is a continuous integration platform that can run specified scripts after a repository is updated. We plan to use GHA to ask participants to ensure that indexing and searching methods work in one of the supported platforms. 
