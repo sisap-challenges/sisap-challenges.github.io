@@ -51,10 +51,10 @@
 ## Gold standard list (computed with 64-bit IEEE floating point arithmetic, 1000 nearest neighbors)
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
-| [laion2B-en-public-gold-standard-v2-100M-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP2023-Challenge/laion2B-en-public-gold-standard-v2-100M-F64-IEEE754.h5) | 100M gold standard | 77M | 59321e7e33b5469a5b435ff11305257f |
-| [laion2B-en-public-gold-standard-v2-30M-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP2023-Challenge/laion2B-en-public-gold-standard-v2-30M-F64-IEEE754.h5) | 30M gold standard | 77M | a445f32702aa43a176b56c54bf3f03f9 |
-| [laion2B-en-public-gold-standard-v2-10M-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP2023-Challenge/laion2B-en-public-gold-standard-v2-10M-F64-IEEE754.h5) | 10M gold standard | 77M | 45b05e4d60b8a66088b378ae7e0d278f |
-| [laion2B-en-public-gold-standard-v2-300K-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP2023-Challenge/laion2B-en-public-gold-standard-v2-300K-F64-IEEE754.h5) | 300K gold standard | 77M | 5d635f26630cced971358fd76f37c32e |
+| [laion2B-en-public-gold-standard-v2-100M-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-public-gold-standard-v2-100M-F64-IEEE754.h5) | 100M gold standard | 77M | 59321e7e33b5469a5b435ff11305257f |
+| [laion2B-en-public-gold-standard-v2-30M-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-public-gold-standard-v2-30M-F64-IEEE754.h5) | 30M gold standard | 77M | a445f32702aa43a176b56c54bf3f03f9 |
+| [laion2B-en-public-gold-standard-v2-10M-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-public-gold-standard-v2-10M-F64-IEEE754.h5) | 10M gold standard | 77M | 45b05e4d60b8a66088b378ae7e0d278f |
+| [laion2B-en-public-gold-standard-v2-300K-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-public-gold-standard-v2-300K-F64-IEEE754.h5) | 300K gold standard | 77M | 5d635f26630cced971358fd76f37c32e |
 
 ## Associated captions and image urls (tabular delimited files)
 | dataset | description | size | md5      |
