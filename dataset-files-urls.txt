@@ -42,3 +42,14 @@ http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-public-gold-standard-v2-1
 http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-public-gold-standard-v2-300K-F64-IEEE754.h5
 http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-public-gold-standard-v2-30M-F64-IEEE754.h5
 
+
+http://ingeotec.mx/~sadit/SISAP23-Challenge/private-queries-gold-10k-hammingv2.h5
+http://ingeotec.mx/~sadit/SISAP23-Challenge/private-queries-gold-10k-pca32v2.h5
+http://ingeotec.mx/~sadit/SISAP23-Challenge/private-queries-gold-10k-pca96v2.h5
+http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-private-gold-standard-v2-100M-F32-IEEE754.h5
+http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5
+http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-private-gold-standard-v2-10M-F32-IEEE754.h5
+http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-private-gold-standard-v2-10M-F64-IEEE754.h5
+http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-private-gold-standard-v2-30M-F32-IEEE754.h5
+http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-private-gold-standard-v2-30M-F64-IEEE754.h5
+http://ingeotec.mx/~sadit/SISAP23-Challenge/private-queries-gold-10k-clip768v2.h5
