@@ -52,7 +52,7 @@ a445f32702aa43a176b56c54bf3f03f9  laion2B-en-public-gold-standard-v2-30M-F64-IEE
 f384beecb5dddcddca8efc00a7fcd911  laion2B-en-private-gold-standard-v2-10M-F64-IEEE754.h5
 4af84d4b26f8bdda0264e19dc70d787e  laion2B-en-private-gold-standard-v2-30M-F32-IEEE754.h5
 3b43d7b1251bd1387419a245bec8ba55  laion2B-en-private-gold-standard-v2-30M-F64-IEEE754.h5
-f8f3e61bd22d7d64234a0f587ead9fcf  private-queries-gold-10k-clip768v2.h5
-6e9bba2023ff0745ecf47361a837c3a8  private-queries-gold-10k-hammingv2.h5
-57dc078229325b6c161521512585738e  private-queries-gold-10k-pca32v2.h5
-301330e6d3963dd2db923fd4e858aa4e  private-queries-gold-10k-pca96v2.h5
+f8f3e61bd22d7d64234a0f587ead9fcf  private-queries-10k-clip768v2.h5
+6e9bba2023ff0745ecf47361a837c3a8  private-queries-10k-hammingv2.h5
+57dc078229325b6c161521512585738e  private-queries-10k-pca32v2.h5
+301330e6d3963dd2db923fd4e858aa4e  private-queries-10k-pca96v2.h5
