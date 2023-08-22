@@ -84,13 +84,13 @@
 77M laion2B-en-public-gold-standard-v2-30M-F64-IEEE754.h5
 
 
- 1.3M private-queries-gold-10k-hammingv2.h5
- 1.3M private-queries-gold-10k-pca32v2.h5
- 3.7M private-queries-gold-10k-pca96v2.h5
+ 1.3M private-queries-10k-hammingv2.h5
+ 1.3M private-queries-10k-pca32v2.h5
+ 3.7M private-queries-10k-pca96v2.h5
   77M laion2B-en-private-gold-standard-v2-100M-F32-IEEE754.h5
  783K laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5
  783K laion2B-en-private-gold-standard-v2-10M-F32-IEEE754.h5
  783K laion2B-en-private-gold-standard-v2-10M-F64-IEEE754.h5
   77M laion2B-en-private-gold-standard-v2-30M-F32-IEEE754.h5
  783K laion2B-en-private-gold-standard-v2-30M-F64-IEEE754.h5
-  30M private-queries-gold-10k-clip768v2.h5
+  30M private-queries-10k-clip768v2.h5
