@@ -28,3 +28,10 @@ For instance:
 \newcommand{\scal}[1]{\langle #1 \rangle}
 \newcommand{\textit}[1]{~~~<em>#1</em>~~~}
 \newcommand{\texttt}[1]{`#1`}
+\newcommand{\linksfirst}{~~~<div><span>2023 edition: </span>
+      <a href="/2023/tasks/">Tasks</a> |
+      <a href="/2023/evaluationmethodology/">Methodology</a> |
+      <a href="/2023/datasets/">Datasets</a> |
+      <a href="/2023/repoexamples/">Repository examples</a> |
+      <a href="/2023/committee/">Committee and pre-registration</a>
+  </div>~~~}

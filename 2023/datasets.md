@@ -5,6 +5,9 @@ date = Date(2023, 02, 10)
 
 tags = ["LAION2B", "dataset", "projections", "gold standard", "pca32", "pca96", "hamming"]
 +++
+
+\linksfirst
+
 # The LAION2B and projections
 
 \toc
@@ -50,18 +53,18 @@ urls = Dict()
 sizes = Dict()
 md5s = Dict()
 
-for line in readlines("dataset-files-urls.txt")
+for line in readlines("2023/dataset-files-urls.txt")
     (length(line) == 0 || line[1] == '#') && continue
     urls[basename(line)] = strip(line)
 end
 
-for line in readlines("dataset-files-size.txt")
+for line in readlines("2023/dataset-files-size.txt")
     (length(line) == 0 || line[1] == '#') && continue
     s, name = split(strip(line))
     sizes[basename(name)] = s
 end
 
-for line in readlines("dataset-files-md5.txt")
+for line in readlines("2023/dataset-files-md5.txt")
     (length(line) == 0 || line[1] == '#') && continue
     s, name = split(strip(line))
     md5s[basename(name)] = s
@@ -158,19 +161,6 @@ For instance, you can download the 10M subset and the query set using the follow
 curl -O https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=10M.h5
 curl -O https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/public-queries-10k-clip768v2.h5
 ```
-
-People likes demonstrations, and that it is were metadata comes again. You can also download a subset of the associated metadata using the next command:
-```bash
-curl -O https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/meta-10M.tsv
-```
-
-Please review the simple [jupyter-based demo](https://github.com/sisap-challenges/sisap2023/blob/main/demo10M.ipynb) to see how it can be used.
-
-The `-C -` flags can be added if you need to resume a broken download.
-
-@@warn
-Metadata for 100K and 300K does not correspond to first 100K and 300K elements of large subsets. More precisely, 100K and 300K subsets include registers with NSFW missing values while large subsets remove missing values.
-@@
 
 <!--
 ## Projection's recall and baseline search times (bruteforce)

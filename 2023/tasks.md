@@ -6,6 +6,8 @@ date = Date(2023, 02, 10)
 tags = ["LAION2B", "Task A", "Task B", "Task C", "similarity search challenges", "Important dates"]
 +++
 
+\linksfirst
+
 # Tasks of the Implementation Challenge and Demo Track
 
 \tableofcontents <!-- you can use \toc as well -->
@@ -15,14 +17,14 @@ tags = ["LAION2B", "Task A", "Task B", "Task C", "similarity search challenges",
 The LAION2B deep features dataset contains 768-dimensional vectors using 16-bit floating point numbers, using dot product as a similarity measure. This task asks for solutions that work on a subset of this dataset. Any transformation to the dataset to load, index, and solve $k$ nearest neighbor queries is allowed. Transformations include, but are not limited to, packing into different data types, dimensional reduction, locality-sensitive hashing, product quantization, and binary sketches. Indexing algorithms can be an original part of the contribution, or alternatively, already published indexes can be used. The entire pipeline should be included and tested in GitHub's Actions (GHA) to reproduce the results; the hyperparameters must be clearly specified on the GHA for all the reported subsets.
 
 - **Input queries:** Query set, retrieve $k=10$ neighbors.
-- **Input dataset:** A subset of the LAION2B dataset, i.e., see [clip768 files](https://sisap-challenges.github.io/datasets/). More detailed, 300K subset for partial ranking and 10M, 30M, and 100M for final ranking. 
+- **Input dataset:** A subset of the LAION2B dataset, i.e., see [clip768 files](/2023/datasets/). More detailed, 300K subset for partial ranking and 10M, 30M, and 100M for final ranking. 
 - **Output:** two $k\times n$ matrices in a single HDF5 files, one for object identifiers (key _knns_, integers) and other for distances (key _dists_, floating point numbers). Note that results should follow column-major order, i.e., the $i$th columns should contain identifiers and distances of the approximate $k$ nearest neighbors of the $i$th query sorted by the distance in ascending order, plus additional metadata. Also, _knns_ identifiers must follow **1**-based indexing (**0**-based indexing solutions must add 1 to evaluate correctly). See <https://github.com/sisap-challenges/sisap23-laion-challenge-evaluation> for more details.
 - **Ranking:** Best queries-per-second for results having a recall bigger than $0.9$ w.r.t a public gold standard (partial ranking, working with GitHub Actions) and w.r.t. a private gold standard (final ranking).
 
 @@warn
 We will reproduce your results post-challenge and produce rankings on quality and search time using a different query set. So, it is essential that your solution can be replicated.
 
-Please visit <https://sisap-challenges.github.io/repoexamples/> for working examples. In particular, please follow the guidelines of <https://github.com/sisap-challenges/sisap23-laion-challenge-evaluation> to simplify evaluating your solution. Note that the available examples can be used as starting points.
+Please visit [examples](/2023/repoexamples/) section for working examples. In particular, please follow the guidelines of <https://github.com/sisap-challenges/sisap23-laion-challenge-evaluation> to simplify evaluating your solution. Note that the available examples can be used as starting points.
 @@
 
 ## Task B: Binary sketches
