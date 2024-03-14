@@ -4,18 +4,18 @@ urls = Dict()
 sizes = Dict()
 md5s = Dict()
 
-for line in readlines("dataset-files-urls.txt")
+for line in readlines("2023/dataset-files-urls.txt")
     (length(line) == 0 || line[1] == '#') && continue
     urls[basename(line)] = strip(line)
 end
 
-for line in readlines("dataset-files-size.txt")
+for line in readlines("2023/dataset-files-size.txt")
     (length(line) == 0 || line[1] == '#') && continue
     s, name = split(strip(line))
     sizes[basename(name)] = s
 end
 
-for line in readlines("dataset-files-md5.txt")
+for line in readlines("2023/dataset-files-md5.txt")
     (length(line) == 0 || line[1] == '#') && continue
     s, name = split(strip(line))
     md5s[basename(name)] = s
