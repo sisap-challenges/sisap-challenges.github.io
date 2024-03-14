@@ -41,18 +41,14 @@ In this task, participants are asked to develop memory-efficient indexing soluti
 ## Datasets and queries
 
 - **Input dataset:** The 100M subset of the LAION2B dataset, i.e., see [clip768 files](/2024/datasets/). 
-- **Public queries:** The 10K private queries from the previous year's challenge will be used as the public query set. Queries asks for the 30nn.
-- **Private queries:** An undisclosed set of 100K queries will be used for the final evaluation. Queries will be asking for the 30nn. 
+- **Public queries:** The 10K private queries from the previous year's challenge will be used as the public query set. Queries asks for the 30nn ($k=30$).
+- **Private queries:** An undisclosed set of 100K queries will be used for the final evaluation. Queries will be asking for the 30nn ($k=30$). 
 - **Similarity measure:** Dot product similarity.
+- **Output:** two $k\times |queries|$ matrices in a single HDF5 filename (one file per search hyperparameter probe)
+  - `knns` matrix to store object identifiers (integers)
+  - `dists` matrix to store distances. Note that results should follow column-major order, i.e., the $i$th columns should contain identifiers and distances of the approximate $k$ nearest neighbors of the $i$th query sorted by the distance in ascending order, plus additional metadata. Also, _knns_ identifiers must follow **1**-based indexing (**0**-based indexing solutions must add 1 to evaluate correctly). <!--See <https://github.com/sisap-challenges/sisap23-laion-challenge-evaluation> for more details.-->
+  - see examples for more details about these matrices and required metadata.
 
-
-## Task A: Indexing and searching a LAION-5B deep features subset
-
-The LAION2B deep features dataset contains 768-dimensional vectors using 16-bit floating point numbers, using dot product as a similarity measure. This task asks for solutions that work on a subset of this dataset. Any transformation to the dataset to load, index, and solve $k$ nearest neighbor queries is allowed. Transformations include, but are not limited to, packing into different data types, dimensional reduction, locality-sensitive hashing, product quantization, and binary sketches. Indexing algorithms can be an original part of the contribution, or alternatively, already published indexes can be used. The entire pipeline should be included and tested in GitHub's Actions (GHA) to reproduce the results; the hyperparameters must be clearly specified on the GHA for all the reported subsets.
-
-- **Input queries:** Query set, retrieve $k=10$ neighbors.
-- **Output:** two $k\times n$ matrices in a single HDF5 files, one for object identifiers (key _knns_, integers) and other for distances (key _dists_, floating point numbers). Note that results should follow column-major order, i.e., the $i$th columns should contain identifiers and distances of the approximate $k$ nearest neighbors of the $i$th query sorted by the distance in ascending order, plus additional metadata. Also, _knns_ identifiers must follow **1**-based indexing (**0**-based indexing solutions must add 1 to evaluate correctly). <!--See <https://github.com/sisap-challenges/sisap23-laion-challenge-evaluation> for more details.-->
-- **Ranking:** Best queries-per-second for results having a recall bigger than $0.9$ w.r.t a public gold standard (partial ranking, working with GitHub Actions) and w.r.t. a private gold standard (final ranking).
 
 @@warn
 We will reproduce your results post-challenge and produce rankings on quality and search time using a different query set. So, it is essential that your solution can be replicated.
