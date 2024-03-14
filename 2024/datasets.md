@@ -12,37 +12,26 @@ tags = ["LAION2B", "dataset", "projections", "gold standard", "pca32", "pca96", 
 ## About the LAION5B
 
 The **LAION5B** dataset is an openly available image collection that has been used for learning very large visual and language deep-neural models; for instance, the famed stable diffusion generative model used it as the training set.
-The collection equips each image with a URL handle, allowing people to showcase demonstrations easily.
 
 A more detailed description can be found here:
 @@important
 _Schuhmann, C., Beaumont, R., Vencu, R., Gordon, C., Wightman, R., Cherti, M., ... & Jitsev, J. (2022). Laion-5b: An open large-scale dataset for training next generation image-text models. arXiv preprint arXiv:2210.08402._
 @@
 
-The English subset, often called LAION2B, contains over 2 billion objects.
+The challenge use a 100M subset of the English subset, often called LAION2B, our objects are not marked as NFSW.
+We use 768-dimensional vector embeddings.
 
 
-### Subset of the challenge
-The dataset is divided into parts containing close to 1M vectors. We selected the first 112 parts (0000 to 0111); we used the first part to extract the public query set and the rest to extract the database. The subset use approximately 160GB of space and its associated metadata 20GB (the first 112 parts). Embeddings are distributed using single precision (16bits) floating point vectors bundled in the NumPy data-specific format `.npz`. They can be loaded on most platforms due to the format's popularity.
 
-The challenge has three subsets:
+### Some notes about the data
 
-- 10M subset: concatenation of 1-11 parts.
-- 30M subset: concatenation of 1-33 parts.
-- 100M subset: concatenation of 1-111 parts.
-- public queries: computed from part 0.
-
-All parts should be concatenated in order and also removing NSFW entries (marked in metadata files).
-
-- **Note 1**: You will get 768 dimensional 16-bit floating point vectors that may be changed to a 32-bit format to get full speed on legacy hardware.
-- **Note 2**: Our gold-standards were computed using $L_2$-normalized vectors (i.e., unitary norms) and the $1-\cos(\cdot, \cdot)$ as distance function.
-- **Note 3**: Our gold-standard `.h5` files contain the 100 nearest neighbors of each query using two associated matrices `knns` and `dists`, i.e., columns correspond to queries and rows to nearest neighbors for each query.
+- You will get 768 dimensional 16-bit floating point vectors that may be changed to a 32-bit format to get full speed on legacy hardware.
+- Our gold-standards were computed using dot product as similarity; vectors are almost $L_2$-normalized, so you can use the cosine distance or the angle distance as well to get a good aproximation.
+- Our gold-standard `.h5` files contain the 1000 nearest neighbors of each query using two associated matrices `knns` and `dists`, i.e., columns correspond to queries and rows to nearest neighbors for each query.
   - The `knns` identifiers start indexing on 1.
-  - The `dists` contains raw distance values for each corresponding query and object, i.e., `1-\cos(\cdot, \cdot)`; please consider that this is not a proper metric distance. People using metric properties can use the angle with minor changes. 
+  - The `dists` contains raw similarity values for each corresponding query and object; please consider that this is not a proper metric distance. People using metric properties can use the angle with minor changes. We will not check distance values for the final ranking. 
 
-## Subsets
-
-We provide access to different subsets of the dataset and also created three different lower-dimensional projections that can be used. In particular, we computed two PCA projections using 32 and 96 dimensions and one more projection into binary sketches designed to work with bit-level hamming distance (using 1024 bits). Find below the URLs to download these bundles. 
+## Data
 
 ```julia:./datasets/table
 #hideall
@@ -75,63 +64,11 @@ end
 files = [
   nothing => "768d clip embeddings (clip768)",
   "laion2B-en-clip768v2-n=100M.h5" => "100M subset",
-  "laion2B-en-clip768v2-n=30M.h5" => "30M subset",
-  "laion2B-en-clip768v2-n=10M.h5" => "10M subset",
   "laion2B-en-clip768v2-n=300K.h5" => "300K subset, for developing purposes",
-  "laion2B-en-clip768v2-n=100K.h5" => "100K subset, for developing purposes",
-  "public-queries-10k-clip768v2.h5" => "10k public query set (original 768d embeddings)",
   "private-queries-10k-clip768v2.h5" => "10k private query set (original 768d embeddings)",
 
-  nothing => "32d PCA projections (pca32)",
-  "laion2B-en-pca32v2-n=100M.h5" => "100M subset",
-  "laion2B-en-pca32v2-n=30M.h5" => "30M subset",
-  "laion2B-en-pca32v2-n=10M.h5" => "10M subset",
-  "laion2B-en-pca32v2-n=300K.h5" => "300K subset, for developing purposes",
-  "laion2B-en-pca32v2-n=100K.h5" => "100K subset, for developing purposes",
-  "public-queries-10k-pca32v2.h5" => "10k public query set for 32d PCA projection",
-  "private-queries-10k-pca32v2.h5" => "10k private query set for 32d PCA projection",
-
-  nothing => "96d PCA projections (pca96)",
-  "laion2B-en-pca96v2-n=100M.h5" => "100M subset",
-  "laion2B-en-pca96v2-n=30M.h5" => "30M subset",
-  "laion2B-en-pca96v2-n=10M.h5" => "10M subset",
-  "laion2B-en-pca96v2-n=300K.h5" => "300K subset, for developing purposes",
-  "laion2B-en-pca96v2-n=100K.h5" => "100K subset, for developing purposes",
-  "public-queries-10k-pca96v2.h5" => "10k public query set for 96d PCA projection",
-  "private-queries-10k-pca96v2.h5" => "10k private query set for 96d PCA projection",
-
-  nothing => "1024-bit binary sketches (hamming)",
-  "laion2B-en-hammingv2-n=100M.h5" => "100M subset",
-  "laion2B-en-hammingv2-n=30M.h5" => "30M subset",
-  "laion2B-en-hammingv2-n=10M.h5" => "10M subset",
-  "laion2B-en-hammingv2-n=300K.h5" => "300K subset, for developing purposes",
-  "laion2B-en-hammingv2-n=100K.h5" => "100K subset, for developing purposes",
-  "public-queries-10k-hammingv2.h5" => "10k public query set for 1024-bit binary sketch projection",
-  "private-queries-10k-pca96v2.h5" => "10k private query set for 1024-bit binary sketch projection",
-
-  nothing => "Gold standard list (computed with 32-bit floating point arithmetic, 100 nearest neighbors)",
-  "laion2B-en-public-gold-standard-v2-100M.h5" => "100M gold standard",
-  "laion2B-en-public-gold-standard-v2-30M.h5" => "30M gold standard",
-  "laion2B-en-public-gold-standard-v2-10M.h5" => "10M gold standard",
-  "laion2B-en-public-gold-standard-v2-300K.h5" => "300K gold standard",
-  "laion2B-en-public-gold-standard-v2-100K.h5" => "100K gold standard",
-
-  nothing => "Gold standard for public queries (computed with 64-bit IEEE floating point arithmetic, 1000 nearest neighbors)",
-  "laion2B-en-public-gold-standard-v2-100M-F64-IEEE754.h5" => "100M gold standard",
-  "laion2B-en-public-gold-standard-v2-30M-F64-IEEE754.h5" => "30M gold standard",
-  "laion2B-en-public-gold-standard-v2-10M-F64-IEEE754.h5" => "10M gold standard",
-  "laion2B-en-public-gold-standard-v2-300K-F64-IEEE754.h5" => "300K gold standard",
-  
   nothing => "Gold standard for private queries (computed with 64-bit IEEE floating point arithmetic, 1000 nearest neighbors)",
-  "laion2B-en-private-gold-standard-v2-10M-F64-IEEE754.h5" => "10M private gold standard",
-  "laion2B-en-private-gold-standard-v2-30M-F64-IEEE754.h5" => "30M private gold standard",
-  "laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5" => "100M private gold standard",
-
-  nothing => "Associated captions and image urls (tabular delimited files)",
-  "meta-10M.tsv" => "metadata for the 10M subset",
-  "meta-30M.tsv" => "metadata for the 30M subset",
-  "meta-100M.tsv" => "metadata for the 100M subset",
-
+  #"laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5" => "100M private gold standard"
 ]
 
 #open("assets/download-table.md", "w") do file

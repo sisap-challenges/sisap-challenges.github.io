@@ -36,9 +36,6 @@ cd93f7bf61a436b5a45d0b3e1a002667  public-queries-10k-hammingv2.h5
 8c0fa4fff523d6263a246f7553d2b92f  public-queries-10k-pca32v2.h5
 f7d0b77f336f8f63803ddb59b4d4b8ed  public-queries-10k-pca96v2.h5
 
-a9abbe13fb19207fb240f74fc03e2476  meta-10M.tsv
-a3205400411f6b82c8748e1a187d87fb  meta-30M.tsv
-323d0cf4cf22ae6edbc71e18e8110100  meta-100M.tsv
 
 59321e7e33b5469a5b435ff11305257f  laion2B-en-public-gold-standard-v2-100M-F64-IEEE754.h5
 45b05e4d60b8a66088b378ae7e0d278f  laion2B-en-public-gold-standard-v2-10M-F64-IEEE754.h5

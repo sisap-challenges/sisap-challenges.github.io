@@ -130,11 +130,6 @@ files = [
   "laion2B-en-private-gold-standard-v2-30M-F64-IEEE754.h5" => "30M private gold standard",
   "laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5" => "100M private gold standard",
 
-  nothing => "Associated captions and image urls (tabular delimited files)",
-  "meta-10M.tsv" => "metadata for the 10M subset",
-  "meta-30M.tsv" => "metadata for the 30M subset",
-  "meta-100M.tsv" => "metadata for the 100M subset",
-
 ]
 
 #open("assets/download-table.md", "w") do file
@@ -192,8 +187,3 @@ Note that our projection models were trained with our 10M subset. Other approach
 
 **Note**: Projections will reduce the result's quality concerning the original embeddings, but you can use these datasets to fast prototype your solution and for hyperparameter optimization. Please email us if you are interested in the associated metadata (which can also be obtained as described in the rest of the document.)
 
-
-@@warn
-The original dataset can be downloaded and processed to get different subsets as described in
-[the downloading and preprocessing LAION](/downloading-laion/) page. We encourage challenge participants to use the provided bundles for consistency reasons.
-@@
