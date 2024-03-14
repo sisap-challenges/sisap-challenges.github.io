@@ -66,10 +66,3 @@
 | [laion2B-en-private-gold-standard-v2-10M-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-private-gold-standard-v2-10M-F64-IEEE754.h5) | 10M private gold standard | 783K | f384beecb5dddcddca8efc00a7fcd911 |
 | [laion2B-en-private-gold-standard-v2-30M-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-private-gold-standard-v2-30M-F64-IEEE754.h5) | 30M private gold standard | 783K | 3b43d7b1251bd1387419a245bec8ba55 |
 | [laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5](http://ingeotec.mx/~sadit/SISAP23-Challenge/laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5) | 100M private gold standard | 783K | 0ab272fd7b0eee8beec378e67da85b65 |
-
-## Associated captions and image urls (tabular delimited files)
-| dataset | description | size | md5      |
-|---------|-------------|------|----------|
-| [meta-10M.tsv](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/meta-10M.tsv) | metadata for the 10M subset | 1.8G | a9abbe13fb19207fb240f74fc03e2476 |
-| [meta-30M.tsv](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/meta-30M.tsv) | metadata for the 30M subset | 5.2G | a3205400411f6b82c8748e1a187d87fb |
-| [meta-100M.tsv](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/meta-100M.tsv) | metadata for the 100M subset | 18G | 323d0cf4cf22ae6edbc71e18e8110100 |

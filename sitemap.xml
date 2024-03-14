@@ -68,12 +68,6 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://sisap-challenges.github.io/2024/downloading-laion/index.html</loc>
-    <lastmod>2024-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>https://sisap-challenges.github.io/2024/index.html</loc>
     <lastmod>2024-03-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -81,12 +75,6 @@
 </url>
 <url>
     <loc>https://sisap-challenges.github.io/2024/repoexamples/index.html</loc>
-    <lastmod>2024-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://sisap-challenges.github.io/2024/ioformats/index.html</loc>
     <lastmod>2024-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -8,43 +8,6 @@ d238b4b037c32bae41e497f95dffa895  laion2B-en-clip768v2-n=300K.h5
 007ec4db4337d8ce3d524f37598d6cef  laion2B-en-clip768v2-n=3M.h5
 257b9eb3f7f25776e0d33b22451b7b32  public-queries-10k-clip768v2.h5
 
-0dcb6fc72284439f67debcb34080b282  laion2B-en-hammingv2-n=100K.h5
-36030a46f0792d8c520b85a39ea64dfc  laion2B-en-hammingv2-n=100M.h5
-13a28c054a351c2b2cdd8fd918b006ed  laion2B-en-hammingv2-n=10M.h5
-03533c23fcc18c806cd42653e46fda89  laion2B-en-hammingv2-n=300K.h5
-9f438fd469e21313684f191d375c63ed  laion2B-en-hammingv2-n=30M.h5
-
-45a6c4e3774430d6318f808b43053895  laion2B-en-pca32v2-n=100K.h5
-02c5726ba41cbfd3320d75ad113ef008  laion2B-en-pca32v2-n=100M.h5
-799dfd317976012a9b768aea123ce6b0  laion2B-en-pca32v2-n=10M.h5
-aeffa3290eedd6063f138d5a81489128  laion2B-en-pca32v2-n=300K.h5
-cf34551e4a80689a155052de640874b1  laion2B-en-pca32v2-n=30M.h5
-
-73d464eccd6a6695d1f78f67bfbc7b46  laion2B-en-pca96v2-n=100K.h5
-715c1f5bfa3da61eaf5e2e8735052043  laion2B-en-pca96v2-n=100M.h5
-4f2520b152929bcd34fb3912d4db025e  laion2B-en-pca96v2-n=10M.h5
-97faba380163a5ec2e1a441c3a6d21b6  laion2B-en-pca96v2-n=300K.h5
-17b783ca3714b4b8084d93d59bac4611  laion2B-en-pca96v2-n=30M.h5
-
-fe39725772f487e4c86af68e18e87c88  laion2B-en-public-gold-standard-v2-100K.h5
-35de58992c6446c85c56e710b144c90c  laion2B-en-public-gold-standard-v2-100M.h5
-b68b17693253d95e1fc94c217af25e95  laion2B-en-public-gold-standard-v2-10M.h5
-258654f2a34a1bdbfa031862b4e6cfae  laion2B-en-public-gold-standard-v2-300K.h5
-1726691372d2f62d7b0b97d8bf4f6189  laion2B-en-public-gold-standard-v2-30M.h5
-
-cd93f7bf61a436b5a45d0b3e1a002667  public-queries-10k-hammingv2.h5
-8c0fa4fff523d6263a246f7553d2b92f  public-queries-10k-pca32v2.h5
-f7d0b77f336f8f63803ddb59b4d4b8ed  public-queries-10k-pca96v2.h5
-
-a9abbe13fb19207fb240f74fc03e2476  meta-10M.tsv
-a3205400411f6b82c8748e1a187d87fb  meta-30M.tsv
-323d0cf4cf22ae6edbc71e18e8110100  meta-100M.tsv
-
-59321e7e33b5469a5b435ff11305257f  laion2B-en-public-gold-standard-v2-100M-F64-IEEE754.h5
-45b05e4d60b8a66088b378ae7e0d278f  laion2B-en-public-gold-standard-v2-10M-F64-IEEE754.h5
-5d635f26630cced971358fd76f37c32e  laion2B-en-public-gold-standard-v2-300K-F64-IEEE754.h5
-a445f32702aa43a176b56c54bf3f03f9  laion2B-en-public-gold-standard-v2-30M-F64-IEEE754.h5
-
 
 9e3113385d2aeae96cefe78c4649d465  laion2B-en-private-gold-standard-v2-100M-F32-IEEE754.h5
 0ab272fd7b0eee8beec378e67da85b65  laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5

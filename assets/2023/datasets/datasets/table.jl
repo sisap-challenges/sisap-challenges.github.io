@@ -81,11 +81,6 @@ files = [
   "laion2B-en-private-gold-standard-v2-30M-F64-IEEE754.h5" => "30M private gold standard",
   "laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5" => "100M private gold standard",
 
-  nothing => "Associated captions and image urls (tabular delimited files)",
-  "meta-10M.tsv" => "metadata for the 10M subset",
-  "meta-30M.tsv" => "metadata for the 30M subset",
-  "meta-100M.tsv" => "metadata for the 100M subset",
-
 ]
 
 #open("assets/download-table.md", "w") do file
