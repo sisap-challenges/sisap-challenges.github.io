@@ -11,7 +11,7 @@ tags = ["LAION2B", "dataset", "projections", "gold standard", "pca32", "pca96", 
 
 ## About the LAION5B
 
-The **LAION5B** dataset is an openly available image collection that has been used for learning very large visual and language deep-neural models; for instance, the famed stable diffusion generative model used it as the training set.
+The **LAION** dataset is an openly available image collection that has been used for learning very large visual and language deep-neural models; for instance, the famed stable diffusion generative model used it as the training set.
 
 A more detailed description can be found here:
 @@important
@@ -39,18 +39,18 @@ urls = Dict()
 sizes = Dict()
 md5s = Dict()
 
-for line in readlines("2023/dataset-files-urls.txt")
+for line in readlines("2024/dataset-files-urls.txt")
     (length(line) == 0 || line[1] == '#') && continue
     urls[basename(line)] = strip(line)
 end
 
-for line in readlines("2023/dataset-files-size.txt")
+for line in readlines("2024/dataset-files-size.txt")
     (length(line) == 0 || line[1] == '#') && continue
     s, name = split(strip(line))
     sizes[basename(name)] = s
 end
 
-for line in readlines("2023/dataset-files-md5.txt")
+for line in readlines("2024/dataset-files-md5.txt")
     (length(line) == 0 || line[1] == '#') && continue
     s, name = split(strip(line))
     md5s[basename(name)] = s
@@ -64,11 +64,18 @@ end
 files = [
   nothing => "768d clip embeddings (clip768)",
   "laion2B-en-clip768v2-n=100M.h5" => "100M subset",
+  "laion2B-en-clip768v2-n=10M.h5" => "10M subset, for developing purposes",
   "laion2B-en-clip768v2-n=300K.h5" => "300K subset, for developing purposes",
-  "private-queries-10k-clip768v2.h5" => "10k private query set (original 768d embeddings)",
+  "private-queries-10k-clip768v2.h5" => "10k public query set",
 
-  nothing => "Gold standard for private queries (computed with 64-bit IEEE floating point arithmetic, 1000 nearest neighbors)",
-  #"laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5" => "100M private gold standard"
+  nothing => "Gold standard files",
+  "gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 100M subset (public queries 2024)",
+  "gold-standard-dbsize=10M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 10M subset (public queries 2024)",
+  "gold-standard-dbsize=1M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 1M subset (public queries 2024)",
+  "gold-standard-dbsize=300K--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 300K subset (public queries)",
+
+  nothing => "Public queries",
+  "public-queries-2024-laion2B-en-clip768v2-n=10k.h5"
 ]
 
 #open("assets/download-table.md", "w") do file
@@ -89,45 +96,16 @@ files = [
 
 \textoutput{./datasets/table}
 
-
-For instance, you can download the 10M subset and the query set using the following commands from a typical linux terminal:
+For instance, you can download the and prepare the development data using the following commands from a typical linux terminal:
 ```bash
-curl -O https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=10M.h5
-curl -O https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/public-queries-10k-clip768v2.h5
+mkdir data2024  # we will use this directory name for the evaluation, so it is good idea to use the same structure
+cd data2024
+curl -O https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=300K.h5
+curl -O http://ingeotec.mx/~sadit/sisap2024-data/public-queries-2024-laion2B-en-clip768v2-n=10k.h5  # this url will be updated soon
+curl -O http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=300K--public-queries-2024-laion2B-en-clip768v2-n=10k.h5 # this url will be updated soon
+# curl -O https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=10M.h5
+# curl -O http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=10M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
+# curl -O https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=100M.h5
+# curl -O http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
 ```
 
-<!--
-## Projection's recall and baseline search times (bruteforce)
-Each projection is an approximation of the original CLIP embeddings; therefore, they produce a quality reduction. For instance, we computed the upper bound recall scores (using brute force) for searching for the 30 nearest neighbors are:
-
-
-```julia:./table-recall
-#hideall
-### using DataFrames, CSV
-### table = CSV.read("recall-projections.csv", DataFrame)
-### 
-### # data size algo buildtime querytime params recall 
-### 
-### println("| data | size | recall | querytime (32 cores / 64 threads) |")
-### println("|------|------|--------|-----------------------|")
-### for r in eachrow(table)
-###     recall = round(r.recall, digits=4)
-###     querytime = round(r.querytime, digits=2)
-###     println("|$(r.data)|$(r.size)|$(recall)|$(querytime)s|")
-### end
-## \textoutput{./table-recall}
-```
-
-
--->
-
-Note that our projection models were trained with our 10M subset. Other approaches may vary the resulting quality.
-
-
-**Note**: Projections will reduce the result's quality concerning the original embeddings, but you can use these datasets to fast prototype your solution and for hyperparameter optimization. Please email us if you are interested in the associated metadata (which can also be obtained as described in the rest of the document.)
-
-
-@@warn
-The original dataset can be downloaded and processed to get different subsets as described in
-[the downloading and preprocessing LAION](/downloading-laion/) page. We encourage challenge participants to use the provided bundles for consistency reasons.
-@@

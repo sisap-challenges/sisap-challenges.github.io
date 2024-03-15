@@ -1,11 +1,10 @@
+77M	gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
+77M	gold-standard-dbsize=10M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
+77M	gold-standard-dbsize=1M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
+77M	gold-standard-dbsize=300K--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
+147G	laion2B-en-clip768v2-n=100M.h5
+15G	laion2B-en-clip768v2-n=10M.h5
+1.5G	laion2B-en-clip768v2-n=1M.h5
+440M	laion2B-en-clip768v2-n=300K.h5
+30M	public-queries-2024-laion2B-en-clip768v2-n=10k.h5
 
-
- 147M laion2B-en-clip768-n=100K.h5
- 147G laion2B-en-clip768-n=100M.h5
-  15G laion2B-en-clip768-n=10M.h5
- 440M laion2B-en-clip768-n=300K.h5
-  44G laion2B-en-clip768-n=30M.h5
-
-
-  77M laion2B-en-private-gold-standard-v2-100M-F32-IEEE754.h5
-  30M private-queries-10k-clip768v2.h5
