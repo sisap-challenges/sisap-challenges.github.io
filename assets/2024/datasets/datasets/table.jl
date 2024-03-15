@@ -4,18 +4,18 @@ urls = Dict()
 sizes = Dict()
 md5s = Dict()
 
-for line in readlines("2023/dataset-files-urls.txt")
+for line in readlines("2024/dataset-files-urls.txt")
     (length(line) == 0 || line[1] == '#') && continue
     urls[basename(line)] = strip(line)
 end
 
-for line in readlines("2023/dataset-files-size.txt")
+for line in readlines("2024/dataset-files-size.txt")
     (length(line) == 0 || line[1] == '#') && continue
     s, name = split(strip(line))
     sizes[basename(name)] = s
 end
 
-for line in readlines("2023/dataset-files-md5.txt")
+for line in readlines("2024/dataset-files-md5.txt")
     (length(line) == 0 || line[1] == '#') && continue
     s, name = split(strip(line))
     md5s[basename(name)] = s
@@ -29,11 +29,18 @@ end
 files = [
   nothing => "768d clip embeddings (clip768)",
   "laion2B-en-clip768v2-n=100M.h5" => "100M subset",
+  "laion2B-en-clip768v2-n=10M.h5" => "10M subset, for developing purposes",
   "laion2B-en-clip768v2-n=300K.h5" => "300K subset, for developing purposes",
-  "private-queries-10k-clip768v2.h5" => "10k private query set (original 768d embeddings)",
+  "private-queries-10k-clip768v2.h5" => "10k public query set",
 
-  nothing => "Gold standard for private queries (computed with 64-bit IEEE floating point arithmetic, 1000 nearest neighbors)",
-  #"laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5" => "100M private gold standard"
+  nothing => "Gold standard files",
+  "gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 100M subset (public queries 2024)",
+  "gold-standard-dbsize=10M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 10M subset (public queries 2024)",
+  "gold-standard-dbsize=1M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 1M subset (public queries 2024)",
+  "gold-standard-dbsize=300K--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 300K subset (public queries)",
+
+  nothing => "Public queries",
+  "public-queries-2024-laion2B-en-clip768v2-n=10k.h5"
 ]
 
 #open("assets/download-table.md", "w") do file

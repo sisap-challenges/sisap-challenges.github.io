@@ -1,21 +1,9 @@
-
-daef38a64e3cd1c5233231f8be882a64  laion2B-en-clip768v2-n=100K.h5
-9d8ee3347b1edf136b3ef38162ac05c3  laion2B-en-clip768v2-n=100M.h5
-c05e4b1d2b2a0c7663ac9767753e25e1  laion2B-en-clip768v2-n=10M.h5
-61dea2ae683636a248cb915391156435  laion2B-en-clip768v2-n=1M.h5
+f88c534ee03f1b2d0adbb972c90bb970  gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
+342794391dafed7bd90dabb740fc15ba  gold-standard-dbsize=10M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
+f8e15cec8172451919a01aaa9815919d  gold-standard-dbsize=1M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
+d73ec238f8b4321778f4cbb80a562d23  gold-standard-dbsize=300K--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
+f8f3e61bd22d7d64234a0f587ead9fcf  public-queries-2024-laion2B-en-clip768v2-n=10k.h5
 d238b4b037c32bae41e497f95dffa895  laion2B-en-clip768v2-n=300K.h5
-15a24d28d2304e14711e23baf7fe86a4  laion2B-en-clip768v2-n=30M.h5
-007ec4db4337d8ce3d524f37598d6cef  laion2B-en-clip768v2-n=3M.h5
-257b9eb3f7f25776e0d33b22451b7b32  public-queries-10k-clip768v2.h5
-
-
-9e3113385d2aeae96cefe78c4649d465  laion2B-en-private-gold-standard-v2-100M-F32-IEEE754.h5
-0ab272fd7b0eee8beec378e67da85b65  laion2B-en-private-gold-standard-v2-100M-F64-IEEE754.h5
-6126938d82244546ec4949a801fc7f66  laion2B-en-private-gold-standard-v2-10M-F32-IEEE754.h5
-f384beecb5dddcddca8efc00a7fcd911  laion2B-en-private-gold-standard-v2-10M-F64-IEEE754.h5
-4af84d4b26f8bdda0264e19dc70d787e  laion2B-en-private-gold-standard-v2-30M-F32-IEEE754.h5
-3b43d7b1251bd1387419a245bec8ba55  laion2B-en-private-gold-standard-v2-30M-F64-IEEE754.h5
-f8f3e61bd22d7d64234a0f587ead9fcf  private-queries-10k-clip768v2.h5
-6e9bba2023ff0745ecf47361a837c3a8  private-queries-10k-hammingv2.h5
-57dc078229325b6c161521512585738e  private-queries-10k-pca32v2.h5
-301330e6d3963dd2db923fd4e858aa4e  private-queries-10k-pca96v2.h5
+47fe7d2da1644bffee684d3b17b7d404  laion2B-en-clip768v2-n=1M.h5
+c05e4b1d2b2a0c7663ac9767753e25e1  laion2B-en-clip768v2-n=10M.h5
+9d8ee3347b1edf136b3ef38162ac05c3  laion2B-en-clip768v2-n=100M.h5
