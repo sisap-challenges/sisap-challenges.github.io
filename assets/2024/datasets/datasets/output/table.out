@@ -17,4 +17,4 @@
 ## Public queries
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
-KeyError: key 'p' not found
+| [public-queries-2024-laion2B-en-clip768v2-n=10k.h5](http://ingeotec.mx/~sadit/sisap2024-data/public-queries-2024-laion2B-en-clip768v2-n=10k.h5) | public queries 2024 (this query set correspond to the 2023 private query set) | 30M | f8f3e61bd22d7d64234a0f587ead9fcf |

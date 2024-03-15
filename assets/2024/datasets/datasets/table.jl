@@ -39,7 +39,7 @@ files = [
   "gold-standard-dbsize=300K--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 300K subset (public queries)",
 
   nothing => "Public queries",
-  "public-queries-2024-laion2B-en-clip768v2-n=10k.h5"
+  "public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "public queries 2024 (this query set correspond to the 2023 private query set)"
 ]
 
 #open("assets/download-table.md", "w") do file
