@@ -5,4 +5,16 @@
 | [laion2B-en-clip768v2-n=100M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=100M.h5) | 100M subset | 147G | 9d8ee3347b1edf136b3ef38162ac05c3 |
 | [laion2B-en-clip768v2-n=10M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=10M.h5) | 10M subset, for developing purposes | 15G | c05e4b1d2b2a0c7663ac9767753e25e1 |
 | [laion2B-en-clip768v2-n=300K.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=300K.h5) | 300K subset, for developing purposes | 440M | d238b4b037c32bae41e497f95dffa895 |
-KeyError: key "private-queries-10k-clip768v2.h5" not found
+
+## Gold standard files
+| dataset | description | size | md5      |
+|---------|-------------|------|----------|
+| [gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5](http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5) | gold standard for the 100M subset (public queries 2024) | 77M | f88c534ee03f1b2d0adbb972c90bb970 |
+| [gold-standard-dbsize=10M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5](http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=10M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5) | gold standard for the 10M subset (public queries 2024) | 77M | 342794391dafed7bd90dabb740fc15ba |
+| [gold-standard-dbsize=1M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5](http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=1M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5) | gold standard for the 1M subset (public queries 2024) | 77M | f8e15cec8172451919a01aaa9815919d |
+| [gold-standard-dbsize=300K--public-queries-2024-laion2B-en-clip768v2-n=10k.h5](http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=300K--public-queries-2024-laion2B-en-clip768v2-n=10k.h5) | gold standard for the 300K subset (public queries) | 77M | d73ec238f8b4321778f4cbb80a562d23 |
+
+## Public queries
+| dataset | description | size | md5      |
+|---------|-------------|------|----------|
+KeyError: key 'p' not found

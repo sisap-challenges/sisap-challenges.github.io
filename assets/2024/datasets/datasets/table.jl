@@ -31,7 +31,6 @@ files = [
   "laion2B-en-clip768v2-n=100M.h5" => "100M subset",
   "laion2B-en-clip768v2-n=10M.h5" => "10M subset, for developing purposes",
   "laion2B-en-clip768v2-n=300K.h5" => "300K subset, for developing purposes",
-  "private-queries-10k-clip768v2.h5" => "10k public query set",
 
   nothing => "Gold standard files",
   "gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 100M subset (public queries 2024)",
