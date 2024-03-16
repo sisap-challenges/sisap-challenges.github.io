@@ -20,8 +20,8 @@ Take a look on `.github/workflows/ci.yml` files, please feel free to use them as
 
 ## Python and Faiss
 
-[https://github.com/sisap-challenges/sisap23-laion-challenge-faiss-example](https://github.com/sisap-challenges/sisap23-laion-challenge-faiss-example)
+_work in progress_
 
 ## Julia and `SimilaritySearch.jl`
-[https://github.com/sisap-challenges/sisap23-laion-challenge-julia-example](https://github.com/sisap-challenges/sisap23-laion-challenge-julia-example)
+[Julia example](https://github.com/sisap-challenges/sisap24-example-julia)
 
