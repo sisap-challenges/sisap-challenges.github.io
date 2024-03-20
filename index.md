@@ -2,7 +2,7 @@
 title = "SISAP Indexing Challenge"
 tags = ["sisap", "challenge"]
 +++
-# SISAP Indexing Challenge  (UNDER CONSTRUCTION FOR SISAP 2024)
+# SISAP Indexing Challenge 
 
 The International Conference on Similarity Search and Applications (SISAP) is an annual forum for researchers and application developers in the area of similarity data management. It aims at the technological problems shared by numerous application domains, such as data mining, information retrieval, multimedia, computer vision, pattern recognition, computational biology, geography, biometrics, machine learning, and many others that use similarity search as a necessary supporting service. Machine learning, dense retrieval, and multimedia indexing have taken the scene of similarity search as the most challenging task among applications. This call reflects on this observation.
 

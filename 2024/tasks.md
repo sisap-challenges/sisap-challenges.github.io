@@ -15,27 +15,28 @@ Approximately 100 million CLIP descriptors extracted from the LAION database
 Similarity between two objects is measured by their dot product. The similarity function is a dot product
 The goal is to evaluate 30 nearest neighbours queries using 10K query objects described below
 
-## Task 1: Unleashed Indexing
-In this task, participants have access to all resources on our testing computer to build their indexing solutions. The goal is to achieve the highest search performance within the given constraints.
+## Task 1: Unrestricted Indexing
+In this task, system solutions will have access to all resources on our testing computer to build their indexing solutions. The goal is to achieve the highest search performance within the given constraints.
 - Wall clock time for index construction: 12 hours.
-- Minimum recall to be considered in the final ranking: $0.8$.
-- Ranking: Highest throughput/fastest search time with average recall of at least 0.8.
-- Search performance will be evaluated using 30 different search hyperparameters.
+- Ranking: Highest throughput/fastest search time with an average recall of at least 0.8. 
+- Search performance will be evaluated using a built index (in a single configuration) and various query executions using up to 30 different search hyperparameters.
 - Saving the index is not required for running the search.
 
+
 ## Task 2: Memory-Constrained Indexing with Reranking
-This task challenges participants to develop memory-efficient indexing solutions with reranking capabilities. Participants will be provided with a virtual machine (VM) with limited memory and storage resources.
-- Container specifications: RAM = 32 GB, SSD = 512 GB.
-- Wall clock time for index construction: 24 hours
-- Ranking: highest throughput/fastest search time with average recall of at least 0.8. 
-- Search performance will be evaluated with the best performance among 30 different search hyperparameters
+This task challenges participants to develop memory-efficient indexing solutions with reranking capabilities. Each solution will be run in a Linux container with limited memory and storage resources.
+- Container specifications: 8 virtual CPUs, RAM = 32 GB, the dataset will be mounted read-only into the container.
+- Wall clock time for index construction: 24 hours.
+- Minimum recall to be considered in the final ranking: 0.8.
+- Search performance will be evaluated using 30 different search hyperparameters.
+
 
 ## Task 3: Memory-Constrained Indexing without Reranking
-In this task, participants are asked to develop memory-efficient indexing solutions that will be used without reranking the search results. The container provided will have higher memory capacity compared to Task 2. Participants have to build an index in the first phase. In the search phase, the original vectors are not available.
-- Container specifications: RAM = 64 GB (read-only access to the database)
-- Wall clock time for index construction: 12 hours
-- Ranking: highest throughput/fastest search time with average recall of at least 0.5. 
-- Search performance will be evaluated with the best performance using 30 different search hyperparameters
+In this task, participants are asked to develop memory-efficient indexing solutions that will be used without reranking the search results. The container provided will have higher memory capacity compared to Task 2. Participants have to build an index in the first phase. In the search phase, the original vectors cannot be used.
+- Container specifications: RAM = 64 GB.
+- Wall clock time for index construction: 12 hours.
+- Minimum recall to be considered in the final ranking: 0.4
+- Search performance will be evaluated using 30 different search hyperparameters.
 
 
 ## Datasets and queries

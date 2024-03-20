@@ -22,15 +22,15 @@ The SISAP Indexing Challenge 2024 invites researchers and practitioners to parti
 
 
 ## Important dates
+  
 - **Mar. 18th, 2024:** Call for participation published, expression of interest opened.
 - **Apr. 20th, 2024:** Expression of interest closes.
 - **Aug. 2nd, 2024:** Submission of proposed implementations deadline (AoE).
-- **Sept. 13th, 2024:** Short paper deadline (AoE).
-- **Aug. 14th, 2024:** Paper notification. 
-- **Aug. 28th, 2024:** Publication of final rankings. 
+- **Aug. 9th, 2024:** Short paper deadline (AoE).
+- **Aug. 16th, 2024:** Paper notification.
+- **Aug. 28th, 2024:** Publication of final rankings.
 - **Sept. 1st, 2024:** Camera-ready.
-- **Nov. 2024:** SISAP 2024 Conference with a special session for the challenge.
-
+- **Nov. 6-8 2024, 2024:** SISAP 2024 Providence (Rhode Island), USA, with a special session for the challenge.
 
 ## Reports
 We expect that participants prepare a detailed report of their solution in a typical SISAP's _shortpaper format_ with a focus on reproducibility and comparing their speedup against a brute force solution in its machine and the resulting quality w.r.t. recall.
