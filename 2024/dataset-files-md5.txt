@@ -7,3 +7,5 @@ d238b4b037c32bae41e497f95dffa895  laion2B-en-clip768v2-n=300K.h5
 47fe7d2da1644bffee684d3b17b7d404  laion2B-en-clip768v2-n=1M.h5
 c05e4b1d2b2a0c7663ac9767753e25e1  laion2B-en-clip768v2-n=10M.h5
 9d8ee3347b1edf136b3ef38162ac05c3  laion2B-en-clip768v2-n=100M.h5
+0086340c91b9414e8e52095e1f41f49c  gold-standard-dbsize=100M--private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5
+3a6757bfd9a5525fe1064bad9bdfc1dd  private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5

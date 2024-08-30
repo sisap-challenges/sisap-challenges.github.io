@@ -6,7 +6,7 @@
 | [laion2B-en-clip768v2-n=10M.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=10M.h5) | 10M subset, for developing purposes | 15G | c05e4b1d2b2a0c7663ac9767753e25e1 |
 | [laion2B-en-clip768v2-n=300K.h5](https://sisap-23-challenge.s3.amazonaws.com/SISAP23-Challenge/laion2B-en-clip768v2-n=300K.h5) | 300K subset, for developing purposes | 440M | d238b4b037c32bae41e497f95dffa895 |
 
-## Gold standard files
+## Gold standard files for the 2024 public queries
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
 | [gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5](http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5) | gold standard for the 100M subset (public queries 2024) | 77M | f88c534ee03f1b2d0adbb972c90bb970 |
@@ -18,3 +18,13 @@
 | dataset | description | size | md5      |
 |---------|-------------|------|----------|
 | [public-queries-2024-laion2B-en-clip768v2-n=10k.h5](http://ingeotec.mx/~sadit/sisap2024-data/public-queries-2024-laion2B-en-clip768v2-n=10k.h5) | public queries 2024 (this query set correspond to the 2023 private query set) | 30M | f8f3e61bd22d7d64234a0f587ead9fcf |
+
+## Gold standard files for the 2024 private queries
+| dataset | description | size | md5      |
+|---------|-------------|------|----------|
+| [gold-standard-dbsize=100M--private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5](http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=100M--private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5) | gold standard for the 100M dataset | 77M | 0086340c91b9414e8e52095e1f41f49c |
+
+## Public queries
+| dataset | description | size | md5      |
+|---------|-------------|------|----------|
+| [private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5](http://ingeotec.mx/~sadit/sisap2024-data/private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5) | private queries 2024 | 30M | 3a6757bfd9a5525fe1064bad9bdfc1dd |

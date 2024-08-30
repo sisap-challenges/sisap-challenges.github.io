@@ -32,14 +32,20 @@ files = [
   "laion2B-en-clip768v2-n=10M.h5" => "10M subset, for developing purposes",
   "laion2B-en-clip768v2-n=300K.h5" => "300K subset, for developing purposes",
 
-  nothing => "Gold standard files",
+  nothing => "Gold standard files for the 2024 public queries",
   "gold-standard-dbsize=100M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 100M subset (public queries 2024)",
   "gold-standard-dbsize=10M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 10M subset (public queries 2024)",
   "gold-standard-dbsize=1M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 1M subset (public queries 2024)",
   "gold-standard-dbsize=300K--public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "gold standard for the 300K subset (public queries)",
 
   nothing => "Public queries",
-  "public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "public queries 2024 (this query set correspond to the 2023 private query set)"
+  "public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "public queries 2024 (this query set correspond to the 2023 private query set)",
+  
+  nothing => "Gold standard files for the 2024 private queries",
+  "gold-standard-dbsize=100M--private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5" => "gold standard for the 100M dataset",
+
+  nothing => "Public queries",
+  "private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5" => "private queries 2024",
 ]
 
 #open("assets/download-table.md", "w") do file
