@@ -77,7 +77,7 @@ files = [
   "public-queries-2024-laion2B-en-clip768v2-n=10k.h5" => "public queries 2024 (this query set correspond to the 2023 private query set)",
   
   nothing => "Gold standard files for the 2024 private queries",
-  "gold-standard-dbsize=100M--private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5" => "gold standard for the 100M dataset"
+  "gold-standard-dbsize=100M--private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5" => "gold standard for the 100M dataset",
 
   nothing => "Public queries",
   "private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5" => "private queries 2024",
