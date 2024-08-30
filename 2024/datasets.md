@@ -31,6 +31,8 @@ We use 768-dimensional vector embeddings.
   - The `knns` identifiers start indexing on 1.
   - The `dists` contains raw similarity values for each corresponding query and object; please consider that this is not a proper metric distance. People using metric properties can use the angle with minor changes. We will not check distance values for the final ranking. 
 
+- Please use "Save link as" option if you have problems when downloading
+
 ## Data
 
 ```julia:./datasets/table
