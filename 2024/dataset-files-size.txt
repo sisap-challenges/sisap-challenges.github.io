@@ -7,4 +7,5 @@
 1.5G	laion2B-en-clip768v2-n=1M.h5
 440M	laion2B-en-clip768v2-n=300K.h5
 30M	public-queries-2024-laion2B-en-clip768v2-n=10k.h5
-
+77M  gold-standard-dbsize=100M--private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5
+30M private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5

@@ -19,7 +19,8 @@ The SISAP Indexing Challenge 2024 invites researchers and practitioners to parti
 
 
 ## News:
-
+- **Aug 28th**: Available results at <https://github.com/sisap-challenges/challenge2024/discussions/8>. 
+- **Aug 30th**: Fixes some mistakes in the site and publish private queries <https://sisap-challenges.github.io/2024/datasets/>.
 
 ## Important dates
   

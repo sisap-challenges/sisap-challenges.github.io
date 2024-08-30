@@ -7,4 +7,5 @@ http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=10M--public-querie
 http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=1M--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
 http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=300K--public-queries-2024-laion2B-en-clip768v2-n=10k.h5
 http://ingeotec.mx/~sadit/sisap2024-data/public-queries-2024-laion2B-en-clip768v2-n=10k.h5
-
+http://ingeotec.mx/~sadit/sisap2024-data/gold-standard-dbsize=100M--private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5
+http://ingeotec.mx/~sadit/sisap2024-data/private-queries-2024-laion2B-en-clip768v2-n=10k-epsilon=0.2.h5

@@ -43,7 +43,7 @@ In this task, participants are asked to develop memory-efficient indexing soluti
 
 - **Input dataset:** The 100M subset of the LAION2B dataset, i.e., see [clip768 files](/2024/datasets/). 
 - **Public queries:** The 10K private queries from the previous year's challenge will be used as the public query set. Queries asks for the 30nn ($k=30$).
-- **Private queries:** An undisclosed set of 100K queries will be used for the final evaluation. Queries will be asking for the 30nn ($k=30$). 
+- **Private queries:** An undisclosed set of 10K queries will be used for the final evaluation. Queries will be asking for the 30nn ($k=30$). 
 - **Similarity measure:** Dot product similarity.
 - **Output:** two $k\times |queries|$ matrices in a single HDF5 filename (one file per search hyperparameter probe)
   - `knns` matrix to store object identifiers (integers)
