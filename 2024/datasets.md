@@ -5,6 +5,9 @@ date = Date(2023, 02, 10)
 
 tags = ["LAION2B", "dataset", "projections", "gold standard", "pca32", "pca96", "hamming"]
 +++
+
+\linkstwentyfour
+
 # The LAION2B and projections
 
 \toc

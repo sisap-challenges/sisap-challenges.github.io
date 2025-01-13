@@ -3,6 +3,8 @@ title = "SISAP Indexing Challenge Committee"
 tags = ["sisap", "organizing committe"]
 +++
 
+\linkstwentyfour
+
 # SISAP 2024's Challenge Organizing Committee
 
 - Edgar L. Chavez, CICESE, México.

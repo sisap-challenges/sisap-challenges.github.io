@@ -5,6 +5,7 @@ date = Date(2024, 03, 13)
 
 tags = ["LAION2B", "Task 1", "Task 2", "Task 3", "similarity search challenges"]
 +++
+\linkstwentyfour
 
 # Tasks of the Implementation Challenge and Demo Track
 

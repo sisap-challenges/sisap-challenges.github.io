@@ -35,3 +35,11 @@ For instance:
       <a href="/2023/repoexamples/">Repository examples</a> |
       <a href="/2023/committee/">Committee and pre-registration</a>
   </div>~~~}
+
+\newcommand{\linkstwentyfour}{~~~<div><span>2024 edition: </span>
+      <a href="/2024/tasks/">Tasks</a> |
+      <a href="/2024/evaluationmethodology/">Methodology</a> |
+      <a href="/2024/datasets/">Datasets</a> |
+      <a href="/2024/repoexamples/">Repository examples</a> |
+      <a href="/2024/committee/">Committee and pre-registration</a>
+  </div>~~~}
