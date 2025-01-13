@@ -27,23 +27,22 @@ Tentative deadlines for the SISAP 2025 Indexing Challenge, i.e., submitted solut
 Task organizers and participants will also have the opportunity to share results and insights in a special oral session of the SISAP conference [https://sisap.org/2025](https://sisap.org/2025) to be held in Iceland on October 1st-3rd,  
 2025. The reports will be published as short papers in the SISAP proceedings.
 
-## Previous editions used GitHub repositories to declare *participation intentions* and save the implementations in GitHub. Asking for a public repository with the solution is congruent with the reproducibility spirit of the challenge.
+Previous editions used GitHub repositories to declare *participation intentions* and save the implementations in GitHub. Asking for a public repository with the solution is congruent with the reproducibility spirit of the challenge.
 
-**Hardware**
+### Hardware
 
-## SISAP 2025 Indexing Challenge does not focus on specialised or extremely limiting hardware that is affordable in rather extreme environments. Conversely, the Challenge aims to address tasks on a common infrastructure of commodity hardware, i.e., hardware that is affordable for small and mid-size companies. The indicative parameters of (each) server(s) that should suffice for task evaluations are:
+SISAP 2025 Indexing Challenge does not focus on specialised or extremely limiting hardware that is affordable in rather extreme environments. Conversely, the Challenge aims to address tasks on a common infrastructure of commodity hardware, i.e., hardware that is affordable for small and mid-size companies. The indicative parameters of (each) server(s) that should suffice for task evaluations are:
 
 - up to 50 CPU cores,  
 - up to 512 GB of RAM  
 - up to 2 TB on NVMe SSD
 
-**Submission of Task Proposals**
+### Submission of Task Proposals
 
-## The proposals for the tasks should be prepared in a shared web document, e.g., a Google document, and the link sent to the e-mail addresses of the committee members (listed below).
+The proposals for the tasks should be prepared in a shared web document, e.g., a Google document, and the link sent to the e-mail addresses of the committee members (listed below).
 
-### 
 
-### **SISAP 2025 Indexing Challenge Committee**
+### SISAP 2025 Indexing Challenge Committee
 
 - Edgar L. Chavez, CICESE, México <elchavez@cicese.edu.mx>  
 - Eric S. Téllez, INFOTEC-CONAHCyT, México <eric.tellez@ieee.org>  
