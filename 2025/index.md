@@ -2,6 +2,7 @@
 title = "SISAP 2025 Indexing Challenge and Demo Track"
 tags = ["sisap", "challenge"]
 +++
+{{redirect /}}
 # SISAP 2025 Indexing Challenge
 The SISAP 2025 Indexing Challenge Committee invites groups of students, researchers, and practitioners worldwide to submit proposals for new tasks to be considered as part of the SISAP Indexing Challenge 2025\. The SISAP Indexing Challenge is an event for researchers and practitioners to test new and/or well-tuned and optimised indexing approaches for shared tasks in laboratory and practical conditions.
 
