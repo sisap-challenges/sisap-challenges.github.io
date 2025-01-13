@@ -32,6 +32,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://sisap-challenges.github.io/2025/committee/index.html</loc>
+    <lastmod>2025-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://sisap-challenges.github.io/2024/tasks/index.html</loc>
     <lastmod>2025-01-13</lastmod>
     <changefreq>monthly</changefreq>
