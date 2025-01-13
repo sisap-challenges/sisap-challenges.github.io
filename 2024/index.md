@@ -36,3 +36,6 @@ The SISAP Indexing Challenge 2024 invites researchers and practitioners to parti
 ## Reports
 We expect that participants prepare a detailed report of their solution in a typical SISAP's _shortpaper format_ with a focus on reproducibility and comparing their speedup against a brute force solution in its machine and the resulting quality w.r.t. recall.
 Organizers and an ad-hoc committee will review these short papers if the number of papers is large, looking to increase the paper's quality. All participants can submit a report regardless of its final rank position. As in other SISAP's tracks and sessions, the acceptance will be based on the quality of contribution and the manuscript itself.
+
+## Past editions
+In 2023 we launched the [SISAP 2023 Indexing Challenge](/2023/) with a test bed to compare new and existing indexing algorithms in three common tasks.
