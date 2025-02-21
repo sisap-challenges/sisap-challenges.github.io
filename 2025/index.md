@@ -3,50 +3,87 @@ title = "SISAP 2025 Indexing Challenge and Demo Track"
 tags = ["sisap", "challenge"]
 +++
 {{redirect /}}
-# SISAP 2025 Indexing Challenge
-The SISAP 2025 Indexing Challenge Committee invites groups of students, researchers, and practitioners worldwide to submit proposals for new tasks to be considered as part of the SISAP Indexing Challenge 2025\. The SISAP Indexing Challenge is an event for researchers and practitioners to test new and/or well-tuned and optimised indexing approaches for shared tasks in laboratory and practical conditions.
 
-The proposal must describe the proposed task succinctly: the metric problem being solved, the queries and datasets, gold standard data, score functions, the goals, the ordering definition of participating teams, and participation rules in general. The proposal must list the names of its authors, affiliations, and contact information. The task name must feel to be part of the SISAP 2025 Indexing Challenge.  
-The tasks from previous years are available at [https://sisap-challenges.github.io/2024/tasks/](https://sisap-challenges.github.io/2024/tasks/) and [https://sisap-challenges.github.io/2023/tasks/](https://sisap-challenges.github.io/2023/tasks/)
+# Task description and call for participation SISAP 2025 Indexing Challenge
 
-A successful proposal nominates a single person to join the organization committee. This person is responsible for carrying out the final evaluation of all solutions from all Challenge participants and for providing the evaluation infrastructure, such as evaluation code and server infrastructure. The server should be limited by the commodity hardware (specified below), and its main parameters should be declared in the proposal. Tasks based on quality measures, i.e., those that do not need to be run in the same infrastructure, can be considered using the Codalab platform. The organizing committee suggests requiring the GitHub Actions scheme or a Dockerfile scheme. If the proposing group is unfamiliar with these schemes, the Organizing committee members are ready to help with the evaluation.
+The SISAP Indexing Challenge 2025 invites researchers and practitioners to participate in exciting tasks to advance the state of the art in similarity search and indexing. The challenge provides a platform for presenting innovative solutions and pushing the boundaries of efficiency and effectiveness in large-scale similarity search indexes. This year, we are opening two challenging tasks.
 
-The task proposal should attend to the following deadlines:
+Datasets can be found in [https://huggingface.co/datasets/sadit/SISAP2025/tree/main](https://huggingface.co/datasets/sadit/SISAP2025/tree/main); you can clone the full repository or download each file.
 
-* Jan. 27th. Task proposal deadline.  
-* Feb. 10th. Task proposal acceptance notification.  
-* Feb. 20th. (tentative) Publishing of the Call for Participation on the Indexing Challenge with the complete list of tasks and task planning dates and details.
+### Task 1: Resource-limited indexing 
 
-Tentative deadlines for the SISAP 2025 Indexing Challenge, i.e., submitted solutions:
+This task challenges participants to develop memory-efficient indexing solutions with reranking capabilities. Each solution will be run in a Linux container with limited memory and storage resources.
 
-* June 6th. Submission of solution implementations deadline  
-* June 13th. Short paper descriptions deadline  
-* July 1st. Final ranking announcement  
-* July 11th. Paper notification  
-* July 31st. Participant (short paper) camera ready
+- Container specifications: 8 virtual CPUs, 16 GB of RAM, the dataset will be mounted read-only into the container.  
+- Wall clock time for the entire task: 12 hours.  
+- Minimum average recall to be considered in the final ranking: 0.7.  
+- Dataset: PUBMED23 (23 million vectors (384 dimensions) with *out-of-distribution* queries).  
+- The goal is to evaluate k=30 nearest neighbors for a large set of query objects, as follows:  
+  - The final score of each team is measured as the best throughput evaluated on up to 16 different search hyperparameters.  
+  - Teams are provided with a public set of 11,000 query objects for development purposes.  
+  - A private set of 10,000 new queries will be used for the final evaluation. 
 
-Task organizers and participants will also have the opportunity to share results and insights in a special oral session of the SISAP conference [https://sisap.org/2025](https://sisap.org/2025) to be held in Iceland on October 1st-3rd,  
-2025. The reports will be published as short papers in the SISAP proceedings.
+### Task 2: K-nearest neighbor graph (a.k.a. metric self-join)
 
-Previous editions used GitHub repositories to declare *participation intentions* and save the implementations in GitHub. Asking for a public repository with the solution is congruent with the reproducibility spirit of the challenge.
+In this task, participants are asked to develop memory-efficient indexing solutions that will be used to compute an approximation of the *k-*nearest neighbor graph for *k=15*. Each solution will be run in a Linux container with limited memory and storage resources.
 
-### Hardware
+- Container specifications: 8 virtual CPUs, 16 GB of RAM, the dataset will be mounted read-only into the container.  
+- Wall clock time for the entire task: 12 hours.  
+- Minimum average recall to be considered in the final ranking: 0.8.  
+- Dataset: GOOAQ (3 million vectors (384 dimensions) ).  
+- The goal is to compute the *k-nearest neighbor graph (without self-references)*, i.e., find the *k*\-nearest neighbors using all objects in the dataset as queries.  
+  - We will measure graph’s quality as the recall against a provided gold standard and the full computation time (i.e., including preprocessing, indexing, and search, and postprocessing)  
+  - We provide a development dataset; the evaluation phase will use an undisclosed dataset of similar size computed with the same neural model.
 
-SISAP 2025 Indexing Challenge does not focus on specialised or extremely limiting hardware that is affordable in rather extreme environments. Conversely, the Challenge aims to address tasks on a common infrastructure of commodity hardware, i.e., hardware that is affordable for small and mid-size companies. The indicative parameters of (each) server(s) that should suffice for task evaluations are:
+#### Test Data and Queries:
 
-- up to 50 CPU cores,  
-- up to 512 GB of RAM  
-- up to 2 TB on NVMe SSD
+- The h5 file structure is described in [https://huggingface.co/datasets/sadit/SISAP2025](https://huggingface.co/datasets/sadit/SISAP2025).  
+- Each file contains vector embeddings computed in Sentence-BERT models over text datasets; for Task 1 we provide *in-distribution* queries and *out-of-distribution* queries for each dataset, so you can develop and compare your methods with different datasets.  
+- Similarity between two objects is measured by their dot product.  
+- Gold standards are given as a matrix of object identifiers (indexing starts at 1).  
+- Task 2 gold standards contain self-references that will be removed before recall computation.
 
-### Submission of Task Proposals
+#### The evaluation will be carried out on a machine with the following specifications:
 
-The proposals for the tasks should be prepared in a shared web document, e.g., a Google document, and the link sent to the e-mail addresses of the committee members (listed below).
+- 2x Intel(R) Xeon(R) CPU E5-2690 v4 @ 2.60GHz, 28 cores in total  
+- 512 GB RAM (DDR4, 2400 MT/s)  
+- 1 TB SSD 
 
+### Registration and Participation
 
-### SISAP 2025 Indexing Challenge Committee
+1. Register for the challenge by opening a *"Pre-registration request"* issue in the GitHub repository [https://github.com/sisap-challenges/challenge2025/](https://github.com/sisap-challenges/challenge2025/). Fill out the required data, taking into account that the given data will be used to keep in contact while the challenge remains open.  
+2. During the development phase, participants will have access to a gold-standard corresponding to that phase.  
+3. Teams are required to provide public GitHub repositories with working GitHub Actions and clear instructions on how to run their solutions with the correct hyperparameters (up to 16 sets) for each task. You can use a small dataset like the given CCNEWS. Submissions are required to run in docker containers. Examples will be released soon, please visit the challenge site for updates.  
+4. Participants' repositories will be cloned and tested at the time of the challenge. Results will be shared with the authors for verification and potential fixes before the final rankings are published.  
+5. The evaluation queryset for Task 1 and the evaluation dataset for Task 2 will be disclosed after the evaluation phase.
+
+### Paper Submissions
+
+All participants will be considered for paper submissions. We aim to accommodate all accepted papers within the conference program. Papers should be short, focusing on the presentation and poster.
+
+We look forward to your participation and innovative solutions in the SISAP Indexing Challenge 2025\! Let's push the frontiers of similarity search and indexing together.
+
+#### Final comments
+
+Any transformation of the dataset to load, index, and solve nearest neighbor queries is allowed. Transformations include but are not limited to, packing into different data types, dimensional reduction, locality-sensitive hashing, product quantization, or transforming into binary sketches. Reproducibility and open science are primary goals of the challenge, so we accept only public GitHub repositories with working GitHub Actions as submissions. Indexing algorithms may be already published or original contributions.
+
+You can find more detailed information, data access, and registration at the SISAP Indexing Challenge website [https://sisap-challenges.github.io/2025/](https://sisap-challenges.github.io/2025/)
+
+### Important Dates
+
+- Jan. 27th. Task proposal deadline. 
+- Feb. 10th. Task proposal acceptance notification Note: _No proposals were received_.  
+- Feb. 21th. Call for Participation on the Indexing Challenge.
+- June 6th. Submission of solution implementations deadline.  
+- June 13th. Short paper descriptions deadline.  
+- July 1st. Final ranking announcement.  
+- July 11th. Paper notification.  
+- July 31st. Participant (short paper) camera ready.
+
+## SISAP Indexing Challenge Chairs
 
 - Edgar L. Chavez, CICESE, México <elchavez@cicese.edu.mx>  
-- Eric S. Téllez, INFOTEC-CONAHCyT, México <eric.tellez@ieee.org>  
+- Eric S. Téllez, INFOTEC-SECIHTI, México <eric.tellez@ieee.org>  
 - Martin Aumüller, ITU Copenhagen, Denmark <maau@itu.dk>  
 - Vladimir Mic, Aarhus University, Denmark <v.mic@cs.au.dk>
 
