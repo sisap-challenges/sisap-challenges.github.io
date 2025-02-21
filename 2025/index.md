@@ -1,16 +1,18 @@
 +++
-title = "SISAP 2025 Indexing Challenge and Demo Track"
+title = "Task description and call for participation SISAP 2025 Indexing Challenge"
 tags = ["sisap", "challenge"]
 +++
 {{redirect /}}
 
 # Task description and call for participation SISAP 2025 Indexing Challenge
+\toc
 
+## Introduction
 The SISAP Indexing Challenge 2025 invites researchers and practitioners to participate in exciting tasks to advance the state of the art in similarity search and indexing. The challenge provides a platform for presenting innovative solutions and pushing the boundaries of efficiency and effectiveness in large-scale similarity search indexes. This year, we are opening two challenging tasks.
 
 Datasets can be found in [https://huggingface.co/datasets/sadit/SISAP2025/tree/main](https://huggingface.co/datasets/sadit/SISAP2025/tree/main); you can clone the full repository or download each file.
 
-### Task 1: Resource-limited indexing 
+## Task 1: Resource-limited indexing
 
 This task challenges participants to develop memory-efficient indexing solutions with reranking capabilities. Each solution will be run in a Linux container with limited memory and storage resources.
 
@@ -23,8 +25,7 @@ This task challenges participants to develop memory-efficient indexing solutions
   - Teams are provided with a public set of 11,000 query objects for development purposes.  
   - A private set of 10,000 new queries will be used for the final evaluation. 
 
-### Task 2: K-nearest neighbor graph (a.k.a. metric self-join)
-
+## Task 2: K-nearest neighbor graph (a.k.a. metric self-join)
 In this task, participants are asked to develop memory-efficient indexing solutions that will be used to compute an approximation of the *k-*nearest neighbor graph for *k=15*. Each solution will be run in a Linux container with limited memory and storage resources.
 
 - Container specifications: 8 virtual CPUs, 16 GB of RAM, the dataset will be mounted read-only into the container.  
@@ -35,7 +36,7 @@ In this task, participants are asked to develop memory-efficient indexing soluti
   - We will measure graph’s quality as the recall against a provided gold standard and the full computation time (i.e., including preprocessing, indexing, and search, and postprocessing)  
   - We provide a development dataset; the evaluation phase will use an undisclosed dataset of similar size computed with the same neural model.
 
-#### Test Data and Queries:
+## Test Data and Queries:
 
 - The h5 file structure is described in [https://huggingface.co/datasets/sadit/SISAP2025](https://huggingface.co/datasets/sadit/SISAP2025).  
 - Each file contains vector embeddings computed in Sentence-BERT models over text datasets; for Task 1 we provide *in-distribution* queries and *out-of-distribution* queries for each dataset, so you can develop and compare your methods with different datasets.  
@@ -43,13 +44,15 @@ In this task, participants are asked to develop memory-efficient indexing soluti
 - Gold standards are given as a matrix of object identifiers (indexing starts at 1).  
 - Task 2 gold standards contain self-references that will be removed before recall computation.
 
-#### The evaluation will be carried out on a machine with the following specifications:
+### Hardware specifications
+
+The evaluation will be carried out on a machine with the following specifications:
 
 - 2x Intel(R) Xeon(R) CPU E5-2690 v4 @ 2.60GHz, 28 cores in total  
 - 512 GB RAM (DDR4, 2400 MT/s)  
 - 1 TB SSD 
 
-### Registration and Participation
+## Registration and Participation
 
 1. Register for the challenge by opening a *"Pre-registration request"* issue in the GitHub repository [https://github.com/sisap-challenges/challenge2025/](https://github.com/sisap-challenges/challenge2025/). Fill out the required data, taking into account that the given data will be used to keep in contact while the challenge remains open.  
 2. During the development phase, participants will have access to a gold-standard corresponding to that phase.  
@@ -63,13 +66,13 @@ All participants will be considered for paper submissions. We aim to accommodate
 
 We look forward to your participation and innovative solutions in the SISAP Indexing Challenge 2025\! Let's push the frontiers of similarity search and indexing together.
 
-#### Final comments
+### Final comments
 
 Any transformation of the dataset to load, index, and solve nearest neighbor queries is allowed. Transformations include but are not limited to, packing into different data types, dimensional reduction, locality-sensitive hashing, product quantization, or transforming into binary sketches. Reproducibility and open science are primary goals of the challenge, so we accept only public GitHub repositories with working GitHub Actions as submissions. Indexing algorithms may be already published or original contributions.
 
 You can find more detailed information, data access, and registration at the SISAP Indexing Challenge website [https://sisap-challenges.github.io/2025/](https://sisap-challenges.github.io/2025/)
 
-### Important Dates
+## Important Dates
 
 - Jan. 27th. Task proposal deadline. 
 - Feb. 10th. Task proposal acceptance notification Note: [No proposals were received](https://sisap-challenges.github.io/2025/call-for-proposals2025/index.html).
@@ -86,4 +89,3 @@ You can find more detailed information, data access, and registration at the SIS
 - Eric S. Téllez, INFOTEC-SECIHTI, México <eric.tellez@ieee.org>  
 - Martin Aumüller, ITU Copenhagen, Denmark <maau@itu.dk>  
 - Vladimir Mic, Aarhus University, Denmark <v.mic@cs.au.dk>
-
