@@ -74,9 +74,6 @@ You can find more detailed information, data access, and registration at the SIS
 
 ## Important Dates
 
-- Jan. 27th. Task proposal deadline. 
-- Feb. 10th. Task proposal acceptance notification Note: [No proposals were received](https://sisap-challenges.github.io/2025/call-for-proposals2025/index.html).
-- Feb. 21th. Call for Participation on the Indexing Challenge.
 - June 6th. Submission of solution implementations deadline.  
 - June 13th. Short paper descriptions deadline.  
 - July 1st. Final ranking announcement.  
