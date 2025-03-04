@@ -56,7 +56,7 @@ The evaluation will be carried out on a machine with the following specification
 
 1. Register for the challenge by opening a *"Pre-registration request"* issue in the GitHub repository [https://github.com/sisap-challenges/challenge2025/](https://github.com/sisap-challenges/challenge2025/). Fill out the required data, taking into account that the given data will be used to keep in contact while the challenge remains open.  
 2. During the development phase, participants will have access to a gold-standard corresponding to that phase.  
-3. Teams are required to provide public GitHub repositories with working GitHub Actions and clear instructions on how to run their solutions with the correct hyperparameters (up to 16 sets) for each task. You can use a small dataset like the given CCNEWS. Submissions are required to run in docker containers. Examples will be released soon, please visit the challenge site for updates.  
+3. Teams are required to provide public GitHub repositories with working GitHub Actions and clear instructions on how to run their solutions with the correct hyperparameters (up to 16 sets) for each task. You can use a small dataset like the given CCNEWS. Submissions are required to run in docker containers. See below for examples.
 4. Participants' repositories will be cloned and tested at the time of the challenge. Results will be shared with the authors for verification and potential fixes before the final rankings are published.  
 5. The evaluation queryset for Task 1 and the evaluation dataset for Task 2 will be disclosed after the evaluation phase.
 
@@ -72,6 +72,13 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
 
 You can find more detailed information, data access, and registration at the SISAP Indexing Challenge website [https://sisap-challenges.github.io/2025/](https://sisap-challenges.github.io/2025/)
 
+## Examples
+- Julia example -- <https://github.com/sisap-challenges/sisap25-example-julia>
+  - Working examples for Task 1 and Task 2
+  - GitHub Actions (check the [artifacts](https://github.com/sisap-challenges/sisap25-example-julia/actions/runs/13662636806) for a brief report
+  - Dockerfile will be finished soon.
+
+- Python example -- to be released soon
 ## Important Dates
 
 - June 6th. Submission of solution implementations deadline.  
