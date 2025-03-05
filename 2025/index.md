@@ -74,8 +74,8 @@ You can find more detailed information, data access, and registration at the SIS
 
 ## Examples
 - Julia example -- <https://github.com/sisap-challenges/sisap25-example-julia>
-  - Working examples for Task 1 and Task 2
-  - GitHub Actions (check the [artifacts](https://github.com/sisap-challenges/sisap25-example-julia/actions/runs/13662636806) for a brief report
+  - Working examples for Task 1 and Task 2.
+  - GitHub Actions (check the [artifacts](https://github.com/sisap-challenges/sisap25-example-julia/actions/runs/13662636806) for a brief report).
   - Dockerfile will be finished soon.
 
 - Python example -- to be released soon
