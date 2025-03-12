@@ -102,13 +102,16 @@ You can find more detailed information, data access, and registration at the SIS
 1. **What the 12-hour time limit includes?**
   - It is the wall clock for the evaluation process. So, it includes preprocessing, indexing, and searching.
 2. **Can I use precomputed models in my pipeline to avoid increasing the indexing time?**
-  - Yes, you can do it. However, your solution will be run in a limited container (even a relatively slow network); also, as we announced, we will change the query set.
-3. ** Can I use a network service to solve the indexing challenge? **
+  - Yes, you can do it. However, your solution will be run in a limited container; we do not garantize fast access to the network; also, as we announced, we will change the query set.
+3. **Do I need to write the necessary code to fetch datasets?**
+  - At evaluation time we will have evaluation dataset and queries in a local directory, so you do not need to retrieve them.
+  - Use the same filenames than we use for the examples.
+4. **Can I use a network service to solve the indexing challenge?**
   - No, you must not do it. We will not isolate the evaluation container from the network, but we will use a permutation of the dataset.
-4. ** What do you mean by recall? **
+5. **What do you mean by recall?**
   - The proportion of exact results of the $30$nn among the top-30 nearest neighbors of your solution.
   - We precomputed a gold standard; we will check identifiers, not distance values.
   - Identifiers should start at 1, not 0.
-5. ** What can be placed on the secondary memory? (SSD technology)**
+6. **What can be placed on the secondary memory? (SSD technology)**
   - You can use the SSD to store whatever you need for running your solution, but it is limited to memory usage similar to the actual memory of each database (`h5` file).
   - We will remove everything after running your solution. 
