@@ -36,7 +36,7 @@ In this task, participants are asked to develop memory-efficient indexing soluti
   - We will measure graph’s quality as the recall against a provided gold standard and the full computation time (i.e., including preprocessing, indexing, and search, and postprocessing)  
   - We provide a development dataset; the evaluation phase will use an undisclosed dataset of similar size computed with the same neural model.
 
-## Test Data and Queries:
+## Test Data and Queries
 
 - The h5 file structure is described in [https://huggingface.co/datasets/sadit/SISAP2025](https://huggingface.co/datasets/sadit/SISAP2025).  
 - Each file contains vector embeddings computed in Sentence-BERT models over text datasets; for Task 1 we provide *in-distribution* queries and *out-of-distribution* queries for each dataset, so you can develop and compare your methods with different datasets.  
@@ -96,3 +96,22 @@ You can find more detailed information, data access, and registration at the SIS
 - Martin Aumüller, ITU Copenhagen, Denmark <maau@itu.dk>  
 - Vladimir Mic, Aarhus University, Denmark <v.mic@cs.au.dk>
 
+
+## Frequently Asked Questions (FAQ)
+
+1. What the 12-hour time limit includes?
+  - It is the wall clock for the evaluation process. So, it includes preprocessing, indexing, and searching.
+
+2. Can I use precomputed models in my pipeline to avoid increasing the indexing time?
+  - Yes, you can do it. However, your solution will be run in a limited container (even a relatively slow network); also, as we announced, we will change the query set.
+
+3. Can I use a network service to solve the indexing challenge?
+  - No, you must not do it. We will not isolate the evaluation container from the network, but we will use a permutation of the dataset.
+
+4. What do you mean by recall?
+  - The proportion of exact results of the $30$nn among the top-30 nearest neighbors of your solution.
+  - We precomputed a gold standard; we will check identifiers, not distance values.
+  - Identifiers should start at 1, not 0.
+
+5. What can be placed on the secondary memory? (SSD technology)
+  - You can use the SSD to store whatever you need, but it is limited to memory usage similar to the actual memory of each database (`h5` file). 
