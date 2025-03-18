@@ -103,9 +103,9 @@ You can find more detailed information, data access, and registration at the SIS
 ## Frequently Asked Questions (FAQ)
 
 1. **What the 12-hour time limit includes?**
-  - It is the wall clock for the evaluation process.
-  - Preparations based on space characteristics (training models, pivot selection, etc.) are not involved in the time limit, but must be pretrained and distributed as part of the solution.
-  - Preparations that treat each data item from the searched dataset (such as reduction of vector's dimensionality, LSH of data items) are involved in the dataset.
+ - Twelve hours is the wall clock for the evaluation process; i.e., we will _stop_ the container.
+ - Preparations based on space characteristics (training models, pivot selection, etc.) are not involved in the time limit but must be previously trained and distributed as part of the solution.
+ - Preparations that treat each data item from the searched dataset, i.e., reduction of vector's dimensionality and LSH of data items, are meant to be made in the running container since the evaluation will carry out a random permutation of the dataset.
 
 <!--2. **Can I use precomputed models in my pipeline to avoid increasing the indexing time?**
   - Yes, you can do it. However, your solution will be run in a limited container; we do not garantize fast access to the network; 
