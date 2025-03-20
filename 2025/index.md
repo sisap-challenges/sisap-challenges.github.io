@@ -103,10 +103,10 @@ You can find more detailed information, data access, and registration at the SIS
 
 ## Frequently Asked Questions (FAQ)
 
-1. **What the 12-hour time limit includes?**
- - Twelve hours is the wall clock for the evaluation process; i.e., we will _stop_ the container.
+1. **What does the 12-hour time limit include?**
+ - Twelve hours is the wall clock for the evaluation process; i.e., we will _stop_ the container after these 12 hours.
  - Preparations based on space characteristics (training models, pivot selection, etc.) are not involved in the time limit but must be previously trained and distributed as part of the solution.
- - Preparations that treat each data item from the searched dataset, i.e., reduction of vector's dimensionality and LSH of data items, are meant to be made in the running container since the evaluation will carry out a random permutation of the dataset.
+ - Preparations that treat each data item from the searched dataset, for example by reducing a vector's dimensionality or hashing of data items, are meant to be made in the running container.  The evaluation will be carried out on a random permutation of the dataset.
 
 <!--2. **Can I use precomputed models in my pipeline to avoid increasing the indexing time?**
   - Yes, you can do it. However, your solution will be run in a limited container; we do not garantize fast access to the network; 
@@ -114,13 +114,14 @@ You can find more detailed information, data access, and registration at the SIS
   -->
 2. **Do I need to write the necessary code to fetch datasets?**
   - At evaluation time we will have evaluation dataset and queries in a local directory, so you do not need to retrieve them.
-  - Use the same filenames than we use for the examples.
+  - Use the same filenames that we use in the provided examples.
 3. **Can I use a network service to solve the indexing challenge?**
-  - No, you must not do it. We will not isolate the evaluation container from the network, but we will use a permutation of the dataset.
+  - No. We will not isolate the evaluation container from the network, but we will use a unknown permutation of the dataset.
 4. **What do you mean by recall?**
-  - The proportion of exact results of the $30$nn among the top-30 nearest neighbors of your solution.
-  - We precomputed a gold standard; we will check identifiers, not distance values.
-  - Identifiers should start at 1, not 0.
+  - The proportion of exact $k$-NN results among the top-$k$ nearest neighbors of your solution (Task 1 uses $k=30$, Task 2 uses $k=15$).
+  - We precomputed a gold standard (groundtruth); we will check against identifiers, not distance values.
+  - Identifiers in the gold standard start at 1, not 0.
+  - See the evaluation code for examples of how the recall is computed.
 5. **What can be placed on the secondary memory? (SSD technology)**
-  - You can use the SSD to store whatever you need for running your solution, but it is limited to memory usage similar to the actual memory of each database (`h5` file).
+  - You can use the SSD to store whatever you need for running your solution, but its size is limited to the size of each dataset given by the size of its `.h5` file.
   - We will remove everything after running your solution. 
