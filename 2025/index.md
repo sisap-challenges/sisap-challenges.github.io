@@ -89,7 +89,7 @@ You can find more detailed information, data access, and registration at the SIS
 
 - June 6th. Submission of solution implementations deadline.  
 - June 13th. Short paper descriptions deadline.  
-- July 1st. Final ranking announcement.  
+- July 1st. Final ranking announcement -- [Notebook](https://github.com/sisap-challenges/challenge2025/blob/results/results.ipynb) [CSV](https://github.com/sisap-challenges/challenge2025/blob/results/results-sisap25.csv)
 - July 11th. Paper notification.  
 - July 31st. Participant (short paper) camera ready.
 
