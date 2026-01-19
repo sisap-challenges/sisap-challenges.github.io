@@ -2,7 +2,6 @@
 title = "Task description and call for participation SISAP 2025 Indexing Challenge"
 tags = ["sisap", "challenge"]
 +++
-{{redirect /}}
 
 
 # Task description and call for participation SISAP 2025 Indexing Challenge
