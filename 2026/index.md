@@ -4,4 +4,15 @@ tags = ["sisap", "challenge"]
 +++
 
 {{redirect /}}
-# We will soon unveil the tasks and rules for the 2026 Indexing Challenge
+
+# Important Dates
+
+- February 16. Call for Participation – tasks finished
+- Mid-March. Evaluation pipeline available
+- June 10. Submission of solution implementations deadline.
+- June 17. Short paper descriptions deadline.
+- July 8. Final ranking announcement.
+- July 27. Paper notification.
+- August 13. Participant (short paper) camera ready.
+
+## Note: We will soon unveil the tasks and rules for the 2026 Indexing Challenge
