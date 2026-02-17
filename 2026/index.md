@@ -7,7 +7,7 @@ tags = ["sisap", "challenge"]
 
 # Important Dates
 
-- ~~February 16. Call for Participation – tasks finished~~
+- <del>February 16. Call for Participation – tasks finished</del>
 - February 23. Call for Participation – tasks finished
 - Mid-March. Evaluation pipeline available
 - June 10. Submission of solution implementations deadline.
