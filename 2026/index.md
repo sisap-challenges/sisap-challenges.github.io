@@ -7,7 +7,8 @@ tags = ["sisap", "challenge"]
 
 # Important Dates
 
-- February 16. Call for Participation – tasks finished
+- ~~February 16. Call for Participation – tasks finished~~
+- February 23. Call for Participation – tasks finished
 - Mid-March. Evaluation pipeline available
 - June 10. Submission of solution implementations deadline.
 - June 17. Short paper descriptions deadline.
