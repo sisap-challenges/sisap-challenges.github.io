@@ -7,6 +7,8 @@ tags = ["sisap", "challenge"]
 # Task description and call for participation SISAP 2025 Indexing Challenge
 \toc
 
+**[Results and evaluation of the SISAP 2025 Indexing Challenge](/2025/evaluation/)**
+
 ## Introduction
 The SISAP Indexing Challenge 2025 invites researchers and practitioners to participate in exciting tasks to advance the state of the art in similarity search and indexing. The challenge provides a platform for presenting innovative solutions and pushing the boundaries of efficiency and effectiveness in large-scale similarity search indexes. This year, we are opening two challenging tasks.
 
