@@ -63,8 +63,6 @@ Task 2 required memory-efficient approximation of the $k$-nearest neighbor graph
 
 The **hforest** team achieved the first position, completing the task in just 105 seconds. BL-SearchGraph was second at 165 seconds, followed by BrownCICESE (450 s) and Crusty Coders (548 s). JLapeyra achieved near-perfect recall but exceeded the 12-hour time limit. DCC-UChile did not meet either the time or recall constraints.
 
-![Performance for Task 2](/assets/2025/fig-task2.png)
-
 ## Winner Ceremony
 
 The diverse set of approaches were presented during a special session at [SISAP 2025](https://sisap.org/2025/index.html).
