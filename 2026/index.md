@@ -89,6 +89,12 @@ We look forward to your participation and innovative solutions in the SISAP Inde
 
 Any transformation of the dataset to load, index, and solve nearest neighbor queries is allowed. Transformations include but are not limited to packing into different data types, dimensional reduction, locality-sensitive hashing, product quantization, and transformation into binary sketches. Reproducibility and open science are primary goals of the challenge, so we accept only public GitHub repositories with working GitHub Actions as submissions. Indexing algorithms may already be published or original contributions, but a dedicated effort towards solving the respective tasks must be visible in the submission.
 
+#### Examples
+- Julia example – <https://github.com/sisap-challenges/sisap2026-julia-example>
+    - Working examples for Task 1 and Task 2.
+    - GitHub Actions (check the artifacts for a brief [report](https://github.com/sisap-challenges/sisap2026-julia-example/actions/runs/22694672389)).
+- Python example - to be release soon.
+
 # Important Dates (all 2026)
 
 - February 23. Call for Participation.
