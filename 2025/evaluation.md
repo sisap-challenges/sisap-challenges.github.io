@@ -14,7 +14,7 @@ tags = ["sisap", "challenge"]
 | cm-lll | Lou, Ma, Luo, Ruan, Wu, Lu, Mao | 1 | [Memory-Constrained DiskANN](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_34) | <https://github.com/sisap-challenges/sisap25-cm-lll>
 | Crusty Coders | Dearle, Connor, Claydon, McKeogh | 1, 2 | [Fast, Compact NN-Table Build Using Equi-Voronoi Polytopes](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_37) | <https://github.com/sisap-challenges/sisap25-metric_space_rust>
 | DCC-UChile | Bustos, Chen | 2 | [SISAP Indexing Challenge 2025 -- Solution for Task 2 Using Root Join](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_36) | <https://github.com/sisap-challenges/sisap25-DCC-Uchile>
-| hforest | Imamura | 1, 2 | — | https://github.com/sisap-challenges/sisap25-hforest
+| hforest | Imamura | 1, 2 | — | <https://github.com/sisap-challenges/sisap25-hforest>
 | JLapeyra | Lapeyra | 1, 2 | — | <https://github.com/sisap-challenges/sisap25-Lapeyra>
 | TeamDoubleFiltering | Higuchi, Imamura, Shinohara, Hiratta, Kuboyama | 1 | [Double Filtering Using Short and Long Quantized Projections](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_35) | <https://github.com/sisap-challenges/sisap25-TeamDoubleFiltering>
 
