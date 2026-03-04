@@ -8,15 +8,15 @@ tags = ["sisap", "challenge"]
 
 ## Participating Teams
 
-| Team | Members | Task | Paper |
-|------|---------|------|-------|
-| BrownCICESE | Foster, Magdaleno-Gatica, Kimia | 1, 2 | [Refinement-Based Graph Construction for Search in Low-Memory Systems](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_38) |
-| cm-lll | Lou, Ma, Luo, Ruan, Wu, Lu, Mao | 1 | [Memory-Constrained DiskANN](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_34) |
-| Crusty Coders | Dearle, Connor, Claydon, McKeogh | 1, 2 | [Fast, Compact NN-Table Build Using Equi-Voronoi Polytopes](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_37) |
-| DCC-UChile | Bustos, Chen | 2 | [Solution for Task 2 Using Root Join](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_36) |
-| hforest | Imamura | 1, 2 | — |
-| JLapeyra | Lapeyra | 1, 2 | — |
-| TeamDoubleFiltering | Higuchi, Imamura, Shinohara, Hiratta, Kuboyama | 1 | [Double Filtering Using Short and Long Quantized Projections](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_35) |
+| Team | Members | Task | Paper | Repo |
+|------|---------|------|-------|------|
+| BrownCICESE | Foster, Magdaleno-Gatica, Kimia | 1, 2 | [Refinement-Based Graph Construction for Search in Low-Memory Systems](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_38) | <https://github.com/sisap-challenges/sisap25-BrownCICESE>
+| cm-lll | Lou, Ma, Luo, Ruan, Wu, Lu, Mao | 1 | [Memory-Constrained DiskANN](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_34) | <https://github.com/sisap-challenges/sisap25-cm-lll>
+| Crusty Coders | Dearle, Connor, Claydon, McKeogh | 1, 2 | [Fast, Compact NN-Table Build Using Equi-Voronoi Polytopes](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_37) | <https://github.com/sisap-challenges/sisap25-metric_space_rust>
+| DCC-UChile | Bustos, Chen | 2 | [SISAP Indexing Challenge 2025 -- Solution for Task 2 Using Root Join](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_36) | <https://github.com/sisap-challenges/sisap25-DCC-Uchile>
+| hforest | Imamura | 1, 2 | — | https://github.com/sisap-challenges/sisap25-hforest
+| JLapeyra | Lapeyra | 1, 2 | — | <https://github.com/sisap-challenges/sisap25-Lapeyra>
+| TeamDoubleFiltering | Higuchi, Imamura, Shinohara, Hiratta, Kuboyama | 1 | [Double Filtering Using Short and Long Quantized Projections](https://link.springer.com/chapter/10.1007/978-3-032-06069-3_35) | <https://github.com/sisap-challenges/sisap25-TeamDoubleFiltering>
 
 Four teams participated in both tasks, two teams focused solely on Task 1, and one team addressed only Task 2. Two baselines were provided: *BL-SearchGraph* (a graph-based index using `SimilaritySearch.jl`) and *BL-Bruteforce* (parallel exhaustive scan), both using PCA projection and 8-bit scalar quantization.
 
