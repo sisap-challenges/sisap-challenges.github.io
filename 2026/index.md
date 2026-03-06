@@ -12,7 +12,7 @@ tags = ["sisap", "challenge"]
 <div style="background-color: #e6f7ff; border: 2px solid #1890ff; border-radius: 5px; padding: 15px; margin: 20px 0;">
     <h3 style="margin-top: 0; color: #0050b3;">📢 Task 3 Datasets Now Available</h3>
     <p>The dataset for <strong>Task 3</strong> (NQ) is now available. We also provide a smaller <strong>FIQA dataset</strong> to help you get started with development.</p>
-    <p>Please check the <a href="#task-3-indexing-very-sparse-high-dimensional-vectors">Task 3 section</a> for more details.</p>
+    <p>Please check the <a href="#task_3_indexing_very_sparse_high-dimensional_vectors">Task 3 section</a> for more details.</p>
 </div>
 ~~~
 
