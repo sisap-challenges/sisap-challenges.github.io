@@ -8,6 +8,13 @@ tags = ["sisap", "challenge"]
 # SISAP 2026 Indexing Challenge: Task description and participation details
 \toc
 
+<div style="background-color: #e6f7ff; border: 2px solid #1890ff; border-radius: 5px; padding: 15px; margin: 20px 0;">
+    <h3 style="margin-top: 0; color: #0050b3;">📢 Task 3 Datasets Now Available</h3>
+    <p>The dataset for <strong>Task 3</strong> (NQ) is now available. We also provide a smaller <strong>FIQA dataset</strong> to help you get started with development.</p>
+    <p>Please check the <a href="#task-3-indexing-very-sparse-high-dimensional-vectors">Task 3 section</a> for more details.</p>
+</div>
+
+
 The SISAP Indexing Challenge 2026 invites researchers and practitioners to participate in exciting tasks to advance the state of the art in similarity search and indexing. The challenge provides a platform for presenting innovative solutions and pushing the boundaries of efficiency and effectiveness in large-scale similarity search indexes. This year, we are proposing three challenging tasks.
 
 Datasets are available at [https://huggingface.co/datasets/sadit/SISAP2026/tree/main](https://huggingface.co/datasets/sadit/SISAP2026/tree/main); you can clone the full repository or download each file separately.
@@ -46,11 +53,16 @@ This task investigates how to design scalable, memory-efficient indexing methods
 
 - Container specifications: 8 virtual CPUs, 24 GB of RAM, the dataset will be mounted read-only into the container.
 - Wall clock time for the entire task: 8 hours.
-- Dataset: NQ (Natural questions) dataset (from BEIR, https://github.com/beir-cellar/beir) embedded with SPLADE-v3, around 2.68M documents with 30,522 (sparse) dimensions.
+- Dataset: NQ (Natural questions) dataset (from BEIR, https://github.com/beir-cellar/beir) embedded with SPLADE-v3, around 2.68M documents with 30,522 (sparse) dimensions. File: `nq.h5`.
 - Similarity is measured by the dot product.
 - The goal is to compute for each query the k=30 nearest neighbors.
 - Operating point: Fastest search time that achieves an average recall (defined as the fraction of true closest returned) of at least 0.9.
 - We provide a development dataset; the evaluation will run on the same dataset vectors with queries that are computed with the same underlying model.
+- **Smaller development dataset**: We also provide a smaller dataset based on FIQA (Financial Question Answering) for development purposes.
+  - File: `fiqa-dev.h5`
+  - Size: 57k sparse vectors, 30,522 dimensions (SPLADE-v3 model)
+  - Queries: 6,648 development queries
+  - This dataset is useful for quick prototyping and testing of indexing structures before moving to the full NQ dataset.
 
 ### Test Data, Queries, Number of Hyperparameters:
 
@@ -66,6 +78,31 @@ Additional datasets:
 
 - For task 1, participants are invited to use the (smaller) datasets from the SISAP 2025 challenge  
 - See [https://huggingface.co/datasets/sadit/SISAP2025](https://huggingface.co/datasets/sadit/SISAP2025) for more details 
+
+### Result Submission Format
+
+To ensure compatibility with the evaluation pipeline, results must be provided as HDF5 files following a specific structure and metadata format.
+
+**File Content:**
+Each HDF5 file must contain two datasets:
+- `knns`: An $n \times k$ matrix of object identifiers (integers), where $n$ is the number of queries and $k$ is the number of neighbors. The $i$-th row contains the identifiers of the $k$ nearest neighbors of the $i$-th query. Identifiers must use **1-based indexing** (i.e., the first object in the dataset has ID 1).
+- `dists`: An $n \times k$ matrix of distances (floats). The $i$-th row contains the distances of the $k$ nearest neighbors of the $i$-th query.
+
+**Note:** Matrices should follow **row-major order** (standard for C/Python/NumPy).
+
+**Metadata (Attributes):**
+The HDF5 file must include the following attributes at the root level:
+- `algo`: Name of the algorithm (string).
+- `task`: Name of the task (e.g., `task1`, `task2`, `task3`).
+- `buildtime`: Index construction time in seconds (float).
+- `querytime`: Total search time in seconds (float).
+- `params`: A string describing the parameters (e.g., `M=16,efConstruction=100`).
+
+**Directory Structure:**
+Files should be organized in the following directory structure:
+`results/<task_name>/<unique_filename>.h5`
+
+For example: `results/task1/myalgo_M16_ef100.h5`.
 
 ### Hardware specifications
 
