@@ -147,11 +147,7 @@ All participants should submit a short paper that details their system. Accepted
 
 We look forward to your participation and innovative solutions in the SISAP Indexing Challenge 2026\! Let's push the frontiers of similarity search and indexing together.
 
-#### Final comments
-
-Any transformation of the dataset to load, index, and solve nearest neighbor queries is allowed. Transformations include but are not limited to packing into different data types, dimensional reduction, locality-sensitive hashing, product quantization, and transformation into binary sketches. Reproducibility and open science are primary goals of the challenge, so we accept only public GitHub repositories with working GitHub Actions as submissions. Indexing algorithms may already be published or original contributions, but a dedicated effort towards solving the respective tasks must be visible in the submission.
-
-#### Examples
+### Examples
 - Julia example – <https://github.com/sisap-challenges/sisap2026-julia-example>
     - Working examples for Task 1 and Task 2.
     - GitHub Actions (check the artifacts for a brief [report](https://github.com/sisap-challenges/sisap2026-julia-example/actions/runs/22694672389)).
@@ -159,6 +155,11 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
     - Working example.
 
 Both examples are work in progress.
+
+### Final comments
+
+Any transformation of the dataset to load, index, and solve nearest neighbor queries is allowed. Transformations include but are not limited to packing into different data types, dimensional reduction, locality-sensitive hashing, product quantization, and transformation into binary sketches. Reproducibility and open science are primary goals of the challenge, so we accept only public GitHub repositories with working GitHub Actions as submissions. Indexing algorithms may already be published or original contributions, but a dedicated effort towards solving the respective tasks must be visible in the submission.
+
 
 # Important Dates (all 2026)
 
