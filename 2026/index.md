@@ -8,11 +8,13 @@ tags = ["sisap", "challenge"]
 # SISAP 2026 Indexing Challenge: Task description and participation details
 \toc
 
+~~~
 <div style="background-color: #e6f7ff; border: 2px solid #1890ff; border-radius: 5px; padding: 15px; margin: 20px 0;">
     <h3 style="margin-top: 0; color: #0050b3;">📢 Task 3 Datasets Now Available</h3>
     <p>The dataset for <strong>Task 3</strong> (NQ) is now available. We also provide a smaller <strong>FIQA dataset</strong> to help you get started with development.</p>
     <p>Please check the <a href="#task-3-indexing-very-sparse-high-dimensional-vectors">Task 3 section</a> for more details.</p>
 </div>
+~~~
 
 
 The SISAP Indexing Challenge 2026 invites researchers and practitioners to participate in exciting tasks to advance the state of the art in similarity search and indexing. The challenge provides a platform for presenting innovative solutions and pushing the boundaries of efficiency and effectiveness in large-scale similarity search indexes. This year, we are proposing three challenging tasks.
@@ -104,6 +106,29 @@ Files should be organized in the following directory structure:
 
 For example: `results/task1/myalgo_M16_ef100.h5`.
 
+### Docker Container and Evaluation
+
+Participants are expected to create a Docker container which we will run to evaluate their solutions. The container will be executed with the following limits, matching the specifications mentioned in the tasks:
+
+```bash
+docker run \
+    -it \
+    --cpus=8 \
+    --memory=24g \
+    --memory-swap=24g \
+    --memory-swappiness 0 \
+    --volume $(pwd)/data:/app/data:ro \
+    --volume $(pwd)/results:/app/results:rw \
+    sisap-baseline --task task3 --dataset fiqa-dev
+```
+
+- `--cpus=8`: Limits the container to 8 CPU cores.
+- `--memory=24g`: Limits the RAM to 24 GB.
+- `--memory-swap=24g`: Ensures that no swap is used beyond the RAM limit.
+- `--volume`: Mounts the data directory as read-only and the results directory as read-write.
+- `sisap-baseline`: This should be replaced with your image name.
+- `--task` and `--dataset`: These are example arguments that your container entrypoint might accept to run the specific task and dataset.
+
 ### Hardware specifications
 
 Details of the evaluation machine will soon be available. 
@@ -130,7 +155,10 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
 - Julia example – <https://github.com/sisap-challenges/sisap2026-julia-example>
     - Working examples for Task 1 and Task 2.
     - GitHub Actions (check the artifacts for a brief [report](https://github.com/sisap-challenges/sisap2026-julia-example/actions/runs/22694672389)).
-- Python example - to be release soon.
+- Python example - <https://github.com/sisap-challenges/sisap26-python-baseline>
+    - Working example.
+
+Both examples are work in progress.
 
 # Important Dates (all 2026)
 
