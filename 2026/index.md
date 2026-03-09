@@ -19,7 +19,7 @@ tags = ["sisap", "challenge"]
 
 The SISAP Indexing Challenge 2026 invites researchers and practitioners to participate in exciting tasks to advance the state of the art in similarity search and indexing. The challenge provides a platform for presenting innovative solutions and pushing the boundaries of efficiency and effectiveness in large-scale similarity search indexes. This year, we are proposing three challenging tasks.
 
-Datasets are available at [https://huggingface.co/datasets/sadit/SISAP2026/tree/main](https://huggingface.co/datasets/sadit/SISAP2026/tree/main); you can clone the full repository or download each file separately.
+Datasets are available at [https://huggingface.co/datasets/sisap-challenges/SISAP2026/tree/main](https://huggingface.co/datasets/sisap-challenges/SISAP2026/tree/main); you can clone the full repository or download each file separately.
 
 ### Task 1: K-nearest neighbor graph (a.k.a. metric self-join)
 
@@ -68,7 +68,7 @@ This task investigates how to design scalable, memory-efficient indexing methods
 
 ### Test Data, Queries, Number of Hyperparameters:
 
-- All test data is embedded into the dataset file. It uses an hdf5 file whose structure is described in [https://huggingface.co/datasets/sadit/SISAP2026](https://huggingface.co/datasets/sadit/SISAP2026).   
+- All test data is embedded into the dataset file. It uses an hdf5 file whose structure is described in [https://huggingface.co/datasets/sisap-challenges/SISAP2026](https://huggingface.co/datasets/sisap-challenges/SISAP2026).   
 - Task 1 dataset: the WIKIPEDIA dataset contains 6.4 million 1024-dimensional, normalized vector embeddings computed with the BGE-M3 model.  
 - Task 2 dataset: the LLAMA dataset contains around 256k 128-dimensional vector embeddings by LLAMA3.2-8B; vectors are not normalized.  
 - Task 3 dataset: The NQ dataset is taken from <https://github.com/beir-cellar/beir> and contains around 2.68 million vectors produced from the SPLADE-v3  model. 
