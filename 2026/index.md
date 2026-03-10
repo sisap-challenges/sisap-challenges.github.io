@@ -69,13 +69,15 @@ This task investigates how to design scalable, memory-efficient indexing methods
 
 ### Test Data, Queries, Number of Hyperparameters:
 
-- All test data is embedded into the dataset file. It uses an hdf5 file whose structure is described in [https://huggingface.co/datasets/sisap-challenges/SISAP2026](https://huggingface.co/datasets/sisap-challenges/SISAP2026).   
+- All test data is embedded into the dataset file. It uses an hdf5 file whose structure is described in [https://huggingface.co/datasets/sisap-challenges/SISAP2026](https://huggingface.co/datasets/sisap-challenges/SISAP2026).
 - Task 1 dataset: the WIKIPEDIA dataset contains 6.4 million 1024-dimensional, normalized vector embeddings computed with the BGE-M3 model.  
 - Task 2 dataset: the LLAMA dataset contains around 256k 128-dimensional vector embeddings by LLAMA3.2-8B; vectors are not normalized.  
 - Task 3 dataset: The NQ dataset is taken from <https://github.com/beir-cellar/beir> and contains around 2.68 million vectors produced from the SPLADE-v3  model. 
 - In all tasks, participants can build a single index, and are allowed to test 15 different search parameters.  
-- For all tasks, gold standards are given as a matrix of object identifiers (indexing starts at 1).  
+- For all tasks, gold standards are given as a matrix of object identifiers (indexing starts at 1).
 - In task 1, the gold standard contains self-references, i.e., each point is its own nearest neighbor. These self-references will be removed before recall computation.
+- For task 2 and task 3, all queries will be presented at once, and batch processing is explicitly encouraged.
+- For task 1, we measure the total wall-clock time, while for task 2 and 3 only the search phase is measured.
 
 Additional datasets:
 
@@ -141,10 +143,11 @@ Details of the evaluation machine will soon be available.
 3. Teams are required to provide public GitHub repositories with working GitHub Actions and clear instructions on how to run their solutions with the correct hyperparameters (up to 15 sets) for each task. You can use a small dataset like the SISAP2025’s CCNEWS. Submissions are required to run in Docker containers. Results have to be written in a standard format to unify the evaluation. Examples will be released soon. Please visit the challenge website for updates.  
 4. Participants' repositories will be cloned and tested at the time of the challenge. Results will be shared with the authors for verification and potential fixes before the final rankings are published. The short paper that is to be submitted following an entry will be submitted before the final rankings are published and should thus focus on a self-evaluation of the proposed system.  
 5. The private workloads that are used in the evaluation are shared publicly after the evaluation has been carried out.
+6. One person can only be part of a single team. 
 
 ### Paper Submissions
 
-All participants should submit one short paper that details their system. If participants solve multiple tasks, the system must be described in a single paper (that might reference a technical report) . Accepted papers will be part of the conference proceedings and part of a special session at SISAP 2026. 
+All participants should submit one short paper that details their system. If participants solve multiple tasks, the system must be described in a single paper (that might reference a technical report). Accepted papers will be part of the conference proceedings and part of a special session at SISAP 2026. 
 Each accepted paper is required to be presented in person as an oral presentation at that session.
 Submissions that are not accompanied by an accepted short paper will be disqualified and removed from the final rankings.
 
