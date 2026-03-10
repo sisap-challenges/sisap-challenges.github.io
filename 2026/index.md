@@ -183,6 +183,7 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
 
 - Eric S. Téllez, INFOTEC-SECIHTI, México
 - Martin Aumüller, ITU Copenhagen, Denmark
+- Maik Fröbe, University of Jena, Germany
 - Vladimír Míč, Aarhus University, Denmark
 
 Write an email to [sisap-2026-indexing-challenge@googlegroups.com](mailto:sisap-2026-indexing-challenge@googlegroups.com) to contact any of the organizers.
