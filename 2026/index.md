@@ -113,7 +113,7 @@ For example: `results/task1/myalgo_M16_ef100.h5`.
 
 ### Docker Container and Evaluation
 
-Participants are expected to create a Docker container which we will run to evaluate their solutions. The container will be executed with the following limits, matching the specifications mentioned in the tasks:
+We are currently working on a reproducible evaluation framework for the SISAP challenge. You can expect that we will evaluate solutions with a container setup in which participants are expected to create a Docker container which we will run to evaluate their solutions. To enforce the system requirements of the challenge, the container can be executed with the following limits:
 
 ```bash
 docker run \
@@ -172,7 +172,7 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
 # Important Dates (all 2026)
 
 - February 23. Call for Participation.
-- End of March. Evaluation pipeline available
+- End of April. Evaluation pipeline available
 - June 10. Submission of solution implementations deadline.
 - June 17. Short paper descriptions deadline.
 - July 8. Final ranking announcement.
