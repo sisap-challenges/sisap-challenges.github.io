@@ -157,7 +157,7 @@ We look forward to your participation and innovative solutions in the SISAP Inde
 
 ### Examples
 - Julia example – <https://github.com/sisap-challenges/sisap2026-julia-example>
-    - Working examples for Task 1 and Task 2.
+    - Working example.
     - GitHub Actions (check the artifacts for a brief [report](https://github.com/sisap-challenges/sisap2026-julia-example/actions/runs/22694672389)).
 - Python example - <https://github.com/sisap-challenges/sisap26-python-baseline>
     - Working example.
