@@ -21,6 +21,8 @@ The SISAP Indexing Challenge 2026 invites researchers and practitioners to parti
 
 Datasets are available at [https://huggingface.co/datasets/sisap-challenges/SISAP2026/tree/main](https://huggingface.co/datasets/sisap-challenges/SISAP2026/tree/main); you can clone the full repository or download each file separately.
 
+If you think about participating in the challenge, please fill out a pre-registration at https://github.com/sisap-challenges/challenge2026/. 
+
 ### Task 1: K-nearest neighbor graph (a.k.a. metric self-join)
 
 In this task, participants are asked to develop memory-efficient indexing solutions that will be used to compute an approximation of the _k_-nearest neighbor graph for *k=15*. Each solution will be run in a Linux container with limited memory and storage resources.
