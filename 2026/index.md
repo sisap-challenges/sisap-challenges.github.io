@@ -41,12 +41,12 @@ In this task, participants are asked to develop memory-efficient indexing soluti
 
 - Container specifications: 8 virtual CPUs, 24 GB of RAM, the dataset will be mounted read-only into the container.  
 - Wall clock time for the entire task: 1 hour.  
-- Dataset: Llama-3-8B-262k (256,921 vectors, 128 dimensions)  
-- For index building, a small set of 1,000 queries that can be used during the index building. These queries are distinct from the queries later used in testing.  
+- Dataset: Llama-3-8B-262k (256,921 vectors, 128 dimensions)
+- The task is split up into two separate phases: an _index preprocessing phase_ in which the dataset is presented, and a _search phase_ in which queries are presented.
 - Similarity between two objects is measured by their dot product; note that vectors are not normalized.  
-- The goal is to compute k=30 maximum inner product queries for 10,000 query points.   
+- The goal is to compute k=30 maximum inner product queries for the provided queries.  
 - Operating point: Fastest search time that achieves an average recall of at least 0.8.  
-- We provide a development dataset; the evaluation will use an undisclosed dataset of similar size computed with the same underlying LLM model.
+- We provide a development dataset; the evaluation will use an undisclosed dataset of similar size computed with the same underlying LLM model, with a larger number of queries.
 
 ### Task 3: Indexing very sparse high-dimensional vectors
 Learned sparse models bridge traditional inverted indexing and neural retrieval. However, their high dimensionality and learned term distributions challenge classical IR data structures.
@@ -56,6 +56,7 @@ This task investigates how to design scalable, memory-efficient indexing methods
 - Container specifications: 8 virtual CPUs, 24 GB of RAM, the dataset will be mounted read-only into the container.
 - Wall clock time for the entire task: 8 hours.
 - Dataset: NQ (Natural questions) dataset (from BEIR, https://github.com/beir-cellar/beir) embedded with SPLADE-v3, around 2.68M documents with 30,522 (sparse) dimensions. File: `nq.h5`.
+- The task is split up into two separate phases: an index preprocessing phase in which the dataset is presented, and a search phase in which queries are presented.
 - Similarity is measured by the dot product.
 - The goal is to compute for each query the k=30 nearest neighbors.
 - Operating point: Fastest search time that achieves an average recall (defined as the fraction of true closest returned) of at least 0.9.
@@ -143,9 +144,11 @@ Details of the evaluation machine will soon be available.
 
 ### Paper Submissions
 
-All participants should submit a short paper that details their system. Accepted papers will be part of the conference proceedings and part of a special session at SISAP 2026\. Each accepted paper is required to be presented in person as an oral presentation at that session. 
+All participants should submit one short paper that details their system. If participants solve multiple tasks, the system must be described in a single paper (that might reference a technical report) . Accepted papers will be part of the conference proceedings and part of a special session at SISAP 2026. 
+Each accepted paper is required to be presented in person as an oral presentation at that session.
+Submissions that are not accompanied by an accepted short paper will be disqualified and removed from the final rankings.
 
-We look forward to your participation and innovative solutions in the SISAP Indexing Challenge 2026\! Let's push the frontiers of similarity search and indexing together.
+We look forward to your participation and innovative solutions in the SISAP Indexing Challenge 2026! Let's push the frontiers of similarity search and indexing together.
 
 ### Examples
 - Julia example – <https://github.com/sisap-challenges/sisap2026-julia-example>
