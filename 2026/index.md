@@ -79,7 +79,7 @@ This task investigates how to design scalable, memory-efficient indexing methods
 Additional datasets:
 
 - For task 1, participants are invited to use the (smaller) datasets from the SISAP 2025 challenge  
-- See [https://huggingface.co/datasets/sadit/SISAP2025](https://huggingface.co/datasets/sadit/SISAP2025) for more details 
+- See [https://huggingface.co/datasets/SISAP-Challenges/SISAP2025](https://huggingface.co/datasets/SISAP-Challenges/SISAP2025) for more details 
 
 ### Result Submission Format
 
