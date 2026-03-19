@@ -171,7 +171,7 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
 
 # Important Dates (all 2026)
 
-- February 23. Call for Participation.
+- February 23. challenge opens
 - End of April. Evaluation pipeline available
 - June 10. Submission of solution implementations deadline.
 - June 17. Short paper descriptions deadline.
