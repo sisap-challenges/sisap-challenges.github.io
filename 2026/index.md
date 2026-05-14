@@ -164,7 +164,7 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
 # Important Dates (all 2026)
 
 - February 23. Call for Participation.
-- End of March. Evaluation pipeline available
+- May 22, evaluation pipeline available. <strike>End of March. Evaluation pipeline available</strike>
 - June 10. Submission of solution implementations deadline.
 - June 17. Short paper descriptions deadline.
 - July 8. Final ranking announcement.
