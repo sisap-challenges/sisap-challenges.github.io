@@ -19,7 +19,9 @@ tags = ["sisap", "challenge"]
 
 The SISAP Indexing Challenge 2026 invites researchers and practitioners to participate in exciting tasks to advance the state of the art in similarity search and indexing. The challenge provides a platform for presenting innovative solutions and pushing the boundaries of efficiency and effectiveness in large-scale similarity search indexes. This year, we are proposing three challenging tasks.
 
-Datasets are available at [https://huggingface.co/datasets/sadit/SISAP2026/tree/main](https://huggingface.co/datasets/sadit/SISAP2026/tree/main); you can clone the full repository or download each file separately.
+Datasets are available at [https://huggingface.co/datasets/sisap-challenges/SISAP2026/tree/main](https://huggingface.co/datasets/sisap-challenges/SISAP2026/tree/main); you can clone the full repository or download each file separately.
+
+If you think about participating in the challenge, please fill out a pre-registration at https://github.com/sisap-challenges/challenge2026/. 
 
 ### Task 1: K-nearest neighbor graph (a.k.a. metric self-join)
 
@@ -41,12 +43,12 @@ In this task, participants are asked to develop memory-efficient indexing soluti
 
 - Container specifications: 8 virtual CPUs, 24 GB of RAM, the dataset will be mounted read-only into the container.  
 - Wall clock time for the entire task: 1 hour.  
-- Dataset: Llama-3-8B-262k (256,921 vectors, 128 dimensions)  
-- For index building, a small set of 1,000 queries that can be used during the index building. These queries are distinct from the queries later used in testing.  
+- Dataset: Llama-3-8B-262k (256,921 vectors, 128 dimensions)
+- The task is split up into two separate phases: an _index preprocessing phase_ in which the dataset is presented, and a _search phase_ in which queries are presented.
 - Similarity between two objects is measured by their dot product; note that vectors are not normalized.  
-- The goal is to compute k=30 maximum inner product queries for 10,000 query points.   
+- The goal is to compute k=30 maximum inner product queries for the provided queries.  
 - Operating point: Fastest search time that achieves an average recall of at least 0.8.  
-- We provide a development dataset; the evaluation will use an undisclosed dataset of similar size computed with the same underlying LLM model.
+- We provide a development dataset; the evaluation will use an undisclosed dataset of similar size computed with the same underlying LLM model, with a larger number of queries.
 
 ### Task 3: Indexing very sparse high-dimensional vectors
 Learned sparse models bridge traditional inverted indexing and neural retrieval. However, their high dimensionality and learned term distributions challenge classical IR data structures.
@@ -56,6 +58,7 @@ This task investigates how to design scalable, memory-efficient indexing methods
 - Container specifications: 8 virtual CPUs, 24 GB of RAM, the dataset will be mounted read-only into the container.
 - Wall clock time for the entire task: 8 hours.
 - Dataset: NQ (Natural questions) dataset (from BEIR, https://github.com/beir-cellar/beir) embedded with SPLADE-v3, around 2.68M documents with 30,522 (sparse) dimensions. File: `nq.h5`.
+- The task is split up into two separate phases: an index preprocessing phase in which the dataset is presented, and a search phase in which queries are presented.
 - Similarity is measured by the dot product.
 - The goal is to compute for each query the k=30 nearest neighbors.
 - Operating point: Fastest search time that achieves an average recall (defined as the fraction of true closest returned) of at least 0.9.
@@ -68,18 +71,20 @@ This task investigates how to design scalable, memory-efficient indexing methods
 
 ### Test Data, Queries, Number of Hyperparameters:
 
-- All test data is embedded into the dataset file. It uses an hdf5 file whose structure is described in [https://huggingface.co/datasets/sadit/SISAP2026](https://huggingface.co/datasets/sadit/SISAP2026).   
+- All test data is embedded into the dataset file. It uses an hdf5 file whose structure is described in [https://huggingface.co/datasets/sisap-challenges/SISAP2026](https://huggingface.co/datasets/sisap-challenges/SISAP2026).
 - Task 1 dataset: the WIKIPEDIA dataset contains 6.4 million 1024-dimensional, normalized vector embeddings computed with the BGE-M3 model.  
 - Task 2 dataset: the LLAMA dataset contains around 256k 128-dimensional vector embeddings by LLAMA3.2-8B; vectors are not normalized.  
 - Task 3 dataset: The NQ dataset is taken from <https://github.com/beir-cellar/beir> and contains around 2.68 million vectors produced from the SPLADE-v3  model. 
 - In all tasks, participants can build a single index, and are allowed to test 15 different search parameters.  
-- For all tasks, gold standards are given as a matrix of object identifiers (indexing starts at 1).  
+- For all tasks, gold standards are given as a matrix of object identifiers (indexing starts at 1).
 - In task 1, the gold standard contains self-references, i.e., each point is its own nearest neighbor. These self-references will be removed before recall computation.
+- For task 2 and task 3, all queries will be presented at once, and batch processing is explicitly encouraged.
+- For task 1, we measure the total wall-clock time, while for task 2 and 3 only the search phase is measured.
 
 Additional datasets:
 
 - For task 1, participants are invited to use the (smaller) datasets from the SISAP 2025 challenge  
-- See [https://huggingface.co/datasets/sadit/SISAP2025](https://huggingface.co/datasets/sadit/SISAP2025) for more details 
+- See [https://huggingface.co/datasets/SISAP-Challenges/SISAP2025](https://huggingface.co/datasets/SISAP-Challenges/SISAP2025) for more details 
 
 ### Result Submission Format
 
@@ -108,7 +113,7 @@ For example: `results/task1/myalgo_M16_ef100.h5`.
 
 ### Docker Container and Evaluation
 
-Participants are expected to create a Docker container which we will run to evaluate their solutions. The container will be executed with the following limits, matching the specifications mentioned in the tasks:
+We are currently working on a reproducible evaluation framework for the SISAP challenge. You can expect that we will evaluate solutions with a container setup in which participants are expected to create a Docker container which we will run to evaluate their solutions. To enforce the system requirements of the challenge, the container can be executed with the following limits:
 
 ```bash
 docker run \
@@ -140,16 +145,19 @@ Details of the evaluation machine will soon be available.
 3. Teams are required to provide public GitHub repositories with working GitHub Actions and clear instructions on how to run their solutions with the correct hyperparameters (up to 15 sets) for each task. You can use a small dataset like the SISAP2025’s CCNEWS. Submissions are required to run in Docker containers. Results have to be written in a standard format to unify the evaluation. Examples will be released soon. Please visit the challenge website for updates.  
 4. Participants' repositories will be cloned and tested at the time of the challenge. Results will be shared with the authors for verification and potential fixes before the final rankings are published. The short paper that is to be submitted following an entry will be submitted before the final rankings are published and should thus focus on a self-evaluation of the proposed system.  
 5. The private workloads that are used in the evaluation are shared publicly after the evaluation has been carried out.
+6. One person can only be part of a single team. 
 
 ### Paper Submissions
 
-All participants should submit a short paper that details their system. Accepted papers will be part of the conference proceedings and part of a special session at SISAP 2026\. Each accepted paper is required to be presented in person as an oral presentation at that session. 
+All participants should submit one short paper that details their system. If participants solve multiple tasks, the system must be described in a single paper (that might reference a technical report). Accepted papers will be part of the conference proceedings and part of a special session at SISAP 2026. 
+Each accepted paper is required to be presented in person as an oral presentation at that session.
+Submissions that are not accompanied by an accepted short paper will be disqualified and removed from the final rankings.
 
-We look forward to your participation and innovative solutions in the SISAP Indexing Challenge 2026\! Let's push the frontiers of similarity search and indexing together.
+We look forward to your participation and innovative solutions in the SISAP Indexing Challenge 2026! Let's push the frontiers of similarity search and indexing together.
 
 ### Examples
 - Julia example – <https://github.com/sisap-challenges/sisap2026-julia-example>
-    - Working examples for Task 1 and Task 2.
+    - Working example.
     - GitHub Actions (check the artifacts for a brief [report](https://github.com/sisap-challenges/sisap2026-julia-example/actions/runs/22694672389)).
 - Python example - <https://github.com/sisap-challenges/sisap26-python-baseline>
     - Working example.
@@ -163,8 +171,8 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
 
 # Important Dates (all 2026)
 
-- February 23. Call for Participation.
-- May 22, evaluation pipeline available. <strike>End of March. Evaluation pipeline available</strike>
+- February 23. challenge opens
+- May 22. evaluation pipeline available. <strike>End of April. Evaluation pipeline available</strike>
 - June 10. Submission of solution implementations deadline.
 - June 17. Short paper descriptions deadline.
 - July 8. Final ranking announcement.
@@ -175,6 +183,7 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
 
 - Eric S. Téllez, INFOTEC-SECIHTI, México
 - Martin Aumüller, ITU Copenhagen, Denmark
-- Vladimír Míč, Aarhus University, Denmark
+- Maik Fröbe, University of Jena, Germany
+- Vladimír Míč, SDU Odense, Denmark
 
 Write an email to [sisap-2026-indexing-challenge@googlegroups.com](mailto:sisap-2026-indexing-challenge@googlegroups.com) to contact any of the organizers.
