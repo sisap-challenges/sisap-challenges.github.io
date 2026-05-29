@@ -2,6 +2,14 @@
 
 Below you will find all the details you need to get started.
 
+**Quick Checklist**
+
+- Pre-register your team via GitHub.
+- Register your team in TIRA.
+- Run a local dry run with the TIRA CLI.
+- Authenticate with TIRA and submit your code.
+- Wait for the organizers to trigger the full evaluation.
+
 ---
 
 **Challenge Overview**
@@ -20,7 +28,8 @@ All tasks are evaluated inside Docker containers with **8 vCPUs and 24 GB RAM**.
 **Submission via TIRA**
 
 For this year, submissions are handled through **TIRA** ([tira.io/task-overview/sisap-2026](https://www.tira.io/task-overview/sisap-2026)). TIRA provides a reproducible, containerized evaluation framework.
-We will help troubleshooting submissions, see more info below.
+Code submissions for SISAP 2026 are handled only through TIRA.
+We can help troubleshoot submissions; see more info below.
 Please register your team as soon as possible. 
 
 
@@ -41,7 +50,7 @@ pip3 install --upgrade tira
 
 tira-cli code-submission \
     --path . \
-    --command '{YOUR EXECTUABLE} --input $inputDataset/*.h5 --task-description $inputDataset/config.json --output $outputDir' \
+    --command '{YOUR EXECUTABLE} --input $inputDataset/*.h5 --task-description $inputDataset/config.json --output $outputDir' \
     --task sisap-2026 \
     --dataset task-1-spot-check-20260528-training \
     --dry-run
@@ -59,14 +68,16 @@ tira-cli verify-installation --task sisap-2026 --team YOUR-TEAM
 
 tira-cli code-submission \
     --path . \
-    --command '{YOUR EXECTUABLE} --input $inputDataset/*.h5 --task-description $inputDataset/config.json --output $outputDir' \
+    --command '{YOUR EXECUTABLE} --input $inputDataset/*.h5 --task-description $inputDataset/config.json --output $outputDir' \
     --task sisap-2026 \
     --dataset task-1-spot-check-20260528-training
 ```
 
+Your program should write its output files to `$outputDir` in the format described on the [task description page](/2026/#result-submission-format).
+
 **Step 4 — Trigger evaluation in the TIRA UI**
 
-Navigate to the task page, click *Submit → Code Submissions*, select your submission, choose a dataset and hardware configuration. The organizers will handle execution on all datasets once your submission looks correct. During the submission, you will only get tested on small workloads. These are available in the baseline mentioned below.
+Navigate to the task page, click *Submit → Code Submissions*, select your submission, choose a dataset and hardware configuration. The organizers will handle execution on all datasets once your submission looks correct. During code submission, TIRA only runs small workloads. These are available in the baseline mentioned below.
 
 ---
 
@@ -86,7 +97,7 @@ A Julia example is also available: [github.com/sisap-challenges/sisap2026-julia-
 | Date | Milestone |
 |------|-----------|
 | **June 10, 2026** | **Submission of solution implementations deadline** |
-| June 17, 2026 | Short paper descriptions deadline |
+| June 17, 2026 | Short paper description deadline |
 | July 8, 2026 | Final ranking announcement |
 | July 27, 2026 | Paper notification |
 | August 13, 2026 | Camera-ready deadline |
