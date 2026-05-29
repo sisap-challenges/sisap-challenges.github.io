@@ -8,8 +8,6 @@ tags = ["sisap", "challenge"]
 # SISAP 2026 Indexing Challenge: Task description and participation details
 \toc
 
-**[Submission details and evaluation for the SISAP 2026 Indexing Challenge](/2026/evaluation/)**
-
 ~~~
 <div style="background-color: #e6f7ff; border: 2px solid #1890ff; border-radius: 5px; padding: 15px; margin: 20px 0;">
     <h3 style="margin-top: 0; color: #0050b3;">📢 Submission Details Now Available</h3>
@@ -138,7 +136,7 @@ docker run \
 
 ### Hardware specifications
 
-Details of the evaluation machine will soon be available. 
+The evaluation will be carried out using AMD EPYC 7F72 24-Core Processors.
 
 ### Registration and Participation
 

@@ -12,14 +12,14 @@ The SISAP 2026 Indexing Challenge features three tasks:
 - **Task 2:** Maximum Inner Product Search on LLM attention workloads (256k vectors, 128-dim, Llama-3-8B).
 - **Task 3:** Indexing very sparse high-dimensional vectors using SPLADE-v3 embeddings (~2.68M documents, 30,522-dim).
 
-All tasks are evaluated inside Docker containers with **8 vCPUs and 24 GB RAM**. The CPUs used are **AMD EPYC 7F72 24-Core** Processor. Full task descriptions are available at: https://sisap-challenges.github.io/2026/
+All tasks are evaluated inside Docker containers with **8 vCPUs and 24 GB RAM**. The CPUs used are **AMD EPYC 7F72 24-Core** Processor. Full task descriptions are available at: [sisap-challenges.github.io/2026](https://sisap-challenges.github.io/2026/)
 
 ---
 
 
 **Submission via TIRA**
 
-For this year, submissions are handled through **TIRA** (https://www.tira.io/task-overview/sisap-2026). TIRA provides a reproducible, containerized evaluation framework.
+For this year, submissions are handled through **TIRA** ([tira.io/task-overview/sisap-2026](https://www.tira.io/task-overview/sisap-2026)). TIRA provides a reproducible, containerized evaluation framework.
 We will help troubleshooting submissions, see more info below.
 Please register your team as soon as possible. 
 
@@ -28,9 +28,9 @@ Please register your team as soon as possible.
 
 **Step 1 — Register your team**
 
-1. Sign up or log in at https://www.tira.io/ (GitHub login supported).
-2. Navigate to https://www.tira.io/task-overview/sisap-2026 and click **Register**.
-3. Optionally add team members via https://www.tira.io/g?type=my.
+1. Sign up or log in at [tira.io](https://www.tira.io/) (GitHub login supported).
+2. Navigate to [tira.io/task-overview/sisap-2026](https://www.tira.io/task-overview/sisap-2026) and click **Register**.
+3. Optionally add team members via [tira.io/g?type=my](https://www.tira.io/g?type=my).
 
 **Step 2 — Verify locally**
 
@@ -73,11 +73,11 @@ Navigate to the task page, click *Submit → Code Submissions*, select your subm
 **Python Baseline**
 
 A working Python baseline is available to help you get started:
-https://github.com/sisap-challenges/sisap26-python-baseline
+[github.com/sisap-challenges/sisap26-python-baseline](https://github.com/sisap-challenges/sisap26-python-baseline)
 
 It includes Docker support, GitHub Actions CI, evaluation scripts, and plotting utilities. You are encouraged to fork it as the starting point for your own solution.
 
-A Julia example is also available: https://github.com/sisap-challenges/sisap2026-julia-example
+A Julia example is also available: [github.com/sisap-challenges/sisap2026-julia-example](https://github.com/sisap-challenges/sisap2026-julia-example)
 
 ---
 
@@ -96,7 +96,7 @@ A Julia example is also available: https://github.com/sisap-challenges/sisap2026
 **Pre-registration**
 
 If you have not yet pre-registered, please open a *"Pre-registration request"* issue at:
-https://github.com/sisap-challenges/challenge2026/
+[github.com/sisap-challenges/challenge2026](https://github.com/sisap-challenges/challenge2026/)
 
 ---
 
