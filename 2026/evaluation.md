@@ -1,4 +1,4 @@
-# Submission Details
+# Submission Details for SISAP 2026 Indexing Challenge
 
 Below you will find all the details you need to get started.
 
