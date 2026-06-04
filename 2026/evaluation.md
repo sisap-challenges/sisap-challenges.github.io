@@ -96,8 +96,8 @@ A Julia example is also available: [github.com/sisap-challenges/sisap2026-julia-
 
 | Date | Milestone |
 |------|-----------|
-| **June 10, 2026** | **Submission of solution implementations deadline** |
-| June 17, 2026 | Short paper description deadline |
+| **~~June 10, 2026~~** **June 17, 2026** (extended) | **Submission of solution implementations deadline** |
+| ~~June 17, 2026~~ **June 24, 2026** (extended) | Short paper description deadline |
 | July 8, 2026 | Final ranking announcement |
 | July 27, 2026 | Paper notification |
 | August 13, 2026 | Camera-ready deadline |
