@@ -172,9 +172,9 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
 # Important Dates (all 2026)
 
 - February 23. challenge opens
-- May 22. evaluation pipeline available. <strike>End of April. Evaluation pipeline available</strike>
-- June 10. Submission of solution implementations deadline.
-- June 17. Short paper descriptions deadline.
+- May 22.  Evaluation pipeline available
+- June 10  → June 17 (extended). Submission of solution implementations deadline.
+- June 17  → June 24 (extended). Short paper descriptions deadline.
 - July 8. Final ranking announcement.
 - July 27. Paper notification.
 - August 13. Participant (short paper) camera ready.
