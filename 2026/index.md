@@ -79,7 +79,12 @@ This task investigates how to design scalable, memory-efficient indexing methods
 - For all tasks, gold standards are given as a matrix of object identifiers (indexing starts at 1).
 - In task 1, the gold standard contains self-references, i.e., each point is its own nearest neighbor. These self-references will be removed before recall computation.
 - For task 2 and task 3, all queries will be presented at once, and batch processing is explicitly encouraged.
-- For task 1, we measure the total wall-clock time, while for task 2 and 3 only the search phase is measured.
+- For task 1, we measure the total time as
+  - the time needed to preprocess and load the data,
+  - the build time for the index (1 index allowed), 
+  - and the time it took to generate the k-NN graph from the index (15 separate hyperparameters possible).
+- For task 2 and 3 only the search phase time is measured.
+- Participants should provide these timings in the result file. We will audit the methodology and compare it to the measured wall-clock time of the container.
 
 Additional datasets:
 
@@ -101,7 +106,7 @@ Each HDF5 file must contain two datasets:
 The HDF5 file must include the following attributes at the root level:
 - `algo`: Name of the algorithm (string).
 - `task`: Name of the task (e.g., `task1`, `task2`, `task3`).
-- `buildtime`: Index construction time in seconds (float).
+- `buildtime`: Index construction time in seconds (float). For task 1, also include data loading/preprocessing.
 - `querytime`: Total search time in seconds (float).
 - `params`: A string describing the parameters (e.g., `M=16,efConstruction=100`).
 
