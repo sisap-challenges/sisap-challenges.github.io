@@ -98,7 +98,7 @@ To ensure compatibility with the evaluation pipeline, results must be provided a
 **File Content:**
 Each HDF5 file must contain two datasets:
 - `knns`: An $n \times k$ matrix of object identifiers (integers), where $n$ is the number of queries and $k$ is the number of neighbors. The $i$-th row contains the identifiers of the $k$ nearest neighbors of the $i$-th query. Identifiers must use **1-based indexing** (i.e., the first object in the dataset has ID 1).
-- `dists`: An $n \times k$ matrix of distances (floats). The $i$-th row contains the distances of the $k$ nearest neighbors of the $i$-th query.
+- `dists`: An $n \times k$ matrix of distances (floats). The $i$-th row contains the distances of the $k$ nearest neighbors of the $i$-th query according your implementation.
 
 **Note:** Matrices should follow **row-major order** (standard for C/Python/NumPy).
 
