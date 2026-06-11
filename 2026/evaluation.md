@@ -106,7 +106,7 @@ A Julia example is also available: [github.com/sisap-challenges/sisap2026-julia-
 
 **Short paper**
 
-Please submit yourshort paper through the regular EasyChair submission system for [SISAP 2026](https://easychair.org/my/conference?conf=sisap2026). Pick "indexing challenge" as paper category. Submissions have to follow the rules of short papers described in the [call for paper](https://sisap.org/2026/callforpapers.html) (in particular, at most 8 pages in standard LNCS style). More detailed analysis can be provided through a technical report referenced in the short paper.
+Please submit yourshort paper through the regular EasyChair submission system for [SISAP 2026](https://easychair.org/my/conference?conf=sisap2026). Pick "indexing challenge" as paper category. Submissions have to follow the rules of short papers described in the [call for paper](https://sisap.org/2026/callforpapers.html) (in particular, at most 8 pages in standard LNCS style), but should be provided **non-anonymized**. More detailed analysis can be provided through a technical report referenced in the short paper.
 
 ---
 

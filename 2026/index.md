@@ -35,6 +35,7 @@ In this task, participants are asked to develop memory-efficient indexing soluti
   - We will measure the graph’s quality as the recall against a provided gold standard and the full computation time (i.e., including preprocessing, indexing, search, and postprocessing such as re-ranking)
   - Operating point: Fastest graph construction time that achieves an average recall of at least 0.8. 
   - We provide a development dataset; the evaluation phase will use an undisclosed dataset of similar size computed with the same neural model.
+  - You are free to return the result set that includes the self-references, i.e., you return an `n x (k + 1)` matrix.
 
 
 ### Task 2: Maximum Inner Product Search on LLM attention workloads (Search under Distribution Shift)
@@ -100,7 +101,7 @@ Each HDF5 file must contain two datasets:
 - `knns`: An $n \times k$ matrix of object identifiers (integers), where $n$ is the number of queries and $k$ is the number of neighbors. The $i$-th row contains the identifiers of the $k$ nearest neighbors of the $i$-th query. Identifiers must use **1-based indexing** (i.e., the first object in the dataset has ID 1).
 - `dists`: An $n \times k$ matrix of distances (floats). The $i$-th row contains the distances of the $k$ nearest neighbors of the $i$-th query according your implementation.
 
-**Note:** Matrices should follow **row-major order** (standard for C/Python/NumPy).
+**Note:** Matrices should follow **row-major order** (standard for C/Python/NumPy). For task 1, you may return a $n \times k + 1$ matrix that includes the self-reference. This will be removed for recall computation.
 
 **Metadata (Attributes):**
 The HDF5 file must include the following attributes at the root level:
@@ -157,6 +158,7 @@ The evaluation will be carried out using AMD EPYC 7F72 24-Core Processors.
 All participants should submit one short paper that details their system. If participants solve multiple tasks, the system must be described in a single paper (that might reference a technical report). Accepted papers will be part of the conference proceedings and part of a special session at SISAP 2026. 
 Each accepted paper is required to be presented in person as an oral presentation at that session.
 Submissions that are not accompanied by an accepted short paper will be disqualified and removed from the final rankings.
+Please submit yourshort paper through the regular EasyChair submission system for [SISAP 2026](https://easychair.org/my/conference?conf=sisap2026). Pick "indexing challenge" as paper category. Submissions have to follow the rules of short papers described in the [call for paper](https://sisap.org/2026/callforpapers.html) (in particular, at most 8 pages in standard LNCS style), but should be provided **non-anonymized**. More detailed analysis can be provided through a technical report referenced in the short paper.
 
 We look forward to your participation and innovative solutions in the SISAP Indexing Challenge 2026! Let's push the frontiers of similarity search and indexing together.
 
