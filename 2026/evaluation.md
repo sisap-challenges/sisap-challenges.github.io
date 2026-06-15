@@ -52,11 +52,11 @@ tira-cli code-submission \
     --path . \
     --command '{YOUR EXECUTABLE} --input $inputDataset/*.h5 --task-description $inputDataset/config.json --output $outputDir' \
     --task sisap-2026 \
-    --dataset task-1-spot-check-20260528-training \
+    --dataset task-1-spot-check-20260602-training \
     --dry-run
 ```
 
-Use `task-2-spot-check-20260528-training` or `task-3-spot-check-20260528-training` if your approach only targets Task 2 or Task 3, respectively.
+Use `task-2-spot-check-20260602-training` or `task-3-spot-check-20260529-training` if your approach only targets Task 2 or Task 3, respectively.
 
 **Step 3 — Authenticate and submit**
 
@@ -70,7 +70,7 @@ tira-cli code-submission \
     --path . \
     --command '{YOUR EXECUTABLE} --input $inputDataset/*.h5 --task-description $inputDataset/config.json --output $outputDir' \
     --task sisap-2026 \
-    --dataset task-1-spot-check-20260528-training
+    --dataset task-1-spot-check-20260602-training
 ```
 
 Your program should write its output files to `$outputDir` in the format described on the [task description page](/2026/#result-submission-format).
