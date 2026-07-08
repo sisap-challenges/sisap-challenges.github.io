@@ -1,8 +1,10 @@
-# Submission Details for SISAP 2026 Indexing Challenge
+# Submission Archive and Evaluation Workflow for SISAP 2026
 
-Below you will find all the details you need to get started.
+The SISAP 2026 challenge is closed.
+Final results are available in the [leaderboard](/sisap26-leaderboard/).
+This page documents the submission workflow and evaluation setup used during the challenge.
 
-**Quick Checklist**
+**Workflow Used During the Challenge**
 
 - Pre-register your team via GitHub.
 - Register your team in TIRA.
@@ -28,9 +30,8 @@ All tasks are evaluated inside Docker containers with **8 vCPUs and 24 GB RAM**.
 **Submission via TIRA**
 
 For this year, submissions are handled through **TIRA** ([tira.io/task-overview/sisap-2026](https://www.tira.io/task-overview/sisap-2026)). TIRA provides a reproducible, containerized evaluation framework.
-Code submissions for SISAP 2026 are handled only through TIRA.
-We can help troubleshoot submissions; see more info below.
-Please register your team as soon as possible. 
+Code submissions for SISAP 2026 were handled only through TIRA.
+Submissions are now closed. We keep the instructions below as archive material.
 
 
 ### How to Submit
@@ -77,7 +78,7 @@ Your program should write its output files to `$outputDir` in the format describ
 
 **Step 4 — Trigger evaluation in the TIRA UI**
 
-Navigate to the task page, click *Submit → Code Submissions*, select your submission, choose a dataset and hardware configuration. The organizers will handle execution on all datasets once your submission looks correct. During code submission, TIRA only runs small workloads. These are available in the baseline mentioned below.
+Navigate to the task page, click *Submit → Code Submissions*, select your submission, choose a dataset and hardware configuration. The organizers handled execution on all datasets once a submission looked correct. During code submission, TIRA only ran small workloads. These are available in the baseline mentioned below.
 
 ---
 
@@ -98,7 +99,7 @@ A Julia example is also available: [github.com/sisap-challenges/sisap2026-julia-
 |------|-----------|
 | June 10, 2026  → **June 17, 2026** (extended) | **Submission of solution implementations deadline** |
 | June 17, 2026  → **June 24, 2026** (extended) | Short paper description deadline |
-| July 8, 2026 | Final ranking announcement |
+| July 8, 2026 | Final leaderboard published |
 | July 27, 2026 | Paper notification |
 | August 13, 2026 | Camera-ready deadline |
 
@@ -106,13 +107,13 @@ A Julia example is also available: [github.com/sisap-challenges/sisap2026-julia-
 
 **Short paper**
 
-Please submit yourshort paper through the regular EasyChair submission system for [SISAP 2026](https://easychair.org/my/conference?conf=sisap2026). Pick "indexing challenge" as paper category. Submissions have to follow the rules of short papers described in the [call for paper](https://sisap.org/2026/callforpapers.html) (in particular, at most 8 pages in standard LNCS style), but should be provided **non-anonymized**. More detailed analysis can be provided through a technical report referenced in the short paper.
+Please submit your short paper through the regular EasyChair submission system for [SISAP 2026](https://easychair.org/my/conference?conf=sisap2026). Pick "indexing challenge" as paper category. Submissions have to follow the rules of short papers described in the [call for paper](https://sisap.org/2026/callforpapers.html) (in particular, at most 8 pages in standard LNCS style), but should be provided **non-anonymized**. More detailed analysis can be provided through a technical report referenced in the short paper.
 
 ---
 
-**Pre-registration**
+**Pre-registration Archive**
 
-If you have not yet pre-registered, please open a *"Pre-registration request"* issue at:
+Pre-registration for SISAP 2026 is closed. During the live challenge, teams were asked to open a *"Pre-registration request"* issue at:
 [github.com/sisap-challenges/challenge2026](https://github.com/sisap-challenges/challenge2026/)
 
 ---
@@ -123,7 +124,7 @@ After registering your team at TIRA, you can reach out to the organizers via the
 
 ---
 
-We look forward to your submissions! For questions, contact the organizing committee at sisap-2026-indexing-challenge@googlegroups.com.
+For questions about results or archival material, contact the organizing committee at sisap-2026-indexing-challenge@googlegroups.com.
 
 ---
 

@@ -8,20 +8,21 @@ tags = ["sisap", "challenge"]
 # SISAP 2026 Indexing Challenge: Task description and participation details
 \toc
 
+**[Final leaderboard for the SISAP 2026 Indexing Challenge](/sisap26-leaderboard/)**
+
 ~~~
 <div style="background-color: #e6f7ff; border: 2px solid #1890ff; border-radius: 5px; padding: 15px; margin: 20px 0;">
-    <h3 style="margin-top: 0; color: #0050b3;">📢 Submission Details Now Available</h3>
-    <p>The submission details for the SISAP 2026 Indexing Challenge are now available.</p>
-    <p>Please see the <a href="/2026/evaluation/">submission details and evaluation page</a> for instructions and requirements.</p>
+    <h3 style="margin-top: 0; color: #0050b3;">Final Leaderboard Available</h3>
+    <p>The SISAP 2026 challenge is now concluded. Final results are available in the <a href="/sisap26-leaderboard/">leaderboard</a>.</p>
 </div>
 ~~~
 
 
-The SISAP Indexing Challenge 2026 invites researchers and practitioners to participate in exciting tasks to advance the state of the art in similarity search and indexing. The challenge provides a platform for presenting innovative solutions and pushing the boundaries of efficiency and effectiveness in large-scale similarity search indexes. This year, we are proposing three challenging tasks.
+The SISAP Indexing Challenge 2026 is now concluded. This page documents the tasks, datasets, rules, and hardware constraints used for the 2026 edition, and the final results are available in the [leaderboard](/sisap26-leaderboard/).
 
 Datasets are available at [https://huggingface.co/datasets/sisap-challenges/SISAP2026/tree/main](https://huggingface.co/datasets/sisap-challenges/SISAP2026/tree/main); you can clone the full repository or download each file separately.
 
-If you think about participating in the challenge, please fill out a pre-registration at https://github.com/sisap-challenges/challenge2026/. 
+The challenge repository remains available at [https://github.com/sisap-challenges/challenge2026/](https://github.com/sisap-challenges/challenge2026/).
 
 ### Task 1: K-nearest neighbor graph (a.k.a. metric self-join)
 
@@ -119,7 +120,7 @@ For example: `results/task1/myalgo_M16_ef100.h5`.
 
 ### Docker Container and Evaluation
 
-We are currently working on a reproducible evaluation framework for the SISAP challenge. You can expect that we will evaluate solutions with a container setup in which participants are expected to create a Docker container which we will run to evaluate their solutions. To enforce the system requirements of the challenge, the container can be executed with the following limits:
+The challenge used a reproducible evaluation framework based on Docker containers. The configuration below is preserved as reference for participants and future editions. To enforce the system requirements of the challenge, the container could be executed with the following limits:
 
 ```bash
 docker run \
@@ -146,21 +147,23 @@ The evaluation will be carried out using AMD EPYC 7F72 24-Core Processors.
 
 ### Registration and Participation
 
-1. To facilitate running the challenge, please register for the challenge by opening a *"Pre-registration request"* issue in the GitHub repository [https://github.com/sisap-challenges/challenge2026/](https://github.com/sisap-challenges/challenge2026/). Fill out the required data, taking into account that the given data will be used to keep in contact while the challenge remains open. We use this system to keep track of potential participants; for later registration, contact the organizers first.  
-2. During the development phase, participants will have access to gold standards for all tasks.  
-3. Teams submit their solutions through TIRA. Submissions are required to run in Docker containers and results have to be written in a standard format to unify the evaluation. Please see the [submission details and evaluation page](/2026/evaluation/) for the current workflow and examples.  
-4. TIRA submissions will be tested at the time of the challenge. Results will be shared with the authors for verification and potential fixes before the final rankings are published. The short paper that is to be submitted following an entry will be submitted before the final rankings are published and should thus focus on a self-evaluation of the proposed system.  
-5. The private workloads that are used in the evaluation are shared publicly after the evaluation has been carried out.
-6. One person can only be part of a single team. 
+The following process was used during the live challenge:
+
+1. Teams registered by opening a *"Pre-registration request"* issue in the GitHub repository [https://github.com/sisap-challenges/challenge2026/](https://github.com/sisap-challenges/challenge2026/).  
+2. During the development phase, participants had access to gold standards for all tasks.  
+3. Teams submitted their solutions through TIRA. Submissions were required to run in Docker containers and results had to be written in a standard format to unify the evaluation. Please see the [submission details and evaluation page](/2026/evaluation/) for the archived workflow and examples.  
+4. TIRA submissions were tested at the time of the challenge. Results were shared with the authors for verification and potential fixes before the final leaderboard was published. The short paper submitted with an entry therefore focused on a self-evaluation of the proposed system.  
+5. The private workloads that were used in the evaluation are shared publicly after the evaluation has been carried out.
+6. One person could only be part of a single team. 
 
 ### Paper Submissions
 
 All participants should submit one short paper that details their system. If participants solve multiple tasks, the system must be described in a single paper (that might reference a technical report). Accepted papers will be part of the conference proceedings and part of a special session at SISAP 2026. 
 Each accepted paper is required to be presented in person as an oral presentation at that session.
 Submissions that are not accompanied by an accepted short paper will be disqualified and removed from the final rankings.
-Please submit yourshort paper through the regular EasyChair submission system for [SISAP 2026](https://easychair.org/my/conference?conf=sisap2026). Pick "indexing challenge" as paper category. Submissions have to follow the rules of short papers described in the [call for paper](https://sisap.org/2026/callforpapers.html) (in particular, at most 8 pages in standard LNCS style), but should be provided **non-anonymized**. More detailed analysis can be provided through a technical report referenced in the short paper.
+Please submit your short paper through the regular EasyChair submission system for [SISAP 2026](https://easychair.org/my/conference?conf=sisap2026). Pick "indexing challenge" as paper category. Submissions have to follow the rules of short papers described in the [call for paper](https://sisap.org/2026/callforpapers.html) (in particular, at most 8 pages in standard LNCS style), but should be provided **non-anonymized**. More detailed analysis can be provided through a technical report referenced in the short paper.
 
-We look forward to your participation and innovative solutions in the SISAP Indexing Challenge 2026! Let's push the frontiers of similarity search and indexing together.
+We thank all participants for their contributions to the SISAP Indexing Challenge 2026.
 
 ### Examples
 - Julia example – <https://github.com/sisap-challenges/sisap2026-julia-example>
@@ -169,7 +172,7 @@ We look forward to your participation and innovative solutions in the SISAP Inde
 - Python example - <https://github.com/sisap-challenges/sisap26-python-baseline>
     - Working example.
 
-Both examples are work in progress.
+Both examples remain available as reference baselines.
 
 ### Final comments
 
@@ -182,7 +185,7 @@ Any transformation of the dataset to load, index, and solve nearest neighbor que
 - May 22.  Evaluation pipeline available
 - June 10  → June 17 (extended). Submission of solution implementations deadline.
 - June 17  → June 24 (extended). Short paper descriptions deadline.
-- July 8. Final ranking announcement.
+- July 8. Final leaderboard published.
 - July 27. Paper notification.
 - August 13. Participant (short paper) camera ready.
 

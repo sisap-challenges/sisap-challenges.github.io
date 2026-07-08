@@ -3,8 +3,8 @@ Add here global page variables to use throughout your
 website.
 The website_* must be defined for the RSS to work
 -->
-@def website_title = "SISAP 2023 Implementation Challenge and Demo Track"
-@def website_descr = "Main site for the call for implementation and challenge"
+@def website_title = "SISAP Indexing Challenge"
+@def website_descr = "Main site for the SISAP Indexing Challenge"
 @def website_url   = "https://sisap-challenges.github.io/"
 
 @def author = "sisap challenge committee"
